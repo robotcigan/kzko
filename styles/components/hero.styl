@@ -1,0 +1,36 @@
+.section-hero
+  height 100vh
+
+.hero
+  height 100vh
+  position relative
+  &__video-container
+    display block
+    height 100%
+    width 100%
+    position relative
+    &:after
+      background-color rgba($main, .6)
+      content ''
+      height 100%
+      left 0
+      position absolute
+      top 0
+      width 100%
+      z-index 20
+  &__video
+    height 100%
+    object-fit cover
+    width 100%
+  &__align
+    top 25%
+    position absolute
+    width 100%
+    z-index 100
+  &__container
+    max-width 60rem
+  &__title
+    color #fff
+  &__subtitle
+    color #fff
+    opacity .5

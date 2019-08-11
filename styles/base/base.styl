@@ -1,0 +1,58 @@
+@import '../helpers/variables.styl'
+
+*
+  box-sizing border-box
+  text-decoration none
+  &:focus
+    outline 0
+
+*:hover
+  text-decoration none
+
+*:focus
+  outline 0
+
+
+html
+  font-size 62.5%
+  margin 0
+  max-width 100%
+  padding 0
+  width 100%
+
+body
+  color $main
+  background #f4f4f6
+  font-family $font
+  font-weight 400
+  font-size 1.6em
+  line-height 1
+  margin 0
+  max-width 100%
+  padding 0
+  text-size-adjust 100%
+  text-rendering optimizeLegibility
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing antialiased
+  width 100%
+  *
+    box-sizing border-box
+    
+
+.svg
+  opacity 0
+
+.replaced-svg
+  opacity 1
+
+img
+  display block
+  max-width 100%
+
+hr
+  background-color transparent
+  border none
+  border-top $border
+  margin 0
+  margin-bottom 2rem
+

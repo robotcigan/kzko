@@ -1,0 +1,21 @@
+$src = '../fonts/proxima/'
+$name = 'Proxima Nova'
+
+font(name, type, weight, style)
+  font-family name
+  src url($src + name + type + '.eot?#iefix') format('embedded-opentype'),
+      url($src + name + type + '.otf') format('opentype')
+  font-weight weight
+  font-style style
+
+@font-face
+  font($name,' Regular', 400, normal)
+
+@font-face
+  font($name,' Semibold', 500, normal)
+
+@font-face
+  font($name,' Bold', 600, normal)
+
+@font-face
+  font($name,' Extrabold', 700, normal)
