@@ -485,6 +485,7 @@
       <video class="hero__video" allow="autoplay" loop muted>
         <source src="./bitrix/templates/ugsp-gaz/img/video/main-video.mp4" type="">
       </video>
+      <div class="hero__box"></div>
     </div>
     <div class="hero__align">
       <div class="wrapper">
@@ -903,385 +904,62 @@
 			</div>
 		</div>
 	</div>
-<div class="section sectieon-sldier6 big-map" data-ajax-language="9">
-	<div class="map_block_cont">
-	<div id="map"></div>
-</div>
-<div class="container">
-	<div class="map-block-wrap">
-		<div class="map-block-left">
-			<p class="title" data-stagger="">География проектов</p>
-			<p class="map-sub-text"></p>
-		</div>
-		<div class="map-block-right">
-			<p class="title" data-stagger="">Партнеры</p>
-					<div class="padtners-wrap">
-									<div class="partners">
-							<img src="./Модульные котельные и паровые промышленные котлы_files/98e4ea2cbf0a1a2a9735b27cc127270c.png" alt="" class="partners-img">
-						</div>
-											<div class="partners">
-							<img src="./Модульные котельные и паровые промышленные котлы_files/78ba83617e9faa3f0f2d5e7a8ce18c79.png" alt="" class="partners-img">
-						</div>
-								<div class="btn-wrap" data-stagger="">
-				<a href="http://kzko.thisdesign.ru/about/" class="btn rose-btn">Смотреть всех</a>
-			</div>
-		</div>
-			</div>
-		
-	</div>
-</div>
-<input type="hidden" name="map-iblock-id" value="14">
-<script src="./Модульные котельные и паровые промышленные котлы_files/approve" type="text/javascript" async=""></script><script src="./Модульные котельные и паровые промышленные котлы_files/Y291bnRlcl9pZD1lMzQ0NDE2OGM5YTRhYTA4NjhjMDNlNjgyMTUzMWJlNSZwYWdlPWh0dHAlM0ElMkYlMkZremtvLnRoaXNkZXNpZ24ucnUlMkYmY29va2llPXJvaXN0YXRfdmlzaXQlM0QxMDY4MTklM0IlMjByb2lzdGF0X2ZpcnN0X3Zpc2l" type="text/javascript" async=""></script><script type="text/javascript" async="" src="./Модульные котельные и паровые промышленные котлы_files/qBsUc5HjSg"></script><script async="" src="./Модульные котельные и паровые промышленные котлы_files/counter.js.Без названия"></script><script src="./Модульные котельные и паровые промышленные котлы_files/addVisit" type="text/javascript" async="" id="roistat-js-script"></script><script type="text/javascript" async="" src="./Модульные котельные и паровые промышленные котлы_files/analytics.js.Без названия"></script><script charset="UTF-8" async="" src="./Модульные котельные и паровые промышленные котлы_files/init"></script><script async="" src="./Модульные котельные и паровые промышленные котлы_files/gtm.js.Без названия"></script><script async="" src="./Модульные котельные и паровые промышленные котлы_files/tag.js.Без названия"></script><script async="" src="./Модульные котельные и паровые промышленные котлы_files/gtm.js.Без названия"></script><script>
-	
-	function init()
-	{
-		var zoom = 2;
-		var center = [60,100];
-		
-		if(screen.width > 2000)
-			zoom = 4;
-		else if(screen.width <= 1500)
-		{
-			center = [60,100];
-			zoom = 3;
-		}
-		
-		
-   	 	var map = new ymaps.Map('map', {
-        	center: [center[0] , center[1]],
-        	zoom: zoom,
-        	type: null,
-			controls: []
-    	},{
-        	//restrictMapArea: [[20, 20], [85,-160]]
-    	});
-		map.behaviors.disable('scrollZoom');
-		// Добавим заливку цветом.
-		var pane = new ymaps.pane.StaticPane(map, {
-			zIndex: 100, css: {
-				width: '100%', height: '100%', backgroundColor: '#f4f4f6'
-			}
-		});
-		map.panes.append('white', pane);
-		// Зададим цвета федеральных округов.
-		var color = "#ebebeb";
-		var districtColors = {
-			cfo: color,
-			szfo: color,
-			yfo: color,
-			skfo: color,
-			pfo: color,
-			urfo: color,
-			sfo: color,
-			dfo: color
-		};
-		// Зададим подсказки при наведении на федеральный округ.
-		var districtsHints = {
-			cfo: '',
-			szfo: '',
-			yfo: '',
-			skfo: '',
-			pfo: '',
-			urfo: '',
-			sfo: '',
-			dfo: ''
-		};
-		// Создадим балун.
-		var districtBalloon = new ymaps.Balloon(map);
-		districtBalloon.options.setParent(map.options);
-		// Загрузим регионы.
-		ymaps.borders.load('RU', {
-			lang: 'en',
-			quality: 2
-		}).then(function (result) {
-			// Создадим объект, в котором будут храниться коллекции с нашими регионами.
-			var districtCollections = {};
-			// Для каждого федерального округа создадим коллекцию.
-			for (var district in districtColors) {
-				districtCollections[district] = new ymaps.GeoObjectCollection(null, {
-					fillColor: districtColors[district],
-					strokeColor: districtColors[district],
-					strokeOpacity: 0.3,
-					fillOpacity: 1,
-					hintCloseTimeout: 0,
-					hintOpenTimeout: 0
-				});
-				// Создадим свойство в коллекции, которое позже наполним названиями субъектов РФ.
-				districtCollections[district].properties.districts = [];
-			}
-	
-			result.features.forEach(function (feature) {
-				var iso = feature.properties.iso3166;
-				var name = feature.properties.name;
-				var district = districtByIso[iso];
-				 feature.properties.hintContent = districtsHints[district];
-	
-				// Добавим субъект РФ в соответствующую коллекцию.
-				districtCollections[district].add(new ymaps.GeoObject(feature));
-	
-	
-			});
-			// Создадим переменную, в которую будем сохранять выделенный в данный момент федеральный округ.
-			var highlightedDistrict;
-			for (var districtName in districtCollections) {
-				// Добавим коллекцию на карту.
-				map.geoObjects.add(districtCollections[districtName]);
-			}
-											var placemark = new ymaps.Placemark
-								(
-									[46.319155 ,  48.018769], 
-									{
-										iconCaption: 'Астрахань',
-										iconColor: '#FF0000'
-									},
-									{
-										preset: 'islands#circleIcon'
-									}
-								);
-								map.geoObjects.add(placemark);
-															var placemark = new ymaps.Placemark
-								(
-									[50.267797 ,  57.204070], 
-									{
-										iconCaption: 'Актобе',
-										iconColor: '#FF0000'
-									},
-									{
-										preset: 'islands#circleIcon'
-									}
-								);
-								map.geoObjects.add(placemark);
-															var placemark = new ymaps.Placemark
-								(
-									[66.545136 ,  66.605091], 
-									{
-										iconCaption: 'Салехард',
-										iconColor: '#FF0000'
-									},
-									{
-										preset: 'islands#circleIcon'
-									}
-								);
-								map.geoObjects.add(placemark);
-															var placemark = new ymaps.Placemark
-								(
-									[66.094988 ,  76.673375], 
-									{
-										iconCaption: 'Новый Уренгой',
-										iconColor: '#FF0000'
-									},
-									{
-										preset: 'islands#circleIcon'
-									}
-								);
-								map.geoObjects.add(placemark);
-															var placemark = new ymaps.Placemark
-								(
-									[41.315469 ,  69.265007], 
-									{
-										iconCaption: 'Ташкент',
-										iconColor: '#FF0000'
-									},
-									{
-										preset: 'islands#circleIcon'
-									}
-								);
-								map.geoObjects.add(placemark);
-															var placemark = new ymaps.Placemark
-								(
-									[42.860093 ,  74.595941], 
-									{
-										iconCaption: 'Бишкек',
-										iconColor: '#FF0000'
-									},
-									{
-										preset: 'islands#circleIcon'
-									}
-								);
-								map.geoObjects.add(placemark);
-															var placemark = new ymaps.Placemark
-								(
-									[40.166262 ,  44.511333], 
-									{
-										iconCaption: 'Ереван',
-										iconColor: '#FF0000'
-									},
-									{
-										preset: 'islands#circleIcon'
-									}
-								);
-								map.geoObjects.add(placemark);
-															var placemark = new ymaps.Placemark
-								(
-									[51.575499 ,  45.996643], 
-									{
-										iconCaption: 'Саратов',
-										iconColor: '#FF0000'
-									},
-									{
-										preset: 'islands#circleIcon'
-									}
-								);
-								map.geoObjects.add(placemark);
-															var placemark = new ymaps.Placemark
-								(
-									[53.212331 ,  50.219150], 
-									{
-										iconCaption: 'Самара',
-										iconColor: '#FF0000'
-									},
-									{
-										preset: 'islands#circleIcon'
-									}
-								);
-								map.geoObjects.add(placemark);
-															var placemark = new ymaps.Placemark
-								(
-									[53.275278 ,  34.397763], 
-									{
-										iconCaption: 'Брянск',
-										iconColor: '#FF0000'
-									},
-									{
-										preset: 'islands#circleIcon'
-									}
-								);
-								map.geoObjects.add(placemark);
-															var placemark = new ymaps.Placemark
-								(
-									[54.784672 ,  32.040501], 
-									{
-										iconCaption: 'Смоленск',
-										iconColor: '#FF0000'
-									},
-									{
-										preset: 'islands#circleIcon'
-									}
-								);
-								map.geoObjects.add(placemark);
-															var placemark = new ymaps.Placemark
-								(
-									[56.335556 ,  30.539293], 
-									{
-										iconCaption: 'Великие Луки',
-										iconColor: '#FF0000'
-									},
-									{
-										preset: 'islands#circleIcon'
-									}
-								);
-								map.geoObjects.add(placemark);
-															var placemark = new ymaps.Placemark
-								(
-									[69.345612 ,  88.207925], 
-									{
-										iconCaption: 'Норильск',
-										iconColor: '#FF0000'
-									},
-									{
-										preset: 'islands#circleIcon'
-									}
-								);
-								map.geoObjects.add(placemark);
-															var placemark = new ymaps.Placemark
-								(
-									[51.659368 ,  39.165007], 
-									{
-										iconCaption: 'Воронеж',
-										iconColor: '#FF0000'
-									},
-									{
-										preset: 'islands#circleIcon'
-									}
-								);
-								map.geoObjects.add(placemark);
-															var placemark = new ymaps.Placemark
-								(
-									[41.722810 ,  44.803108], 
-									{
-										iconCaption: 'Тбилиси',
-										iconColor: '#FF0000'
-									},
-									{
-										preset: 'islands#circleIcon'
-									}
-								);
-								map.geoObjects.add(placemark);
-															var placemark = new ymaps.Placemark
-								(
-									[45.039525 ,  41.987832], 
-									{
-										iconCaption: 'Ставрополь',
-										iconColor: '#FF0000'
-									},
-									{
-										preset: 'islands#circleIcon'
-									}
-								);
-								map.geoObjects.add(placemark);
-															var placemark = new ymaps.Placemark
-								(
-									[43.317688 ,  45.694082], 
-									{
-										iconCaption: 'Грозный',
-										iconColor: '#FF0000'
-									},
-									{
-										preset: 'islands#circleIcon'
-									}
-								);
-								map.geoObjects.add(placemark);
-															var placemark = new ymaps.Placemark
-								(
-									[51.781425 ,  55.105826], 
-									{
-										iconCaption: 'Оренбург',
-										iconColor: '#FF0000'
-									},
-									{
-										preset: 'islands#circleIcon'
-									}
-								);
-								map.geoObjects.add(placemark);
-															var placemark = new ymaps.Placemark
-								(
-									[51.158619 ,  71.450974], 
-									{
-										iconCaption: 'Нур-Султан',
-										iconColor: '#FF0000'
-									},
-									{
-										preset: 'islands#circleIcon'
-									}
-								);
-								map.geoObjects.add(placemark);
-															var placemark = new ymaps.Placemark
-								(
-									[43.129772 ,  131.901743], 
-									{
-										iconCaption: 'Владивосток',
-										iconColor: '#FF0000'
-									},
-									{
-										preset: 'islands#circleIcon'
-									}
-								);
-								map.geoObjects.add(placemark);
-									})
-		
-		map.behaviors.disable('drag');
-	}
-</script>	<footer class="footer footer-home">
-		<!-- <div class="change-language main-change-language" data-ajax-language="3"> -->
-					<!-- </div> -->
-		<div class="container" data-ajax-language="12">
-			<div class="footer-wrap">
-	<p class="copyright"><span style="font-size: 10pt;"><b><span style="font-size: 8pt;">КЗКЭО "Энерго-Стандарт", 2019</span></b></span></p>
-	<a href="https://maxi-top.ru/" target="_blank" class="maxitop"></a>
-	<a href="https://unic.agency/" class="unic" target="_blank"></a>
-</div>		</div>
-		<!-- <div class="footer-back-btn"></div> -->
-	</footer>
+
+<section class="section section-map">
+  <div class="wrapper">
+    <h2>География проектов</h2>
+    <p>Работаем по всей России, а так же некоторые страны СНГ, например, Казахстан, Украина и Беларусь</p>
+    <div class="map">
+      <!-- <img src="./img/map.svg"> -->
+      <img src="./img/russia.svg">
+    </div>
+  </div>
+</section>
+
+<section class="section section-partners fade-container">
+  <div class="wrapper">
+    <h2>Партнеры</h2>
+    <div class="grid partners">
+      <div class="col col--sm-2 partner fade-item">
+        <img src="./img/partner-2.png">
+      </div>
+      <div class="col col--sm-2 partner fade-item">
+        <img src="./img/partner-1.png">
+      </div>
+      <div class="col col--sm-2 partner fade-item">
+        <img src="./img/partner-3.png">
+      </div>
+      <div class="col col--sm-2 partner fade-item">
+        <img src="./img/partner-4.png">
+      </div>
+      <div class="col col--sm-2 partner fade-item">
+        <img src="./img/partner-5.png">
+      </div>
+      <div class="col col--sm-2 partner fade-item">
+        <img src="./img/partner-6.png">
+      </div>
+      <div class="col col--sm-2 partner fade-item">
+        <img src="./img/partner-2.png">
+      </div>
+      <div class="col col--sm-2 partner fade-item">
+        <img src="./img/partner-1.png">
+      </div>
+      <div class="col col--sm-2 partner fade-item">
+        <img src="./img/partner-3.png">
+      </div>
+      <div class="col col--sm-2 partner fade-item">
+        <img src="./img/partner-4.png">
+      </div>
+      <div class="col col--sm-2 partner fade-item">
+        <img src="./img/partner-5.png">
+      </div>
+      <div class="col col--sm-2 partner fade-item">
+        <img src="./img/partner-6.png">
+      </div>
+    </div>
+  </div>
+</section>
+
 </div>
 <style>
 	footer.footer-home{position:absolute;bottom:0;left:0;width:100%;z-index:10;border-top:none}
@@ -1334,82 +1012,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
   gtag('config', 'UA-138224509-1');
 </script>
-<!-- Yandex.Metrika counter -->
-<script type="text/javascript">
-   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-   m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
-   (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
-
-   ym(51693896, "init", {
-        id:51693896,
-        clickmap:true,
-        trackLinks:true,
-        accurateTrackBounce:true,
-        webvisor:true
-   });
-</script>
-<noscript><div><img src="https://mc.yandex.ru/watch/51693896" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-<!-- /Yandex.Metrika counter -->
-
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async="" src="./Модульные котельные и паровые промышленные котлы_files/js(1)"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-131362468-1');
-</script>
-
-<!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-M5TXWM4');</script>
-<!-- End Google Tag Manager -->
-
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M5TXWM4"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
-
-<!-- BEGIN Mango office -->
-
-<!-- <div class="mango-callback" data-settings="{&quot;type&quot;:&quot;&quot;, &quot;id&quot;: &quot;MTAwMTA2Mzk=&quot;,&quot;autoDial&quot; : &quot;0&quot;, &quot;lang&quot; : &quot;ru-ru&quot;, &quot;host&quot;:&quot;widgets.mango-office.ru/&quot;, &quot;errorMessage&quot;: &quot;В данный момент наблюдаются технические проблемы и совершение звонка невозможно&quot;}" init="true" onclick="">
-<div class="widget-wrapper mng-wgt common-window mng-wgt-index   left-x twitter-color heavenly-additional-color    dark- selected-dynamic" style="position: fixed; top: auto;"><div class="widget-wrapper__center"><div class="widget-content"><div class="background-video"><div id="mango-video-container"></div></div><h5 class="title-widget">Заказать звонок</h5><p class="text-widget">Мы позвоним<br>в рабочее время</p><div class="box-select-group" style="display: none;"><div class="select-list"><div class="select-item"><select class="select-day-week"><option value="1565112600">сегодня</option><option value="1565199000">завтра</option><option value="1565285400">в четверг</option></select></div><div class="select-item"><select class="select-time widget-start-time"><option value="1565071200">09:00 - 09:30</option><option value="1565073000">09:30 - 10:00</option><option value="1565074800">10:00 - 10:30</option><option value="1565076600">10:30 - 11:00</option><option value="1565078400">11:00 - 11:30</option><option value="1565080200">11:30 - 12:00</option><option value="1565082000">12:00 - 12:30</option><option value="1565083800">12:30 - 13:00</option><option value="1565085600">13:00 - 13:30</option><option value="1565087400">13:30 - 14:00</option><option value="1565089200">14:00 - 14:30</option><option value="1565091000">14:30 - 15:00</option><option value="1565092800">15:00 - 15:30</option><option value="1565094600">15:30 - 16:00</option><option value="1565096400">16:00 - 16:30</option><option value="1565098200">16:30 - 17:00</option><option value="1565100000">17:00 - 17:30</option><option value="1565101800">17:30 - 18:00</option></select></div></div></div><div class="box-phone-number"><ul class="currentCountry"><li class="selectedCountry" data-country="ru" data-index="0"><div class="triangle" style="display: none;"></div><img class="flag flag-ru" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"></li><li class="changeCountry"><ul class="selectCountryList"><li class="selectCountry userCountry" data-country="ru" data-code="+7" data-mask="(999) 999-99-99" data-placeholder="(ххх) ххх-хх-хх" data-index="0"><div class="selectCountryTable"><div class="selectCountryTableCell"><img class="flag flag-ru" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"></div><div class="countryName">Россия</div><div class="countryCode">+7</div></div></li><li class="selectCountry" data-country="ru" data-code="+7" data-mask="(999) 999-99-99" data-placeholder="(ххх) ххх-хх-хх" data-index="0"><div class="selectCountryTable"><div class="selectCountryTableCell"><img class="flag flag-ru" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"></div><div class="countryName">Россия</div><div class="countryCode">+7</div></div></li></ul></li></ul><span class="box-phone-span-input ru-box-phone-span-input" data-content="+7"><input placeholder="(ххх) ххх-хх-хх" class="call-input" mask="(999) 999-99-99" restrict="reject" clean="true" data-padding="30" style="padding-left: 30px; height: 36px; width: 190px;"></span><div class="button-call button-widget">Позвоните мне</div></div><div class="text-policy-dynamic">Нажимая на кнопку "Заказать звонок", вы даете согласие c Политикой обработки персональных данных</div></div><div class="thanks-content"><div class="background-video"><div id="mango-video-thanks-container"></div></div><h5 class="title-widget">Спасибо,</h5><p class="text-widget">Спасибо! Заявку получили, сейчас позвоним.</p></div><div class="wait-content"><div class="background-video"><div id="mango-video-wait-container"></div></div><div class="clock"></div><h5 class="title-widget">Подождите,</h5><p class="text-widget">Ваша заявка обрабатывается!</p></div></div><div class="close-popup"></div><button class="button-widget-open"></button><a href="http://www.mango-office.ru/products/virtualnaya_ats/functions/obratnyj_zvonok" class="technology" target="_blank">Технологии MANGO OFFICE</a></div><div class="mng-overlay" style="display: none;"></div></div>
-<script>!function(t){function e(){i=document.querySelectorAll(".button-widget-open");for(var e=0;e<i.length;e++)"true"!=i[e].getAttribute("init")&&(options=JSON.parse(i[e].closest('.'+t).getAttribute("data-settings")),i[e].setAttribute("onclick","alert('"+options.errorMessage+"(0000)'); return false;"))}function o(t,e,o,n,i,r){var s=document.createElement(t);for(var a in e)s.setAttribute(a,e[a]);s.readyState?s.onreadystatechange=o:(s.onload=n,s.onerror=i),r(s)}function n(){for(var t=0;t<i.length;t++){var e=i[t];if("true"!=e.getAttribute("init")){options=JSON.parse(e.getAttribute("data-settings"));var o=new MangoWidget({host:window.location.protocol+'//'+options.host,id:options.id,elem:e,message:options.errorMessage});o.initWidget(),e.setAttribute("init","true"),i[t].setAttribute("onclick","")}}}host=window.location.protocol+"//widgets.mango-office.ru/";var i=document.getElementsByClassName(t);o("link",{rel:"stylesheet",type:"text/css",href:host+"css/widget-button.css"},function(){},function(){},e,function(t){document.documentElement.insertBefore(t,document.documentElement.firstChild)}),o("script",{type:"text/javascript",src:host+"widgets/mango-callback.js", async:true},function(){("complete"==this.readyState||"loaded"==this.readyState)&&n()},n,e,function(t){document.documentElement.appendChild(t)})}("mango-callback");</script>
- -->
-<!-- End Mango office -->
-<script>
-(function(w, d, s, h, id) {
-    w.roistatProjectId = id; w.roistatHost = h;
-    var p = d.location.protocol == "https:" ? "https://" : "http://";
-    var u = /^.*roistat_visit=[^;]+(.*)?$/.test(d.cookie) ? "/dist/module.js" : "/api/site/1.0/"+id+"/init";
-    var js = d.createElement(s); js.charset="UTF-8"; js.async = 1; js.src = p+h+u; var js2 = d.getElementsByTagName(s)[0]; js2.parentNode.insertBefore(js, js2);
-})(window, document, 'script', 'cloud.roistat.com', 'e3444168c9a4aa0868c03e6821531be5');
-</script>
-<!-- BEGIN JIVOSITE INTEGRATION WITH ROISTAT -->
-<script type="text/javascript">
-var getCookie = window.getCookie = function (name) {
-    var matches = document.cookie.match(new RegExp("(?:^|; )" + name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + "=([^;]*)"));
-return matches ? decodeURIComponent(matches[1]) : undefined;
-};
-function jivo_onLoadCallback() {
-    jivo_api.setUserToken(getCookie('roistat_visit'));
-    }
-</script>
-<!-- END JIVOSITE INTEGRATION WITH ROISTAT --> 
-<!-- BEGIN JIVOSITE CODE {literal} -->
-<script async="" type="text/javascript">
-(function(){ var widget_id = 'qBsUc5HjSg';var d=document;var w=window;function l(){
-  var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true;
-  s.src = '//code.jivosite.com/script/widget/'+widget_id
-    ; var ss = document.getElementsByTagName('script')[0]; ss.parentNode.insertBefore(s, ss);}
-  if(d.readyState=='complete'){l();}else{if(w.attachEvent){w.attachEvent('onload',l);}
-  else{w.addEventListener('load',l,false);}}})();
-</script>
-<!-- {/literal} END JIVOSITE CODE -->
 
 
 
@@ -1418,7 +1020,9 @@ function jivo_onLoadCallback() {
 <script src="./Модульные котельные и паровые промышленные котлы_files/map_data.js.Без названия" type="text/javascript"></script>
 
 <script src="./dist/js/smoothscroll.js"></script>
+<script src="./dist/js/jquery.blast.min.js"></script>
 <script src="./dist/js/main.js"></script>
+<script src="./dist/js/animations.js"></script>
 
 </body>
 

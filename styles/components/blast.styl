@@ -1,0 +1,14 @@
+.hero__title
+  // line-height 1.2
+  overflow hidden
+  .blast
+    display inline-block
+    transition all .5s
+    transform translateY(2.2em)
+  &--hidden
+    .blast
+      opacity 0
+  &--visible
+    .blast
+      opacity 1
+      transform none

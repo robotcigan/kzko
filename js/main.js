@@ -7,6 +7,7 @@ $(document).ready(function() {
 
   // SVG magic
   jQuery('img.svg').each(function(){
+    console.log('svg')
     var $img = jQuery(this);
     var imgID = $img.attr('id');
     var imgClass = $img.attr('class');
