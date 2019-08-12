@@ -975,6 +975,18 @@ small {
   -ms-flex-pack: center;
   justify-content: center;
 }
+.service {
+  background-color: #fff;
+  border-radius: 4px;
+  padding: 4rem;
+}
+.service__title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  margin-bottom: 0.4em;
+  text-transform: uppercase;
+}
 .section {
   margin-bottom: 12rem;
 }
