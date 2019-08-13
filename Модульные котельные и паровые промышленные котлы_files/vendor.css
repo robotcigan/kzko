@@ -11280,7 +11280,10 @@ sup {
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    margin-bottom: 8px
+    /*margin-bottom: 8px*/
+}
+.news-list .news-item:not(:last-child) {
+  margin-bottom: .8rem;
 }
 
 @media screen and (max-width: 960px) {
@@ -11329,7 +11332,9 @@ sup {
 
 .news-list .news-item .news-img-wrap {
     margin-right: 30px;
-    max-width: 200px
+    /*max-width: 200px*/
+    min-width: 140px;
+    width: 140px;
 }
 
 @media screen and (max-width: 960px) {
