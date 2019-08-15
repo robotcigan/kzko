@@ -186,7 +186,7 @@ hr {
 .form-control select:hover,
 .form-control textarea:hover,
 .form-control .custom-select:hover {
-  background-color: #ededed;
+  border-color: rgba(30,31,33,0.3);
 }
 .form-control textarea {
   height: 100%;
@@ -986,6 +986,12 @@ small {
   right: 0;
   top: -8rem;
 }
+.section-map p {
+  max-width: 44rem;
+}
+.map {
+  margin-top: -20rem;
+}
 .map img {
   height: 80rem;
   width: 100%;
@@ -1085,6 +1091,59 @@ small {
 }
 .service:hover .service__icon svg path {
   fill: #fff;
+}
+.category {
+  background-color: #fff;
+  display: block;
+  overflow: hidden;
+  position: relative;
+}
+.category:before {
+  background-color: #fbfbfb;
+  content: '';
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  transition: all 0.3s ease;
+  width: 0;
+  z-index: 0;
+}
+.category__title {
+  font-size: 2.4rem;
+  font-weight: 600;
+  line-height: 1.333333333333333;
+  transition: all 0.3s ease;
+}
+.category__number {
+  opacity: 0.5;
+  transition: all 0.3s ease;
+}
+.category__container {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -ms-flex-pack: center;
+  justify-content: center;
+  position: absolute;
+  top: 2.4rem;
+  text-align: center;
+  width: 100%;
+}
+.category__img {
+  position: relative;
+  transition: all 0.3s ease;
+  z-index: 10;
+}
+.category:hover:before {
+  width: 100%;
+}
+.category:hover .category__title {
+  color: #dc1a14;
+}
+.category:hover .category__number {
+  opacity: 1;
 }
 .section {
   margin-bottom: 12rem;

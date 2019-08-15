@@ -3,13 +3,29 @@
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:amcharts="http://amcharts.com/ammap" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
 	<defs>
 		<style type="text/css">
-			.land
-			{
+			.land {
 				fill: #e5e5e5;
 				fill-opacity: 1;
 				stroke:white;
 				stroke-opacity: 1;
 				stroke-width:0.5;
+				position: relative;
+			}
+			.land:before {
+				  background-color: teal;
+			    content: '';
+			    left: 0;
+			    position: absolute;
+			    top: 0;
+			    padding: 8px;
+			    font-size: 20px;
+			    color: blue;
+			    z-index: 500;
+			    width: 200px;
+			    height: 200px;
+			}
+			#RU-AD:before {
+				content: 'Адыгея';
 			}
 			.land--active {
 				fill: #DC1A14;
