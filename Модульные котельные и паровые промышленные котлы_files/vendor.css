@@ -6541,7 +6541,7 @@ body.compensate-for-scrollbar {
 }
 
 .header {
-    overflow: hidden;
+    /*overflow: hidden;*/
     padding: 5.92593vh 2% 50px;
     position: fixed;
     background-color: rgba(255,255,255,0);
@@ -6693,6 +6693,14 @@ body.compensate-for-scrollbar {
     width: 100%;
     background-color: #fff;
     padding: 20px 0 50px
+}
+
+.top-sub-menu .container {
+    max-width: initial;
+}
+
+.top-sub-menu-item-img-wrap {
+    max-width: 200px;
 }
 
 .header-wrap .top-navigation .top-sub-menu .top-sub-menu-list {
