@@ -6542,7 +6542,8 @@ body.compensate-for-scrollbar {
 
 .header {
     /*overflow: hidden;*/
-    padding: 5.92593vh 2% 50px;
+    /*padding: 5.92593vh 2% 50px;*/
+    padding: 4rem 3%;
     position: fixed;
     background-color: rgba(255,255,255,0);
     left: 0;
@@ -6564,10 +6565,10 @@ body.compensate-for-scrollbar {
     }
 }
 
-.header {
+/*.header {
     padding: 5.92593vh 2% 43px
 }
-
+*/
 @media screen and (max-width: 960px) {
     .header {
         padding:30px 15px 10px
@@ -9401,9 +9402,9 @@ ul li {
     position: absolute;
     top: 0;
     left: 0;
-    -webkit-transition: .6s cubic-bezier(0.165,0.84,0.44,1);
+/*    -webkit-transition: .6s cubic-bezier(0.165,0.84,0.44,1);
     -o-transition: .6s cubic-bezier(0.165,0.84,0.44,1);
-    transition: .6s cubic-bezier(0.165,0.84,0.44,1)
+    transition: .6s cubic-bezier(0.165,0.84,0.44,1)*/
 }
 
 .effect-hover1 .effect-wrap .effect-hide {

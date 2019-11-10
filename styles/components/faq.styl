@@ -1,0 +1,29 @@
+body
+  counter-reset faq
+
+.faq
+  cursor pointer
+  &__top
+    align-items center
+    display flex
+    justify-content space-between
+    padding 2.4rem 0
+  &__title
+    counter-increment faq
+    font-size 2.4rem
+    &:before
+      color $primary
+      content counter(faq)
+      display inline-block
+      width 4rem
+  &__plus
+    transition $transition
+    &_active
+      transform rotate(45deg)
+  &__content
+    display none
+    padding 2.4rem 4rem
+  &:not(:last-child)
+    .faq
+      &__top
+        border-bottom $border

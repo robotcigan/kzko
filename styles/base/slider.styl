@@ -1,6 +1,11 @@
 .slick
   &-prev,
   &-next
+    border $border
+    border-radius 50%
+    circle(4.8rem)
+    content ''
+    display block
     top 50%
     &:before
       font-size 2.4rem
@@ -10,23 +15,26 @@
       &:before
         opacity .3
   &-prev
-    left 2.2rem
+    left -6.4rem
     &:before
-      content url('../../img/slider-arrow-left.png')
+      content url('../../img/slider-arrow.svg')
+      display block
+      transform scale(-1) translateX(1px)
+
   &-next
-    right 2.2rem
+    right -6.4rem
     &:before
-      content url('../../img/slider-arrow-right.png')
+      content url('../../img/slider-arrow.svg')
   &-dots
-    bottom 4rem
+    bottom -2.4rem
     left 0
     li
       margin 0
-  &-dots li button:before
-    color #fff
-    // display none
-    font-size 3.2rem
-    opacity 1
+  // &-dots li button:before
+  //   color #fff
+  //   // display none
+  //   font-size 3.2rem
+  //   opacity 1
   &-dots li.slick-active button:before
     color $primary
     opacity 1
@@ -79,7 +87,8 @@
   .slick-slide
     margin 0 1rem
 
-
+.section.sectieon-sldier3 .slick-arrow
+  display none !important
 
 @media(max-width 1200px)
   .slick-dotted.slick-slider
@@ -150,4 +159,4 @@
       padding-left 0
   .slick
     &-dots
-      bottom 2rem
+      bottom -2rem

@@ -5,11 +5,49 @@ $(document).ready(function () {
   if ($('.hero__video').length) {
     document.querySelector('.hero__video').play();
   }
-  console.log('some');
+
+  // Шапка
+  function HeaderScroll() {
+    if ($(window).scrollTop() > 20) {
+      $('.main-page-header').addClass('main-page-header--scroll');
+    } else {
+      $('.main-page-header').removeClass('main-page-header--scroll');
+    }
+  }
+
+  $(window).scroll(function () {
+    HeaderScroll();
+  });
+  HeaderScroll();
+
+  $('.services').slick({
+    arrows: true,
+    infinite: true,
+    slidesToShow: 2,
+    slidesToScroll: 2,
+    adaptiveHeight: true,
+    responsive: [{
+      breakpoint: 1200,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        dots: true
+      }
+    }]
+  });
+
+  $('.cards').slick({
+    slidesToShow: 3,
+    slidesToScroll: 1
+  });
+
+  $('.faq').on('click', function () {
+    $(this).find('.faq__content').slideToggle('faq__content_active');
+    $(this).find('.faq__plus').toggleClass('faq__plus_active');
+  });
 
   // SVG magic
   jQuery('img.svg').each(function () {
-    console.log('svg');
     var $img = jQuery(this);
     var imgID = $img.attr('id');
     var imgClass = $img.attr('class');

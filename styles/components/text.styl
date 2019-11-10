@@ -1,0 +1,73 @@
+.text
+  background-color #2F3745
+  color #fff
+  margin-bottom 16rem
+  min-height 44rem
+  // overflow hidden
+  padding-bottom 8rem
+  padding-top 8rem
+  position relative
+  &:before
+    // content url('../../img/services/text-sybmol.svg')
+    background url('../../img/services/text-sybmol.svg') top right no-repeat
+    content ''
+    height 100%
+    position absolute
+    right 0
+    top 0
+    z-index 0
+    width 100%
+  &__container
+    display flex
+    justify-content space-between
+    position relative
+    z-index 10
+  &-list
+    padding-left 4rem
+    &__item
+      line-height 1.4
+      margin-bottom 2em
+      position relative
+      &:before
+        align-items center
+        border 1px solid rgba(#fff, .2)
+        border-radius 50%
+        circle(3.2rem)
+        content url('../../img/services/list-check.svg')
+        display flex
+        justify-content center
+        left -4.4rem
+        position absolute
+        top -.5em
+  &__left
+    p
+      opacity .7
+      max-width 56rem
+  &__right
+    margin-bottom -16rem
+    &_white
+      background-color #fff
+      padding 5.6rem
+      .text
+        &-list
+          &__item
+            color $main
+            &:before
+              border $border
+              content url('../../img/services/list-check-color.svg')
+  &__img
+    margin-top -3rem
+    img
+      margin-bottom 2.4rem
+    p
+      opacity .7
+
+
+
+
+
+
+
+
+
+

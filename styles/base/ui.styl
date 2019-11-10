@@ -59,7 +59,7 @@
       &:after
         display none !important
 
-.form-control
+.form-input
   // min-height 5rem
   // flex-shrink 0
   margin-bottom 2rem
@@ -131,7 +131,7 @@
       border-color $error
     label
       color $error
-    .form-control__icon
+    .form-input__icon
       color $error
   &--small
     width 28rem
@@ -146,95 +146,95 @@
     //   width 50%
 
 
-.checkbox
-  align-items center
-  cursor pointer
-  display flex
-  margin-bottom 1em
-  user-select none
-  &__label
-    background transparent
-    border-radius $radius
-    border $border
-    cursor pointer
-    circle(1.8rem)
-    display inline-block
-    flex-shrink 0
-    margin-right .4rem
-    position relative
-    transform translateY(-1px)
-    z-index 1
-    &:after
-      color $main
-      // content "\f00c"
-      content url('../../img/checkbox.png')
-      display none
-      // font-family 'FontAwesome'
-      font-size 1.3rem
-      left 3px
-      position absolute
-      top 0
-      z-index 10
-  &__text
-    display inline-block
-  .link
-    display inline-block
-    margin-bottom 0
-  input
-    display none
-  input:checked + .checkbox__label
-    // border-color $primary
-    &:after
-      display block
+// .checkbox
+//   align-items center
+//   cursor pointer
+//   display flex
+//   margin-bottom 1em
+//   user-select none
+//   &__label
+//     background transparent
+//     border-radius $radius
+//     border $border
+//     cursor pointer
+//     circle(1.8rem)
+//     display inline-block
+//     flex-shrink 0
+//     margin-right .4rem
+//     position relative
+//     transform translateY(-1px)
+//     z-index 1
+//     &:after
+//       color $main
+//       // content "\f00c"
+//       content url('../../img/checkbox.png')
+//       display none
+//       // font-family 'FontAwesome'
+//       font-size 1.3rem
+//       left 3px
+//       position absolute
+//       top 0
+//       z-index 10
+//   &__text
+//     display inline-block
+//   .link
+//     display inline-block
+//     margin-bottom 0
+//   input
+//     display none
+//   input:checked + .checkbox__label
+//     // border-color $primary
+//     &:after
+//       display block
 
-.radio
-  cursor pointer
-  display block
-  margin-bottom 1rem
-  user-select none
-  &__label
-    background transparent
-    border-radius 50%
-    border 1px solid $light-gray - 10%
-    cursor pointer
-    circle(2.4rem)
-    display inline-block
-    margin-right 1rem
-    position relative
-    vertical-align middle
-    z-index 1
-    &:after
-      background-color $primary
-      border-radius 50%
-      circle(1.4rem)
-      color #fff
-      content ''
-      display none
-      font-size 1.5rem
-      left 4px
-      position absolute
-      top 4px
-      z-index 10
-  input
-    display none
-  input:checked + .radio__label
-    background-color #fff
-    border-color $primary
-    box-shadow 0 0 0 1px $primary
-    &:after
-      display block
-  label
-    color $main
-    display inline-block
-    cursor pointer
-    vertical-align middle
+// .radio
+//   cursor pointer
+//   display block
+//   margin-bottom 1rem
+//   user-select none
+//   &__label
+//     background transparent
+//     border-radius 50%
+//     border 1px solid $light-gray - 10%
+//     cursor pointer
+//     circle(2.4rem)
+//     display inline-block
+//     margin-right 1rem
+//     position relative
+//     vertical-align middle
+//     z-index 1
+//     &:after
+//       background-color $primary
+//       border-radius 50%
+//       circle(1.4rem)
+//       color #fff
+//       content ''
+//       display none
+//       font-size 1.5rem
+//       left 4px
+//       position absolute
+//       top 4px
+//       z-index 10
+//   input
+//     display none
+//   input:checked + .radio__label
+//     background-color #fff
+//     border-color $primary
+//     box-shadow 0 0 0 1px $primary
+//     &:after
+//       display block
+//   label
+//     color $main
+//     display inline-block
+//     cursor pointer
+//     vertical-align middle
 
-.file-upload
-  display block
-  margin-bottom .8rem
-  margin-top .8rem
-  input
-    display none
+// .file-upload
+//   display block
+//   margin-bottom .8rem
+//   margin-top .8rem
+//   input
+//     display none
 
 
 

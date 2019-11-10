@@ -1,0 +1,32 @@
+.block
+  align-items center
+  &__plate
+    color $primary
+    font-weight 500
+    margin-bottom 1em
+  &__img
+    display block
+    &_video
+      position relative
+      &:after
+        align-items center
+        background-color $primary
+        border-radius 50%
+        bottom 0
+        circle(8.8rem)
+        content url('../../img/services/play.svg')
+        display flex
+        justify-content center
+        left 0
+        margin auto
+        position absolute
+        right 0
+        top 0
+        transition $transition
+      &:hover
+        &:after
+          circle(9.6rem)
+    img
+      display block
+  &:not(:last-child)
+    margin-bottom 8rem
