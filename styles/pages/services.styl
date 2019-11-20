@@ -30,3 +30,17 @@
 .transport-companies
   display flex
   justify-content space-between
+
+
+@media(max-width 1200px)
+  .transport-companies
+    .transport-company
+      &:not(:last-child)
+        margin-right 1rem
+
+@media(max-width 767px)
+  .transport-companies
+    flex-wrap wrap
+    .transport-company
+      margin-bottom 1rem
+      width calc(50% - 1rem)

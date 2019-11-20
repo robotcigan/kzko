@@ -838,6 +838,9 @@ small {
 .section.sectieon-sldier3 .slick-arrow {
   display: none !important;
 }
+.slick-dots li button:before {
+  font-size: 3rem;
+}
 @media (max-width: 1200px) {
   .slick-dotted.slick-slider {
     margin-bottom: 6.4rem;
@@ -851,6 +854,9 @@ small {
   }
   .index-slider .slide .btn {
     display: none;
+  }
+  -dots {
+    bottom: 0;
   }
 }
 @media (max-width: 767px) {
@@ -1066,6 +1072,14 @@ small {
 .fos_without-bg {
   background-color: initial;
   padding: 0;
+}
+@media (max-width: 1000px) {
+  .fos__form {
+    display: block;
+  }
+  .fos__form .form-input {
+    margin-bottom: 1rem;
+  }
 }
 .section-map p {
   max-width: 44rem;
@@ -1318,6 +1332,11 @@ small {
 .card__list li:before {
   display: none;
 }
+@media (max-width: 1200px) {
+  .card__icon-container {
+    display: none;
+  }
+}
 .text {
   background-color: #2f3745;
   color: #fff;
@@ -1395,6 +1414,25 @@ small {
 }
 .text__img p {
   opacity: 0.7;
+}
+@media (max-width: 1000px) {
+  .text__right_white {
+    padding: 2.4rem;
+  }
+}
+@media (max-width: 767px) {
+  .text__container {
+    display: block;
+  }
+  .text__left {
+    margin-bottom: 2rem;
+  }
+  .text__right {
+    margin-bottom: 0;
+  }
+  .text__img {
+    margin-top: 0;
+  }
 }
 .block {
   -ms-flex-align: center;
@@ -1557,6 +1595,21 @@ body {
   display: flex;
   -ms-flex-pack: justify;
   justify-content: space-between;
+}
+@media (max-width: 1200px) {
+  .transport-companies .transport-company:not(:last-child) {
+    margin-right: 1rem;
+  }
+}
+@media (max-width: 767px) {
+  .transport-companies {
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+  .transport-companies .transport-company {
+    margin-bottom: 1rem;
+    width: calc(50% - 1rem);
+  }
 }
 .small-offset {
   margin-bottom: 1em;
