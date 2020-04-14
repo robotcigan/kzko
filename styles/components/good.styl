@@ -1,0 +1,38 @@
+.good
+  display block
+  margin-bottom 4.8rem
+  &__img
+    background-color #eee
+    align-items center
+    display flex
+    height 30rem
+    justify-content center
+    overflow hidden
+    margin-bottom 2.4rem
+    img
+      display block
+      height 100%
+      object-fit cover
+      object-position center
+      transition $transition
+      width 100%
+  &__container
+    display flex
+    justify-content space-between
+  &__category
+    color $gray
+    font-size 1.4rem
+    line-height 1.2
+    margin-bottom .75em
+  &__title
+    font-size 2rem
+    line-height 1.2
+  &__right
+    flex-shrink 0
+  &__price
+    font-weight 500
+  &:hover
+    .good
+      &__img
+        img
+          transform scale(1.05)

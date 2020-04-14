@@ -61,6 +61,33 @@ $(document).ready(function () {
     $(this).find('.faq__plus').toggleClass('faq__plus_active');
   });
 
+  // selects
+  $('.custom-select').niceSelect();
+
+  // Телефон маска
+  if ($('.phone-mask').length) {
+    $('.phone-mask').inputmask({
+      mask: "+7 (999) 999 99 99",
+      showMask: true,
+      showMaskOnHover: false
+    });
+  }
+
+  // Filter
+  $('.filter-mobile-button').on('click', function () {
+    $('.page').toggleClass('page_shadow');
+    $('.filter').toggleClass('filter_active');
+    $('body').addClass('mobile-menu-is-open');
+  });
+  // filter close on click on area
+  $(document).on('click', function (event) {
+    if (!$(event.target).closest('.filter').length && !$(event.target).closest('.filter-mobile-button').length) {
+      $('.filter').removeClass('filter_active');
+      $('.page').removeClass('page_shadow');
+      $('body').removeClass('mobile-menu-is-open');
+    }
+  });
+
   // SVG magic
   jQuery('img.svg').each(function () {
     var $img = jQuery(this);

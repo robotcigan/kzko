@@ -6,14 +6,30 @@ debug()
       & *
         outline 1px solid purple
 
-size($height, $width)
+size($height, $width = $height)
   height $height
   width $width
+  
+linkHover($color)
+  cursor pointer
+  display inline-block
+  position relative
+  transition $transition
+  &:before
+    background-color rgba($color, .3)
+    bottom -3px
+    content ''
+    height 1px
+    right 0
+    position absolute
+    transition $transition
+    width 0
+  &:hover
+    color $primary
+    &:before
+      left 0
+      width 100%
 
-
-circle($size)
-  height $size
-  width $size
 
 
 clearfix()

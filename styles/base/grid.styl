@@ -1,3 +1,8 @@
+.container
+  max-width 1600px
+  padding-left 0
+  padding-right 0
+
 .wrapper
   // max-width (1700 / 1920 * 100)%
   margin 0 auto
@@ -186,10 +191,11 @@
     &-12
       grid-column span 12
 
-@media(min-width 1200px)
+@media(min-width 1680px)
   .wrapper
     padding 0
-    width 1170px
+    // width 1170px
+    max-width 1600px
 
 
 @media(max-width 1199px)

@@ -8,12 +8,13 @@
   display inline-flex
   font-family $font
   font-size 1.2rem
-  font-weight 600
+  font-weight 500
   flex-shrink 0
   justify-content center
+  letter-spacing .5px
   line-height 1
   max-height 6.4rem
-  margin-left -4px
+  margin-left 0
   overflow hidden
   padding 1.8rem 2.4rem
   position relative
@@ -65,12 +66,13 @@
   margin-bottom 2rem
   position relative
   width 100%
-  label
+  label,
+  &__input
     color $main
     cursor text
     display inline-block
     line-height 1
-    font-weight 500
+    font-weight 400
     margin-bottom .5em
     transition all .2s
     max-width 100%
@@ -116,6 +118,14 @@
       width 100%
     &.open .list
       transform none
+    .option
+      font-size 1.2rem
+      line-height 1.6
+      margin 0
+      margin-left 0 !important
+      min-height initial
+      // padding-left 0
+      padding .5em 1em
     &:after
       right 2.4rem
   &--error

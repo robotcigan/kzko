@@ -1,0 +1,66 @@
+.catalog-links
+  margin-bottom 4rem
+  .catalog-link
+    display inline-block
+    margin-right .8rem
+    margin-bottom .8rem
+    a
+      background-color #E4E8EE
+      border-radius $radius
+      display block
+      padding .8em 1.6em
+      transition $transition
+    &:hover
+      a
+        background-color #E4E8EE - 5%
+    &_active
+      color #fff
+      a
+        color #fff
+        background-color #464444
+
+
+.filter
+  max-width 35rem
+  transition all .8s cubic-bezier(.16,1.08,.38,.98)
+
+.filter-mobile-button
+  align-items center
+  // background-color $primary
+  background-color #fff
+  border $border
+  // color $primary
+  // color #fff
+  display none
+  // border $border
+  border-radius 4px
+  justify-content center
+  padding 1.8rem 0
+  text-align center
+  &__img
+    margin-right .8rem
+    size(2rem)
+    path
+      fill $primary
+  &__text
+    color $primary
+
+
+@media(max-width 1200px)
+  .filter
+    background-color #fff
+    height 100%
+    left -100%
+    // overflow-y auto
+    overflow-y scroll
+    padding 3.2rem
+    padding-right 6.4rem
+    position fixed
+    top 0
+    z-index 150
+    &_active
+      left 0
+    &__link
+      font-size 1.6rem
+  .filter-mobile-button
+    display flex

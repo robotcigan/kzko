@@ -1,0 +1,42 @@
+.catalog-item
+  // align-items center
+  background-color #eee
+  display flex
+  height 34rem
+  flex-direction column
+  justify-content space-between
+  overflow hidden
+  padding 3.2rem
+  position relative
+  transition $transition
+  &__title
+    font-size 1.8rem
+    font-weight 600
+  &__img
+    align-items center
+    bottom 0
+    display flex
+    justify-content center
+    left 0
+    position absolute
+    transition $transition
+    // height 22rem
+    img
+      display block
+      width 100%
+  &__bottom
+    align-items center
+    display flex
+    justify-content space-between
+  .btn
+    opacity 0
+    transform translateY(1rem)
+  &:hover
+    // background-color #E4E8EE - 10%
+    background-color #E4E8EE
+    .btn
+      opacity 1
+      transform none
+    .catalog-item
+      &__img
+        transform scale(1.05)

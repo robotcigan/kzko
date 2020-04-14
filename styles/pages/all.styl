@@ -1,2 +1,67 @@
+.page
+  display block
+  &_shadow
+    cursor pointer
+    height 100vh
+    overflow hidden
+    position relative
+    transition $transition
+    &:after
+      background-color rgba(26,26,26,0.2)
+      content ''
+      height 100%
+      left 0
+      position fixed
+      top 0
+      width 100%
+      z-index 100
+
 .section
   margin-bottom 12rem
+
+.inner-header
+  // margin-top -3.2rem
+  // padding 8rem 0
+  height 24rem
+  margin-bottom 3.2rem
+  overflow hidden
+  position relative
+  &__bg
+    display flex
+    height 24rem
+    left 0
+    position absolute
+    top 0
+    width 100%
+    z-index -1
+    img
+      display block
+      height 100%
+      object-fit cover
+      object-position center
+      width 100%
+    &:before
+      background linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 100%)
+      bottom 0
+      content ''
+      height 100%
+      opacity .5
+      left 0
+      position absolute
+      width 100%
+  &__container
+    bottom 0
+    position absolute
+    width 100%
+  h1
+    color #fff
+  .breadcrumbs
+    &-text
+      color #fff !important
+    &-list
+      .breadcrumbs-item:after
+        color #fff
+
+@media screen and (max-width: 1260px)
+  .section
+    padding-top 0
