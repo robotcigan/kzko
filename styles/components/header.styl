@@ -14,7 +14,7 @@
   position sticky
   top 0
   width 100%
-  z-index 100
+  z-index 200
   &__container
     display flex
     justify-content space-between
@@ -29,8 +29,9 @@
     flex-shrink 0
     margin-right 4rem
   &__phone
+    flex-shrink 0
     margin-right 2em
-  & + .inner-header
+  & + .inner-header_with-img
     margin-top -3.2rem
 
 .main-header
@@ -38,32 +39,212 @@
     align-items center
     display flex
     &__link
-      linkHover($primary)
+      display inline-block
+      & > a
+        padding 2.5rem 0
+        position relative
+        &:before
+          background-color $primary
+          bottom 0
+          content ''
+          height 1px
+          left 0
+          position absolute
+          transition $transition
+          width 0
+        &:hover
+          &:before
+            width 100%
+      &:hover
+        .dropdown
+          opacity 1
+          pointer-events initial
       &:not(:last-child)
         margin-right 1em
+    &__container
+      flex-shrink 0
 
+.dropdown
+  background-color #fff
+  border-top $border
+  bottom -6.4rem
+  left 0
+  opacity 0
+  position absolute
+  pointer-events none
+  transition $transition
+  width 100%
+  &__container
+    display flex
+    // justify-content center
+  &__link
+    a
+      display block
+      margin-right 1.5em
+      padding 1.5em 0
+      transition $transition
+      &:hover
+        color $primary
+
+
+
+
+.burger
+  align-items center
+  // background-color teal
+  display none
+  position relative
+  size(2.4rem)
+  transition $transition
+  transform translateY(-4px)
+  width 2.4rem
+  &:before,
+  &:after
+    background-color $main
+    content ''
+    height 2px
+    position absolute
+    // top 0
+    transition all .3s ease
+    width 2.4rem
+  &:before
+    top 6px
+  &:after
+    top 14px
+  &_active
+    transform translate(8px, -4px)
+    &:before
+      transform rotate(45deg) translateY(6px)
+      width 2.4rem
+    &:after
+      transform rotate(-45deg) translateY(-6px)
+      width 2.4rem
+
+
+.mobile-menu
+  background-color #fff
+  left -100%
+  height 100%
+  padding 2.4rem
+  position fixed
+  top 0
+  transition all 1s $bezier
+  width 80%
+  z-index 300
+  &__item
+    // border-bottom $border
+    opacity 0
+    padding-bottom 1rem
+    position relative
+    transition $transition2
+    transform translateY(-1.5rem)
+    &:after
+      background-color #eee
+      bottom 0
+      content ''
+      height 1px
+      position absolute
+      transition $transition2
+      width 0
+    for num in (1..12)
+      &:nth-child({num})
+        transition-delay (num / 10) s
+    &:not(:last-child)
+      margin-bottom 1.4rem
+  &__link
+    font-size 1.4rem
+    font-weight 400
+    margin-bottom .7em
+    &_big
+      font-size 1.4rem
+      font-weight 700
+      margin-bottom .4em
+      letter-spacing .5px
+      text-transform uppercase
+    &-section
+      display flex
+      justify-content space-between
+      width 100%
+    &-container
+      display none
+      margin-bottom .5em
+      margin-top .5em
+  &-accordion
+    position relative
+    .mobile-menu__link_big
+      display inline-block
+      &:after
+        content url('../../img/mobile-accordion.svg')
+        display inline-block
+        position absolute
+        transform translateY(-2px)
+        transition $transition
+        top 0
+        right 0
+      &_active
+        &:after
+          transform rotate(180deg)
+  &__phone-container
+    align-items center
+    display flex
+    margin-bottom 2rem
+  &__phone
+    color #fff
+    font-size 2rem
+    margin-right .5em
+  &_active
+    left 0
+    .logo
+      svg
+        #logo-mediaheads
+          fill #fff
+        #logo-sub
+          fill #fff
+    .mobile-menu
+      &__item
+        opacity 1
+        transform none
+        &:after
+          width 100%
+
+
+@media(max-width 1200px)
+  .main-header
+    .logo
+      margin-right 2rem
+      max-width 12rem
+    &__phone
+      margin-right 1em
+    .btn
+      padding 1.2rem .8rem
 
 @media(max-width 1000px)
   .main-header
     margin-bottom 6.4rem
+    .logo
+      max-width 12rem
     .nav
       background-color #fff
       border-top $border
       bottom -4.8rem
       height 4.8rem
       left 0
+      overflow-x scroll
       padding-left 1.2rem
+      padding-right 2rem
       position absolute
       width 100%
-    &__phone
-      margin-right 0
+      -webkit-overflow-scrolling touch
+      &__link
+        flex-shrink 0
+      &__link:last-child
+        margin-right 2rem
     .btn
       display none
       // background-color transparent
       // color $primary
-      // padding 0
-
-
+  .burger
+    display flex
 
 
 

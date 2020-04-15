@@ -2,17 +2,20 @@ extends layout.pug
 
 block content
 
+
+  .inner-header
+    .inner-header__container
+      .wrapper
+        section.breadcrumbs
+          .breadcrumbs-list
+            .breadcrumbs-item
+              a(href="/" title="Главная").breadcrumbs-text Главная
+            .breadcrumbs-item
+              .breadcrumbs-text Услуги
+        h1 Каталог
+
+
   .wrapper
-    section.breadcrumbs
-      .breadcrumbs-list
-        .breadcrumbs-item
-          a(href="/" title="Главная").breadcrumbs-text Главная
-        .breadcrumbs-item
-          .breadcrumbs-text Услуги
-
-    h1 Каталог
-
-
     section.section
       .catalog-items.grid
         .col.col--xl-4.col--sm-6
@@ -59,7 +62,7 @@ block content
 
   section.help
     .wrapper
-      h2 Нужна помощь в выборе или остались вопросы?<br>Мы перезвоним вам в течение 15 минут!
+      h2 Нужна помощь в выборе или остались вопросы? <br>Мы перезвоним вам в течение 15 минут!
       form.form
         .form-input
           input(type="tel" placeholder="Номер телефона").phone-mask

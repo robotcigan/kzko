@@ -1,549 +1,179 @@
-h1 index
+extends layout.pug
 
-//- include header.html
+block content
 
+  section.section.section-hero
+    .hero
+      .hero__video-container
+        video.hero__video(allow='autoplay', loop='', muted='')
+          source(src='./bitrix/templates/ugsp-gaz/img/video/main-video.mp4', type='')
+        .hero__box
+      .hero__align
+        .wrapper
+          .hero__container
+            h1.hero__title Краснодарский завод котельного оборудования
+            p.hero__subtitle
+              | Наша компания эксперт в строительстве котельных, комплексном проектировании, пусконаладке, монтаже оборудования и сдаче в эксплуатацию под ключ
+            a.btn(href='') Каталог продукции
 
-//- block content
-
-//-   <section class="section section-hero">
-//-     <div class="hero">
-//-       <div class="hero__video-container">
-//-         <video class="hero__video" allow="autoplay" loop muted>
-//-           <source src="./bitrix/templates/ugsp-gaz/img/video/main-video.mp4" type="">
-//-         </video>
-//-         <div class="hero__box"></div>
-//-       </div>
-//-       <div class="hero__align">
-//-         <div class="wrapper">
-//-           <div class="hero__container">
-//-             <h1 class="hero__title">Краснодарский завод котельного оборудования</h1>
-//-             <p class="hero__subtitle">Наша компания эксперт в строительстве котельных, комплексном проектировании, пусконаладке, монтаже оборудования и сдаче в эксплуатацию под ключ</p>
-//-             <a href="" class="btn">Каталог продукции</a>
-//-           </div>
-//-         </div>
-//-       </div>
-//-     </div>
-//-   </section>
-
-
-//-   <section class="section section-prems">
-//-     <div class="wrapper">
-//-       <div class="grid">
-
-//-         <div class="col col--sm-4">
-//-           <a href="" class="prem">
-//-             <div class="prem__img">
-//-               <img src="./img/prem-1.jpg">
-//-             </div>
-//-             <div class="prem__container">
-//-               <div class="prem__title">Пусконаладочные работы</div>
-//-               <p class="prem__subtitle">промышленных парогенераторов, котельных, тепловых пунктов и другое</p>
-//-             </div>
-//-           </a>
-//-         </div>
-//-         <div class="col col--sm-4">
-//-           <a href="" class="prem">
-//-             <div class="prem__img">
-//-               <img src="./img/prem-2.jpg">
-//-             </div>
-//-             <div class="prem__container">
-//-               <div class="prem__title">Лизинг</div>
-//-               <p class="prem__subtitle">условия приобретения котельных и оборудования</p>
-//-             </div>
-//-           </a>
-//-         </div>
-//-         <div class="col col--sm-4">
-//-           <a href="" class="prem">
-//-             <div class="prem__img">
-//-               <img src="./img/prem-3.jpg">
-//-             </div>
-//-             <div class="prem__container">
-//-               <div class="prem__title">Сервисное обслуживание</div>
-//-               <p class="prem__subtitle">техосмотр, контроль техсостояния, диагностика, осмотр и замена механизмов</p>
-//-             </div>
-//-           </a>
-//-         </div>
-
-//-       </div>
-//-     </div>
-//-   </section>
-
-//-   <section class="section section-categories">
-//-     <div class="wrapper">
-//-       <h2>Каталог товаров</h2>
-//-       <div class="categoires grid">
-
-//-         <div class="col col--sm-4">
-//-           <a href="" class="category">
-//-             <div class="category__container">
-//-               <div class="category__title">Паровые котлы (парогенераторы)</div>
-//-               <div class="category__number">6 товаров</div>
-//-             </div>
-//-             <img src="./img/category-1.png" class="category__img"></img>
-//-           </a>
-//-         </div>
-//-         <div class="col col--sm-4">
-//-           <a href="" class="category">
-//-             <div class="category__container">
-//-               <div class="category__title">Котельные</div>
-//-               <div class="category__number">6 товаров</div>
-//-             </div>
-//-             <img src="./img/category-2.png" class="category__img"></img>
-//-           </a>
-//-         </div>
-//-         <div class="col col--sm-4">
-//-           <a href="" class="category">
-//-             <div class="category__container">
-//-               <div class="category__title">Тепловые пункты</div>
-//-               <div class="category__number">6 товаров</div>
-//-             </div>
-//-             <img src="./img/category-3.png" class="category__img"></img>
-//-           </a>
-//-         </div>
-//-         <div class="col col--sm-4">
-//-           <a href="" class="category">
-//-             <div class="category__container">
-//-               <div class="category__title">Дымовые трубы</div>
-//-               <div class="category__number">6 товаров</div>
-//-             </div>
-//-             <img src="./img/category-4.png" class="category__img"></img>
-//-           </a>
-//-         </div>
-//-         <div class="col col--sm-4">
-//-           <a href="" class="category">
-//-             <div class="category__container">
-//-               <div class="category__title">Деаэраторы</div>
-//-               <div class="category__number">6 товаров</div>
-//-             </div>
-//-             <img src="./img/category-5.png" class="category__img"></img>
-//-           </a>
-//-         </div>
-//-         <div class="col col--sm-4">
-//-           <a href="" class="category">
-//-             <div class="category__container">
-//-               <div class="category__title">Бесплатные услуги и акции</div>
-//-               <div class="category__number">6 товаров</div>
-//-             </div>
-//-             <img src="./img/category-6.png" class="category__img"></img>
-//-           </a>
-//-         </div>
-
-//-       </div>
-//-     </div>
-//-   </section>
+  //- section.section.section-prems
+  //-   .wrapper
+  //-     .grid
+  //-       .col.col--sm-4
+  //-         a.prem(href='')
+  //-           .prem__img
+  //-             img(src='./img/prem-1.jpg')
+  //-           .prem__container
+  //-             .prem__title Пусконаладочные работы
+  //-             p.prem__subtitle промышленных парогенераторов, котельных, тепловых пунктов и другое
+  //-       .col.col--sm-4
+  //-         a.prem(href='')
+  //-           .prem__img
+  //-             img(src='./img/prem-2.jpg')
+  //-           .prem__container
+  //-             .prem__title Лизинг
+  //-             p.prem__subtitle условия приобретения котельных и оборудования
+  //-       .col.col--sm-4
+  //-         a.prem(href='')
+  //-           .prem__img
+  //-             img(src='./img/prem-3.jpg')
+  //-           .prem__container
+  //-             .prem__title Сервисное обслуживание
+  //-             p.prem__subtitle техосмотр, контроль техсостояния, диагностика, осмотр и замена механизмов
 
 
-//-   <section class="section fos">
-//-     <div class="wrapper">
-//-       <div class="grid">
-//-         <div class="col col--sm-6">
-
-//-           <div class="fos__left">
-//-             <h2 class="fos__title">Разработаем котельную под ключ за 2 месяца</h2>
-//-             <p class="fos__subtitle">Разработаем индивидуальный проект для вашей котельной бесплатно. Оставьте телефон и мы свяжемся с вами, чтобы уточнить параметры.</p>
-//-             <form class="fos__form">
-//-               <div class="form-input">
-//-                 <input type="tel" class="phone">
-//-               </div>
-//-               <div class="btn">Получить консультацию</div>
-//-             </form>
-//-             <small>Нажимая кнопку «Получить консультацию» Вы соглашаетесь на обработку ваших персональных данных</small>
-//-           </div>
-
-//-         </div>
-//-         <div class="col col--sm-6">
-
-//-           <div class="fos__right">
-//-             <div class="fos__img">
-//-               <img src="./dist/img/fos-img.png">
-//-             </div>
-//-           </div>
-
-//-         </div>
-//-       </div>
-//-     </div>
-//-   </section>
-
-//-   <div class="section sectieon-sldier3" data-ajax-language="6">
-//-         <div class="container">
-//-         <div class="section3-top" data-stagger="" style="opacity: 0; transform: matrix(1, 0, 0, 1, 0, 20);">
-//-           <!-- <p class="title">Популярные товары</p> -->
-//-           <h2>Популярные товары</h2>
-//-                 </div>
-//-         <div class="popular-slider">
-//-           <div class="slider-elem-wrap third-slider-elements">
-//-             <div class="slick-button-prev">
-//-               <svg width="18" height="12" viewBox="0 0 18 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-//-                 <path d="M17.2208 5.16274H2.66019L6.13456 1.42922C6.43894 1.10235 6.43894 0.572112 6.13456 0.245295C5.83019 -0.0817649 5.33672 -0.0817649 5.03279 0.245295L0.228283 5.40794C-0.0760942 5.73481 -0.0760942 6.2651 0.228283 6.59187L5.03279 11.7548C5.18494 11.9183 5.38433 12 5.58368 12C5.78303 12 5.98242 11.9183 6.13456 11.7548C6.43894 11.4279 6.43894 10.8976 6.13456 10.5709L2.66019 6.83716H17.2208C17.6511 6.83716 18 6.46228 18 5.99993C18 5.53758 17.6511 5.16274 17.2208 5.16274Z" fill="white"></path>
-//-               </svg>
-//-             </div>
-//-             <div class="slick-button-next">
-//-               <svg width="18" height="12" viewBox="0 0 18 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-//-                 <path d="M0.7792 6.83726L15.3398 6.83726L11.8654 10.5708C11.5611 10.8977 11.5611 11.4279 11.8654 11.7547C12.1698 12.0818 12.6633 12.0818 12.9672 11.7547L17.7717 6.59206C18.0761 6.26519 18.0761 5.7349 17.7717 5.40813L12.9672 0.2452C12.8151 0.0817002 12.6157 0 12.4163 0C12.217 0 12.0176 0.0817002 11.8654 0.2452C11.5611 0.5721 11.5611 1.1024 11.8654 1.4291L15.3398 5.16284L0.7792 5.16284C0.3489 5.16284 0 5.53772 0 6.00007C0 6.46242 0.3489 6.83726 0.7792 6.83726Z" fill="white"></path>
-//-               </svg>
-//-             </div>
-//-           </div>
-//-           <div class="popular-list slick-initialized slick-slider"><button type="button" data-role="none" class="slick-prev slick-arrow" aria-label="Previous" role="button" style="display: block;">Previous</button>
-//-                             <div aria-live="polite" class="slick-list draggable"><div class="slick-track" style="opacity: 1; width: 6015px; transform: translate3d(-1203px, 0px, 0px);" role="listbox"><a href="http://kzko.thisdesign.ru/catalog/aktsii/besplatnaya-dostavka/" class="popular-item slick-slide slick-cloned" data-stagger="" data-slick-index="-3" aria-hidden="true" style="width: 369px;" tabindex="-1">
-//-                     <p class="popular-title">Акции</p>
-//-                                       <div class="popular-img-wrap">
-//-                       <img src="./Модульные котельные и паровые промышленные котлы_files/d6beb8c5dacbfd41c59f27f245e11215.jpg" alt="" class="popular-img">
-//-                     </div>
-//-                     <p class="popular-name">Бесплатная доставка!</p>
-//-                     <div class="arrow-wrap">
-//-                       <img src="./Модульные котельные и паровые промышленные котлы_files/slider-arrow.png" alt="" class="popular-item-arrow">
-//-                     </div>
-//-                   </a><a href="http://kzko.thisdesign.ru/catalog/aktsii/besplatnaya-puskonaladka-dlya-vas/" class="popular-item slick-slide slick-cloned" data-stagger="" data-slick-index="-2" aria-hidden="true" style="width: 369px;" tabindex="-1">
-//-                     <p class="popular-title">Акции</p>
-//-                                       <div class="popular-img-wrap">
-//-                       <img src="./Модульные котельные и паровые промышленные котлы_files/2fe96aa7931f22cf5ec8c0496345f434.jpg" alt="" class="popular-img">
-//-                     </div>
-//-                     <p class="popular-name">Бесплатная пусконаладка!</p>
-//-                     <div class="arrow-wrap">
-//-                       <img src="./Модульные котельные и паровые промышленные котлы_files/slider-arrow.png" alt="" class="popular-item-arrow">
-//-                     </div>
-//-                   </a><a href="http://kzko.thisdesign.ru/catalog/aktsii/besplatnyy-shef-montazh-itp-i-btp/" class="popular-item slick-slide slick-cloned" data-stagger="" data-slick-index="-1" aria-hidden="true" style="width: 369px;" tabindex="-1">
-//-                     <p class="popular-title">Акции</p>
-//-                                       <div class="popular-img-wrap">
-//-                       <img src="./Модульные котельные и паровые промышленные котлы_files/05f6b4f22111636d4c4ced4ab7feb832.jpg" alt="" class="popular-img">
-//-                     </div>
-//-                     <p class="popular-name">Бесплатный шеф-монтаж ИТП!</p>
-//-                     <div class="arrow-wrap">
-//-                       <img src="./Модульные котельные и паровые промышленные котлы_files/slider-arrow.png" alt="" class="popular-item-arrow">
-//-                     </div>
-//-                   </a><a href="http://kzko.thisdesign.ru/catalog/seriya-eco-par-0-7-bar/0-7-bar-100-10000-kg-ch-/" class="popular-item slick-slide slick-current slick-active" data-stagger="" data-slick-index="0" aria-hidden="false" style="width: 369px; opacity: 0; transform: matrix(1, 0, 0, 1, 0, 20);" tabindex="-1" role="option" aria-describedby="slick-slide00">
-//-                     <p class="popular-title">Серия ECO-PAR 0,7 бар</p>
-//-                                       <div class="popular-img-wrap">
-//-                       <img src="./Модульные котельные и паровые промышленные котлы_files/c68faa4c3335e084a22563f6c74a5a93.png" alt="" class="popular-img">
-//-                     </div>
-//-                     <p class="popular-name">0,7 бар 100 - 10000  кг/ч</p>
-//-                     <div class="arrow-wrap">
-//-                       <img src="./Модульные котельные и паровые промышленные котлы_files/slider-arrow.png" alt="" class="popular-item-arrow">
-//-                     </div>
-//-                   </a><a href="http://kzko.thisdesign.ru/catalog/seriya-eco-par-0-7-bar/0-7-bar-100-2000-kg-ch/" class="popular-item slick-slide slick-active" data-stagger="" data-slick-index="1" aria-hidden="false" style="width: 369px; opacity: 0; transform: matrix(1, 0, 0, 1, 0, 20);" tabindex="-1" role="option" aria-describedby="slick-slide01">
-//-                     <p class="popular-title">Серия ECO-PAR 0,7 бар</p>
-//-                                       <div class="popular-img-wrap">
-//-                       <img src="./Модульные котельные и паровые промышленные котлы_files/6aa011e74779841171e483398b855b6a.png" alt="" class="popular-img">
-//-                     </div>
-//-                     <p class="popular-name">0,7 бар 100 - 2000 кг/ч</p>
-//-                     <div class="arrow-wrap">
-//-                       <img src="./Модульные котельные и паровые промышленные котлы_files/slider-arrow.png" alt="" class="popular-item-arrow">
-//-                     </div>
-//-                   </a><a href="http://kzko.thisdesign.ru/catalog/seriya-eco-par-10-bar/10-bar-100-2000-kg-ch/" class="popular-item slick-slide slick-active" data-stagger="" data-slick-index="2" aria-hidden="false" style="width: 369px; opacity: 0; transform: matrix(1, 0, 0, 1, 0, 20);" tabindex="-1" role="option" aria-describedby="slick-slide02">
-//-                     <p class="popular-title">Серия ECO-PAR 10 бар</p>
-//-                                       <div class="popular-img-wrap">
-//-                       <img src="./Модульные котельные и паровые промышленные котлы_files/f3c9448c783f9f9dc0f5c39a0f1502ea.png" alt="" class="popular-img">
-//-                     </div>
-//-                     <p class="popular-name">10 бар 100 - 2000 кг/ч</p>
-//-                     <div class="arrow-wrap">
-//-                       <img src="./Модульные котельные и паровые промышленные котлы_files/slider-arrow.png" alt="" class="popular-item-arrow">
-//-                     </div>
-//-                   </a><a href="http://kzko.thisdesign.ru/catalog/seriya-eco-par-10-bar/10-bar-150-10000-kg-ch-/" class="popular-item slick-slide" data-stagger="" data-slick-index="3" aria-hidden="true" style="width: 369px; opacity: 0; transform: matrix(1, 0, 0, 1, 0, 20);" tabindex="-1" role="option" aria-describedby="slick-slide03">
-//-                     <p class="popular-title">Серия ECO-PAR 10 бар</p>
-//-                                       <div class="popular-img-wrap">
-//-                       <img src="./Модульные котельные и паровые промышленные котлы_files/a332cd044aab55c829b607ae65b7202d.png" alt="" class="popular-img">
-//-                     </div>
-//-                     <p class="popular-name">10 бар 150-10000  кг/ч</p>
-//-                     <div class="arrow-wrap">
-//-                       <img src="./Модульные котельные и паровые промышленные котлы_files/slider-arrow.png" alt="" class="popular-item-arrow">
-//-                     </div>
-//-                   </a><a href="http://kzko.thisdesign.ru/catalog/seriya-eco-par-16-bar/16-bar-100-2000-kg-ch/" class="popular-item slick-slide" data-stagger="" data-slick-index="4" aria-hidden="true" style="width: 369px; opacity: 0; transform: matrix(1, 0, 0, 1, 0, 20);" tabindex="-1" role="option" aria-describedby="slick-slide04">
-//-                     <p class="popular-title">Серия ECO-PAR 16 бар</p>
-//-                                       <div class="popular-img-wrap">
-//-                       <img src="./Модульные котельные и паровые промышленные котлы_files/1826049a41d78ceb865c14ba17682ca4.png" alt="" class="popular-img">
-//-                     </div>
-//-                     <p class="popular-name">16 бар 100 - 2000  кг/ч</p>
-//-                     <div class="arrow-wrap">
-//-                       <img src="./Модульные котельные и паровые промышленные котлы_files/slider-arrow.png" alt="" class="popular-item-arrow">
-//-                     </div>
-//-                   </a><a href="http://kzko.thisdesign.ru/catalog/seriya-eco-par-16-bar/16-bar-1000-10000-kg-ch-/" class="popular-item slick-slide" data-stagger="" data-slick-index="5" aria-hidden="true" style="width: 369px; opacity: 0; transform: matrix(1, 0, 0, 1, 0, 20);" tabindex="-1" role="option" aria-describedby="slick-slide05">
-//-                     <p class="popular-title">Серия ECO-PAR 16 бар</p>
-//-                                       <div class="popular-img-wrap">
-//-                       <img src="./Модульные котельные и паровые промышленные котлы_files/8f44dc606e53f824b6b5309b7987d8f8.png" alt="" class="popular-img">
-//-                     </div>
-//-                     <p class="popular-name">16 бар 1000 - 10000 кг/ч</p>
-//-                     <div class="arrow-wrap">
-//-                       <img src="./Модульные котельные и паровые промышленные котлы_files/slider-arrow.png" alt="" class="popular-item-arrow">
-//-                     </div>
-//-                   </a><a href="http://kzko.thisdesign.ru/catalog/aktsii/besplatnaya-dostavka/" class="popular-item slick-slide" data-stagger="" data-slick-index="6" aria-hidden="true" style="width: 369px; opacity: 0; transform: matrix(1, 0, 0, 1, 0, 20);" tabindex="-1" role="option" aria-describedby="slick-slide06">
-//-                     <p class="popular-title">Акции</p>
-//-                                       <div class="popular-img-wrap">
-//-                       <img src="./Модульные котельные и паровые промышленные котлы_files/d6beb8c5dacbfd41c59f27f245e11215.jpg" alt="" class="popular-img">
-//-                     </div>
-//-                     <p class="popular-name">Бесплатная доставка!</p>
-//-                     <div class="arrow-wrap">
-//-                       <img src="./Модульные котельные и паровые промышленные котлы_files/slider-arrow.png" alt="" class="popular-item-arrow">
-//-                     </div>
-//-                   </a><a href="http://kzko.thisdesign.ru/catalog/aktsii/besplatnaya-puskonaladka-dlya-vas/" class="popular-item slick-slide" data-stagger="" data-slick-index="7" aria-hidden="true" style="width: 369px; opacity: 0; transform: matrix(1, 0, 0, 1, 0, 20);" tabindex="-1" role="option" aria-describedby="slick-slide07">
-//-                     <p class="popular-title">Акции</p>
-//-                                       <div class="popular-img-wrap">
-//-                       <img src="./Модульные котельные и паровые промышленные котлы_files/2fe96aa7931f22cf5ec8c0496345f434.jpg" alt="" class="popular-img">
-//-                     </div>
-//-                     <p class="popular-name">Бесплатная пусконаладка!</p>
-//-                     <div class="arrow-wrap">
-//-                       <img src="./Модульные котельные и паровые промышленные котлы_files/slider-arrow.png" alt="" class="popular-item-arrow">
-//-                     </div>
-//-                   </a><a href="http://kzko.thisdesign.ru/catalog/aktsii/besplatnyy-shef-montazh-itp-i-btp/" class="popular-item slick-slide" data-stagger="" data-slick-index="8" aria-hidden="true" style="width: 369px; opacity: 0; transform: matrix(1, 0, 0, 1, 0, 20);" tabindex="-1" role="option" aria-describedby="slick-slide08">
-//-                     <p class="popular-title">Акции</p>
-//-                                       <div class="popular-img-wrap">
-//-                       <img src="./Модульные котельные и паровые промышленные котлы_files/05f6b4f22111636d4c4ced4ab7feb832.jpg" alt="" class="popular-img">
-//-                     </div>
-//-                     <p class="popular-name">Бесплатный шеф-монтаж ИТП!</p>
-//-                     <div class="arrow-wrap">
-//-                       <img src="./Модульные котельные и паровые промышленные котлы_files/slider-arrow.png" alt="" class="popular-item-arrow">
-//-                     </div>
-//-                   </a><a href="http://kzko.thisdesign.ru/catalog/seriya-eco-par-0-7-bar/0-7-bar-100-10000-kg-ch-/" class="popular-item slick-slide slick-cloned" data-stagger="" data-slick-index="9" aria-hidden="true" style="width: 369px;" tabindex="-1">
-//-                     <p class="popular-title">Серия ECO-PAR 0,7 бар</p>
-//-                                       <div class="popular-img-wrap">
-//-                       <img src="./Модульные котельные и паровые промышленные котлы_files/c68faa4c3335e084a22563f6c74a5a93.png" alt="" class="popular-img">
-//-                     </div>
-//-                     <p class="popular-name">0,7 бар 100 - 10000  кг/ч</p>
-//-                     <div class="arrow-wrap">
-//-                       <img src="./Модульные котельные и паровые промышленные котлы_files/slider-arrow.png" alt="" class="popular-item-arrow">
-//-                     </div>
-//-                   </a><a href="http://kzko.thisdesign.ru/catalog/seriya-eco-par-0-7-bar/0-7-bar-100-2000-kg-ch/" class="popular-item slick-slide slick-cloned" data-stagger="" data-slick-index="10" aria-hidden="true" style="width: 369px;" tabindex="-1">
-//-                     <p class="popular-title">Серия ECO-PAR 0,7 бар</p>
-//-                                       <div class="popular-img-wrap">
-//-                       <img src="./Модульные котельные и паровые промышленные котлы_files/6aa011e74779841171e483398b855b6a.png" alt="" class="popular-img">
-//-                     </div>
-//-                     <p class="popular-name">0,7 бар 100 - 2000 кг/ч</p>
-//-                     <div class="arrow-wrap">
-//-                       <img src="./Модульные котельные и паровые промышленные котлы_files/slider-arrow.png" alt="" class="popular-item-arrow">
-//-                     </div>
-//-                   </a><a href="http://kzko.thisdesign.ru/catalog/seriya-eco-par-10-bar/10-bar-100-2000-kg-ch/" class="popular-item slick-slide slick-cloned" data-stagger="" data-slick-index="11" aria-hidden="true" style="width: 369px;" tabindex="-1">
-//-                     <p class="popular-title">Серия ECO-PAR 10 бар</p>
-//-                                       <div class="popular-img-wrap">
-//-                       <img src="./Модульные котельные и паровые промышленные котлы_files/f3c9448c783f9f9dc0f5c39a0f1502ea.png" alt="" class="popular-img">
-//-                     </div>
-//-                     <p class="popular-name">10 бар 100 - 2000 кг/ч</p>
-//-                     <div class="arrow-wrap">
-//-                       <img src="./Модульные котельные и паровые промышленные котлы_files/slider-arrow.png" alt="" class="popular-item-arrow">
-//-                     </div>
-//-                   </a></div></div>
-                                
-                                
-                                
-                                
-                                
-                                
-                                
-                                
-//-                         <button type="button" data-role="none" class="slick-next slick-arrow" aria-label="Next" role="button" style="display: block;">Next</button></div>
-//-         </div>
-//-       </div>
-//-     </div>
-//-   <div class="section sectieon-sldier4" data-ajax-language="7">
-//-     <div class="container">
-//-     <h2>Наши преимущества</h2>
-//-     <!-- <p class="title" data-stagger="" style="opacity: 0; transform: matrix(1, 0, 0, 1, 0, 20);">Наши преимущества</p> -->
-//-     <div class="screen4-wrap">
-//-       <div class="screen4-left">
-//-         <div class="left-text-wrap" data-stagger="" style="opacity: 0; transform: matrix(1, 0, 0, 1, 0, 20);">
-//-           <p>
-//-      Мы предлагаем наиболее экономичные и эффективные решения в сфере теплоэнергетики за счет значительного опыта в проектировании и реализации теплоэнергетических систем. Чтобы обеспечить бесперебойную и экономичную работу теплоэнергетических установок, мы уделяем особое внимание разработке и производству целого ряда продуктов для систем модульных котельных. Нашей компанией&nbsp;заключен ряд прямых контрактов с европейскими производителями навесного оборудования, что помогает экономить полезное пространство.
-//-   </p>
-//-   <p>
-//-      Многолетнее плодотворное сотрудничество на взаимовыгодной основе подтверждено положительными отзывами и рекомендациями наших партнеров. Производимое нашим заводом котельное оборудование проходит регламентированные технические испытания, поэтому отвечает всем требованиям безопасности. Это не только подтверждено сертификатами качества и высокими оценками экспертов, но и успешной многолетней практикой и положительными отзывами наших клиентов.
-//-   </p>
-//-   <p>
-//-   </p>
-//-   <p>
-//-     Каждому клиенту,&nbsp;обратившемуся&nbsp;к нам, предоставляется весь комплекс услуг в сфере теплоэнергетических систем "под ключ". С нами Вы не только значительно экономите время и деньги, но и получаете действительно достойный результат.&nbsp;
-//-   </p>
-//-   <p>
-//-     Мы работаем по всей России и ряду стран&nbsp;СНГ.&nbsp;
-//-   </p>
-//-   <p>
-//-      Создавая тепло, мы гарантируем качество!
-//-   </p>      </div>
-//-         <p class="read-more">Развернуть текст</p>
-//-         <div class="screen4-left-bottom">
-//-           <div class="bottom-block" data-stagger="" style="opacity: 0; transform: matrix(1, 0, 0, 1, 0, 20);">
-//-             <p class="bottom-block-title"><b>7 лет</b></p>
-//-             <p class="bottom-block-text">предоставляем комплексные решения в теплоэнергетике</p>
-//-           </div>
-//-           <div class="bottom-block" data-stagger="" style="opacity: 0; transform: matrix(1, 0, 0, 1, 0, 20);">
-//-             <p class="bottom-block-title"><b>50 проектов</b></p>
-//-             <p class="bottom-block-text">реализуется ежегодно в&nbsp;регионах России и СНГ</p>
-//-           </div>
-//-         </div>
-//-       </div>
-//-       <div class="screen4-right">
-//-         <div class="img-wrap" data-stagger="" style="opacity: 0; transform: matrix(1, 0, 0, 1, 0, 20);">
-//-           <img src="./Модульные котельные и паровые промышленные котлы_files/document.png" alt="" class="document">     </div>
-//-         <div class="btn-wrap" data-stagger="" style="opacity: 0; transform: matrix(1, 0, 0, 1, 0, 20);">
-//-                   <a href="http://kzko.thisdesign.ru/about/" class="btn main-btn">Наши преимущества</a>
-//-         </div>
-//-       </div>
-//-     </div>
-//-   </div></div>
-
-//-   <section class="section section-map">
-//-     <div class="wrapper">
-//-       <h2>География проектов</h2>
-//-       <p>Работаем по всей России, а так же в некоторых странах СНГ, например, Казахстан, Украина и Беларусь</p>
-//-       <div class="map">
-//-         <img src="./img/russia3.svg">
-//-       </div>
-//-     </div>
-//-   </section>
-
-//-   <section class="section sectieon-sldier5" data-ajax-language="8">
-//-         <div class="container">
-//-         <div class="section5-top" data-stagger="" style="opacity: 0; transform: matrix(1, 0, 0, 1, 0, 20);">
-//-           <!-- <p class="title">Новости</p> -->
-//-           <h2>Новости</h2>
-//-           <a href="http://kzko.thisdesign.ru/news/" class="all-news"></a>
-//-         </div>
-//-         <div class="news-wrap">
-//-           <div class="news-left">             <a href="http://kzko.thisdesign.ru/news/otgruzka-eco-par-200-st-novovelichkovskaya/" class="main-news" data-stagger="" style="opacity: 0; transform: matrix(1, 0, 0, 1, 0, 20);">
-//-                   <div class="news-img-wrap">
-//-                     <img src="./Модульные котельные и паровые промышленные котлы_files/a79db1a2131eb63deb2180276bd90b71.jpg" alt="" class="news-img">
-//-                   </div>
-//-                   <div class="news-text-wrap">
-//-                     <p class="news-date">29 июля 2019</p>
-//-                     <p class="news-name">Отгрузка  ECO-PAR-200, ст. Нововеличковская</p>
-//-                     <p class="news-read"></p>
-//-                   </div>
-                  
-//-                 </a>
-//-               </div><div class="news-right"><div class="news-list">             <a href="http://kzko.thisdesign.ru/news/otgruzka-kp-eco-par-600-g-sankt-peterburg/" class="news-item" data-stagger="" style="opacity: 0; transform: matrix(1, 0, 0, 1, 0, 20);">
-//-                   <div class="news-img-wrap">
-//-                     <img src="./Модульные котельные и паровые промышленные котлы_files/374c9bd86e128b43b799372f8b52b978.jpg" alt="" class="news-img">
-//-                   </div>
-//-                   <div class="news-text-wrap">
-//-                     <p class="news-date">29 июля 2019</p>
-//-                     <p class="news-name">Отгрузка КП ECO-PAR-600, г. Санкт-Петербург</p>
-//-                     <p class="news-read"></p>
-//-                   </div>
-                  
-//-                 </a>
-//-                             <a href="http://kzko.thisdesign.ru/news/otgruzka-kp-eco-par-900-v-gornolyzhnyy-kompleks-prielbruse/" class="news-item" data-stagger="" style="opacity: 0; transform: matrix(1, 0, 0, 1, 0, 20);">
-//-                   <div class="news-img-wrap">
-//-                     <img src="./Модульные котельные и паровые промышленные котлы_files/83c7075925be7fcd7dfa848a2bc6dcfd.jpeg" alt="" class="news-img">
-//-                   </div>
-//-                   <div class="news-text-wrap">
-//-                     <p class="news-date">29 июля 2019</p>
-//-                     <p class="news-name">Отгрузка КП ECO-PAR-900 в Горнолыжный комплекс, Приэльбрусье</p>
-//-                     <p class="news-read"></p>
-//-                   </div>
-                  
-//-                 </a>
-//-                             <a href="http://kzko.thisdesign.ru/news/otkrytie-filiala-energo-standart-v-samare/" class="news-item" data-stagger="" style="opacity: 0; transform: matrix(1, 0, 0, 1, 0, 20);">
-//-                   <div class="news-img-wrap">
-//-                     <img src="./Модульные котельные и паровые промышленные котлы_files/13ccc395a7e3ab343668c0f6c7dd63a8.jpg" alt="" class="news-img">
-//-                   </div>
-//-                   <div class="news-text-wrap">
-//-                     <p class="news-date">23 июля 2019</p>
-//-                     <p class="news-name">Открытие филиала "Энерго-Стандарт" в Самаре</p>
-//-                     <p class="news-read"></p>
-//-                   </div>
-                  
-//-                 </a>
-//-                       </div></div>
-//-         </div>
-//-       </div>
-//-     </section>
-
-//-   <section class="section section-partners fade-container">
-//-     <div class="wrapper">
-//-       <h2>Партнеры</h2>
-//-       <div class="grid partners">
-//-         <div class="col col--xs-6 col--sm-2 partner fade-item">
-//-           <img src="./img/partner-2.png">
-//-         </div>
-//-         <div class="col col--xs-6 col--sm-2 partner fade-item">
-//-           <img src="./img/partner-1.png">
-//-         </div>
-//-         <div class="col col--xs-6 col--sm-2 partner fade-item">
-//-           <img src="./img/partner-3.png">
-//-         </div>
-//-         <div class="col col--xs-6 col--sm-2 partner fade-item">
-//-           <img src="./img/partner-4.png">
-//-         </div>
-//-         <div class="col col--xs-6 col--sm-2 partner fade-item">
-//-           <img src="./img/partner-5.png">
-//-         </div>
-//-         <div class="col col--xs-6 col--sm-2 partner fade-item">
-//-           <img src="./img/partner-6.png">
-//-         </div>
-//-         <div class="col col--xs-6 col--sm-2 partner fade-item">
-//-           <img src="./img/partner-7.png">
-//-         </div>
-//-         <div class="col col--xs-6 col--sm-2 partner fade-item">
-//-           <img src="./img/partner-8.png">
-//-         </div>
-//-         <div class="col col--xs-6 col--sm-2 partner fade-item">
-//-           <img src="./img/partner-9.png">
-//-         </div>
-//-         <div class="col col--xs-6 col--sm-2 partner fade-item">
-//-           <img src="./img/partner-10.png">
-//-         </div>
-//-         <div class="col col--xs-6 col--sm-2 partner fade-item">
-//-           <img src="./img/partner-11.png">
-//-         </div>
-//-         <div class="col col--xs-6 col--sm-2 partner fade-item">
-//-           <img src="./img/partner-12.png">
-//-         </div>
-//-       </div>
-//-     </div>
-//-   </section>
+  section.section.section-categories
+    .wrapper
+      h2 Каталог товаров
+      .categoires.grid
+        .col.col--sm-4
+          a.category(href='')
+            .category__container
+              .category__title Паровые котлы (парогенераторы)
+              //- .category__number 6 товаров
+            img.category__img(src='./img/category-1.png')
+        .col.col--sm-4
+          a.category(href='')
+            .category__container
+              .category__title Котельные
+              //- .category__number 6 товаров
+            img.category__img(src='./img/category-2.png')
+        .col.col--sm-4
+          a.category(href='')
+            .category__container
+              .category__title Тепловые пункты
+              //- .category__number 6 товаров
+            img.category__img(src='./img/category-3.png')
+        .col.col--sm-4
+          a.category(href='')
+            .category__container
+              .category__title Дымовые трубы
+              //- .category__number 6 товаров
+            img.category__img(src='./img/category-4.png')
+        .col.col--sm-4
+          a.category(href='')
+            .category__container
+              .category__title Деаэраторы
+              //- .category__number 6 товаров
+            img.category__img(src='./img/category-5.png')
+        //- .col.col--sm-4
+        //-   a.category(href='')
+        //-     .category__container
+        //-       .category__title Бесплатные услуги и акции
+        //-       //- .category__number 6 товаров
+        //-     img.category__img(src='./img/category-6.png')
 
 
-//-   <section class="section section-services">
-//-     <div class="wrapper">
-//-       <h2>Услуги</h2>
-//-       <div class="services">
-
-//-           <a href="" class="service">
-//-             <div class="service__img">
-//-               <img src="./img/service-1.jpg" class="service__img">
-//-             </div>
-//-             <div class="service__left">
-//-               <div class="service__title">Бесплатный рассчет</div>
-//-               <p class="service__subtitle">Бесплатная консультация и подготовка тепловой схемы  и расчёта по установке оборудования и монтажа!</p>
-//-             </div>
-//-             <div class="service__right">
-//-               <div class="service__icon">
-//-                 <img src="./img/service-1.svg" class="svg">
-//-               </div>
-//-             </div>
-//-           </a>
-
-//-           <a href="" class="service">
-//-             <div class="service__img">
-//-               <img src="./img/service-2.jpg" class="service__img">
-//-             </div>
-//-             <div class="service__left">
-//-               <div class="service__title">Бесплатная пусконаладка</div>
-//-               <p class="service__subtitle">Бесплатная пусконаладка при покупке промышленного парогенератора (парового котлы) до 31 июля 2019 года!</p>
-//-             </div>
-//-             <div class="service__right">
-//-               <div class="service__icon">
-//-                 <img src="./img/service-1.svg" class="svg">
-//-               </div>
-//-             </div>
-//-           </a>
-
-//-           <a href="" class="service">
-//-             <div class="service__img">
-//-               <img src="./img/service-2.jpg" class="service__img">
-//-             </div>
-//-             <div class="service__left">
-//-               <div class="service__title">Бесплатная пусконаладка</div>
-//-               <p class="service__subtitle">Бесплатная пусконаладка при покупке промышленного парогенератора (парового котлы) до 31 июля 2019 года!</p>
-//-             </div>
-//-             <div class="service__right">
-//-               <div class="service__icon">
-//-                 <img src="./img/service-1.svg" class="svg">
-//-               </div>
-//-             </div>
-//-           </a>
-
-//-       </div>
-//-     </div>
-//-   </section>
+  section.section.fos
+    .wrapper
+      .grid
+        .col.col--sm-6
+          .fos__left
+            h2.fos__title Разработаем котельную под ключ за 2 месяца
+            p.fos__subtitle
+              | Разработаем индивидуальный проект для вашей котельной бесплатно. Оставьте телефон и мы свяжемся с вами, чтобы уточнить параметры.
+            form.fos__form
+              .form-input
+                input.phone(type='tel')
+              .btn Получить консультацию
+            small
+              | Нажимая кнопку «Получить консультацию» Вы соглашаетесь на обработку ваших персональных данных
+        .col.col--sm-6
+          .fos__right
+            .fos__img
+              img(src='./img/fos-img.png')
 
 
-//-   </div>
+  section.section.section-map
+    .wrapper
+      h2 География проектов
+      p
+        | Работаем по всей России, а так же в некоторых странах СНГ, например, Казахстан, Украина и Беларусь
+      .map
+        img(src='./img/russia3.svg')
 
+
+  section.section.section-partners.fade-container
+    .wrapper
+      h2 Партнеры
+      .grid.partners
+        .col.col--xs-6.col--sm-2.partner.fade-item
+          img(src='./img/partner-2.png')
+        .col.col--xs-6.col--sm-2.partner.fade-item
+          img(src='./img/partner-1.png')
+        .col.col--xs-6.col--sm-2.partner.fade-item
+          img(src='./img/partner-3.png')
+        .col.col--xs-6.col--sm-2.partner.fade-item
+          img(src='./img/partner-4.png')
+        .col.col--xs-6.col--sm-2.partner.fade-item
+          img(src='./img/partner-5.png')
+        .col.col--xs-6.col--sm-2.partner.fade-item
+          img(src='./img/partner-6.png')
+        .col.col--xs-6.col--sm-2.partner.fade-item
+          img(src='./img/partner-7.png')
+        .col.col--xs-6.col--sm-2.partner.fade-item
+          img(src='./img/partner-8.png')
+        .col.col--xs-6.col--sm-2.partner.fade-item
+          img(src='./img/partner-9.png')
+        .col.col--xs-6.col--sm-2.partner.fade-item
+          img(src='./img/partner-10.png')
+        .col.col--xs-6.col--sm-2.partner.fade-item
+          img(src='./img/partner-11.png')
+        .col.col--xs-6.col--sm-2.partner.fade-item
+          img(src='./img/partner-12.png')
+
+
+  section.section.section-services
+    .wrapper
+      h2 Услуги
+      .services
+        a.service(href='')
+          .service__img
+            img.service__img(src='./img/service-1.jpg')
+          .service__left
+            .service__title Бесплатный рассчет
+            p.service__subtitle
+              | Бесплатная консультация и подготовка тепловой схемы  и расчёта по установке оборудования и монтажа!
+          .service__right
+            .service__icon
+              img.svg(src='./img/service-1.svg')
+        a.service(href='')
+          .service__img
+            img.service__img(src='./img/service-2.jpg')
+          .service__left
+            .service__title Бесплатная пусконаладка
+            p.service__subtitle
+              | Бесплатная пусконаладка при покупке промышленного парогенератора (парового котлы) до 31 июля 2019 года!
+          .service__right
+            .service__icon
+              img.svg(src='./img/service-1.svg')
+        a.service(href='')
+          .service__img
+            img.service__img(src='./img/service-2.jpg')
+          .service__left
+            .service__title Бесплатная пусконаладка
+            p.service__subtitle
+              | Бесплатная пусконаладка при покупке промышленного парогенератора (парового котлы) до 31 июля 2019 года!
+          .service__right
+            .service__icon
+              img.svg(src='./img/service-1.svg')

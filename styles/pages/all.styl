@@ -22,7 +22,7 @@
 .inner-header
   // margin-top -3.2rem
   // padding 8rem 0
-  height 24rem
+  
   margin-bottom 3.2rem
   overflow hidden
   position relative
@@ -49,19 +49,30 @@
       left 0
       position absolute
       width 100%
-  &__container
-    bottom 0
-    position absolute
-    width 100%
-  h1
-    color #fff
-  .breadcrumbs
-    &-text
-      color #fff !important
-    &-list
-      .breadcrumbs-item:after
-        color #fff
+
+  &_with-img
+    height 24rem
+    .inner-header
+      &__container
+        bottom 0
+        position absolute
+        width 100%
+    .breadcrumbs
+      &-text
+        color #fff !important
+      &-list
+        .breadcrumbs-item:after
+          color #fff
+    h1
+      color #fff
+
+
 
 @media screen and (max-width: 1260px)
   .section
+    margin-bottom 6.4rem
     padding-top 0
+
+@media(max-width 767px)
+  .inner-header
+    height 16rem

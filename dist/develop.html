@@ -11,16 +11,113 @@
     <link rel="stylesheet" href="./styles/css/main.css">
   </head>
   <body>
+    <div class="mobile-menu-bg"></div>
+    <div class="mobile-menu">
+      <div class="mobile-menu__nav">
+        <div class="mobile-menu__item">
+          <div class="mobile-menu-accordion">
+            <div class="mobile-menu__link mobile-menu__link_big">О заводе</div>
+            <div class="mobile-menu__link-container">
+              <div class="mobile-menu__link"><a href="">О заводе</a></div>
+              <div class="mobile-menu__link"><a href="">Отзывы</a></div>
+              <div class="mobile-menu__link"><a href="">Гарантии</a></div>
+              <div class="mobile-menu__link"><a href="">Доставка</a></div>
+              <div class="mobile-menu__link"><a href="">Обслуживание</a></div>
+              <div class="mobile-menu__link"><a href="">Сертификаты</a></div>
+              <div class="mobile-menu__link"><a href="">Лизинг</a></div>
+              <div class="mobile-menu__link"><a href="">Отраслевые решения</a></div>
+            </div>
+          </div>
+        </div>
+        <div class="mobile-menu__item">
+          <div class="mobile-menu-accordion">
+            <div class="mobile-menu__link mobile-menu__link_big">Каталог</div>
+            <div class="mobile-menu__link-container">
+              <div class="mobile-menu__link"><a href="">Весь каталог</a></div>
+              <div class="mobile-menu__link"><a href="">Паровые котлы (парогенераторы)</a></div>
+              <div class="mobile-menu__link"><a href="">Котельные</a></div>
+              <div class="mobile-menu__link"><a href="">Тепловые пункты</a></div>
+              <div class="mobile-menu__link"><a href="">Дымовые трубы</a></div>
+              <div class="mobile-menu__link"><a href="">Деаэраторы</a></div>
+            </div>
+          </div>
+        </div>
+        <div class="mobile-menu__item">
+          <div class="mobile-menu-accordion">
+            <div class="mobile-menu__link mobile-menu__link_big">Услуги</div>
+            <div class="mobile-menu__link-container">
+              <div class="mobile-menu__link"><a href="">Все услуги</a></div>
+              <div class="mobile-menu__link"><a href="">Проектирование</a></div>
+              <div class="mobile-menu__link"><a href="">Строительство</a></div>
+              <div class="mobile-menu__link"><a href="">Пусконаладка</a></div>
+              <div class="mobile-menu__link"><a href="">Доставка</a></div>
+              <div class="mobile-menu__link"><a href="">Сервис</a></div>
+              <div class="mobile-menu__link"><a href="">Реконструкция</a></div>
+            </div>
+          </div>
+        </div>
+        <div class="mobile-menu__item">
+          <div class="mobile-menu-accordion">
+            <div class="mobile-menu__link mobile-menu__link_big">Информация</div>
+            <div class="mobile-menu__link-container">
+              <div class="mobile-menu__link"><a href="">Акции</a></div>
+              <div class="mobile-menu__link"><a href="">FAQ</a></div>
+              <div class="mobile-menu__link"><a href="">Статьи</a></div>
+              <div class="mobile-menu__link"><a href="">Новости</a></div>
+            </div>
+          </div>
+        </div>
+        <div class="mobile-menu__item">
+          <div class="mobile-menu__link mobile-menu__link_big"><a href="">Контакты</a></div>
+        </div>
+      </div>
+      <div class="mobile-menu__phone-container"><a class="mobile-menu__phone" href="tel:79882459001">+7 988 245-90-01</a></div>
+      <div class="btn">
+        <div class="btn__text">Отправить заявку</div>
+      </div>
+    </div>
     <div class="page">
       <header class="main-header">
         <div class="wrapper">
           <div class="main-header__container">
             <div class="main-header__left"><a class="logo" href="./pages.html"><img src="./img/logo.svg" alt=""></a>
-              <div class="nav"><a class="nav__link" href="">О заводе</a><a class="nav__link" href="">Каталог</a><a class="nav__link" href="">Услуги</a><a class="nav__link" href="">Информация</a><a class="nav__link" href="">Контакты</a></div>
+              <div class="nav">
+                <div class="nav__container">
+                  <div class="nav__link"><a href="">О заводе</a>
+                    <div class="dropdown">
+                      <div class="wrapper dropdown__container">
+                        <div class="dropdown__link"><a href="">О заводе</a></div>
+                        <div class="dropdown__link"><a href="">Отзывы</a></div>
+                        <div class="dropdown__link"><a href="">Гарантии</a></div>
+                        <div class="dropdown__link"><a href="">Доставка</a></div>
+                        <div class="dropdown__link"><a href="">Обслуживание</a></div>
+                        <div class="dropdown__link"><a href="">Сертификаты</a></div>
+                        <div class="dropdown__link"><a href="">Лизинг</a></div>
+                        <div class="dropdown__link"><a href="">Отраслевые решения</a></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="nav__link"> <a href="">Каталог</a>
+                    <div class="dropdown">
+                      <div class="wrapper dropdown__container">
+                        <div class="dropdown__link"><a href="">Паровые котлы (парогенераторы)</a></div>
+                        <div class="dropdown__link"><a href="">Котельные</a></div>
+                        <div class="dropdown__link"><a href="">Тепловые пункты</a></div>
+                        <div class="dropdown__link"><a href="">Дымовые трубы</a></div>
+                        <div class="dropdown__link"><a href="">Деаэраторы</a></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="nav__link"><a href="">Услуги</a></div>
+                  <div class="nav__link"><a href="">Информация</a></div>
+                  <div class="nav__link"><a href="">Контакты</a></div>
+                </div>
+              </div>
             </div>
             <div class="main-header__right">
               <div class="main-header__phone">8 861 206 31 86</div>
               <div class="btn">Отправить заявку / КП</div>
+              <div class="burger"></div>
             </div>
           </div>
         </div>
@@ -243,7 +340,7 @@
             <div class="col col--lg-2"><a class="logo" href=""><img src="./img/logo.svg" alt=""></a></div>
             <div class="col col--xl-8 col--lg-7">
               <div class="grid">
-                <div class="col col--sm-4">
+                <div class="col col--sm-4 col--xs-6">
                   <div class="footer-nav">
                     <div class="footer-nav__link footer-nav__link_big"><a href="">Каталог</a></div>
                     <div class="footer-nav__link"><a href="">Паровые котлы (парогенераторы)</a></div>
@@ -253,7 +350,7 @@
                     <div class="footer-nav__link"><a href="">Деаэраторы</a></div>
                   </div>
                 </div>
-                <div class="col col--sm-4">
+                <div class="col col--sm-4 col--xs-6">
                   <div class="footer-nav">
                     <div class="footer-nav__link footer-nav__link_big"><a href="">Услуги</a></div>
                     <div class="footer-nav__link"><a href="">Проектирование</a></div>
@@ -264,7 +361,7 @@
                     <div class="footer-nav__link"><a href="">Реконструкция</a></div>
                   </div>
                 </div>
-                <div class="col col--sm-4">
+                <div class="col col--sm-4 col--xs-6">
                   <div class="footer-nav">
                     <div class="footer-nav__link footer-nav__link_big"><a href="">О заводе</a></div>
                     <div class="footer-nav__link footer-nav__link_big"><a href="">Портфолио</a></div>
@@ -292,6 +389,8 @@
     <script src="./js/jquery.blast.min.js"></script>
     <script src="./js/jquery.inputmask.bundle.min.js"></script>
     <script src="./js/jquery.nice-select.min.js"></script>
+    <script src="./js/nouislider.min.js"></script>
+    <script src="./js/wNumb.js"></script>
     <script src="./js/main.js"></script>
     <script src="./js/animations.js"></script>
   </body>

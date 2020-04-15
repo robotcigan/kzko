@@ -2,7 +2,7 @@ extends layout.pug
 
 block content
 
-  .inner-header
+  .inner-header.inner-header_with-img
     .inner-header__bg
       img(src="./img/catalog-bg.jpg", alt="")
     .inner-header__container
@@ -61,6 +61,16 @@ block content
               select.custom-select
                 option Жидкое топливо
                 option Другого типа
+            .form-input
+              label.forim-input__label Параметр
+              .filter__item
+                input(type="checkbox")
+                label Классика
+            .price-slider
+              .price-slider__values
+                input(type="tel" data-min=0).price-slider__left
+                input(type="tel" data-max=6000).price-slider__right
+              #price-slider
         .col.col--xl-9
           section.section
             .goods.grid

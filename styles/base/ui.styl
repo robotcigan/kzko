@@ -156,46 +156,70 @@
     //   width 50%
 
 
-// .checkbox
-//   align-items center
-//   cursor pointer
-//   display flex
-//   margin-bottom 1em
-//   user-select none
-//   &__label
-//     background transparent
-//     border-radius $radius
-//     border $border
-//     cursor pointer
-//     circle(1.8rem)
-//     display inline-block
-//     flex-shrink 0
-//     margin-right .4rem
-//     position relative
-//     transform translateY(-1px)
-//     z-index 1
-//     &:after
-//       color $main
-//       // content "\f00c"
-//       content url('../../img/checkbox.png')
-//       display none
-//       // font-family 'FontAwesome'
-//       font-size 1.3rem
-//       left 3px
-//       position absolute
-//       top 0
-//       z-index 10
-//   &__text
-//     display inline-block
-//   .link
-//     display inline-block
-//     margin-bottom 0
-//   input
-//     display none
-//   input:checked + .checkbox__label
-//     // border-color $primary
-//     &:after
-//       display block
+.checkbox
+  align-items center
+  cursor pointer
+  display flex
+  margin-bottom 1em
+  user-select none
+  &__label
+    background transparent
+    border-radius $radius
+    border $border
+    cursor pointer
+    circle(1.8rem)
+    display inline-block
+    flex-shrink 0
+    margin-right .4rem
+    position relative
+    transform translateY(-1px)
+    z-index 1
+    &:after
+      color $main
+      // content "\f00c"
+      content url('../../img/checkbox.png')
+      display none
+      // font-family 'FontAwesome'
+      font-size 1.3rem
+      left 2px
+      position absolute
+      top 2px
+      z-index 10
+  &__text
+    display inline-block
+  .link
+    display inline-block
+    margin-bottom 0
+  input
+    display none
+  input:checked + .checkbox__label
+    // border-color $primary
+    &:after
+      display block
+
+.noUi
+  &-horizontal
+    background-color $primary-light
+    border none
+    box-shadow none
+    height 2px
+    .noUi-handle
+      circle(2rem)
+      top -.9rem
+  &-handle
+    background #fff
+    box-shadow none
+    border $border
+    border-radius 50%
+    cursor move
+    cursor -webkit-grab
+    cursor grab
+    &:before,
+    &:after
+      display none
+  &-connect
+    background $primary
+    box-shadow none
 
 // .radio
 //   cursor pointer

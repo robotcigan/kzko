@@ -15,7 +15,63 @@ html(lang="ru")
     link(rel="stylesheet", href="./styles/css/main.css")
   body
 
+
+    .mobile-menu-bg
+
+    .mobile-menu
+      .mobile-menu__nav
+        .mobile-menu__item
+          .mobile-menu-accordion
+            .mobile-menu__link.mobile-menu__link_big О заводе
+            .mobile-menu__link-container
+              .mobile-menu__link: a(href="") О заводе
+              .mobile-menu__link: a(href="") Отзывы
+              .mobile-menu__link: a(href="") Гарантии
+              .mobile-menu__link: a(href="") Доставка
+              .mobile-menu__link: a(href="") Обслуживание
+              .mobile-menu__link: a(href="") Сертификаты
+              .mobile-menu__link: a(href="") Лизинг
+              .mobile-menu__link: a(href="") Отраслевые решения
+        .mobile-menu__item
+          .mobile-menu-accordion
+            .mobile-menu__link.mobile-menu__link_big Каталог
+            .mobile-menu__link-container
+              .mobile-menu__link: a(href="") Весь каталог
+              .mobile-menu__link: a(href="") Паровые котлы (парогенераторы)
+              .mobile-menu__link: a(href="") Котельные
+              .mobile-menu__link: a(href="") Тепловые пункты
+              .mobile-menu__link: a(href="") Дымовые трубы
+              .mobile-menu__link: a(href="") Деаэраторы
+        .mobile-menu__item
+          .mobile-menu-accordion
+            .mobile-menu__link.mobile-menu__link_big Услуги
+            .mobile-menu__link-container
+              .mobile-menu__link: a(href="") Все услуги
+              .mobile-menu__link: a(href="") Проектирование
+              .mobile-menu__link: a(href="") Строительство
+              .mobile-menu__link: a(href="") Пусконаладка
+              .mobile-menu__link: a(href="") Доставка
+              .mobile-menu__link: a(href="") Сервис
+              .mobile-menu__link: a(href="") Реконструкция
+        .mobile-menu__item
+          .mobile-menu-accordion
+            .mobile-menu__link.mobile-menu__link_big Информация
+            .mobile-menu__link-container
+              .mobile-menu__link: a(href="") Акции
+              .mobile-menu__link: a(href="") FAQ
+              .mobile-menu__link: a(href="") Статьи
+              .mobile-menu__link: a(href="") Новости
+        .mobile-menu__item
+          .mobile-menu__link.mobile-menu__link_big: a(href="") Контакты
+      .mobile-menu__phone-container
+        a(href="tel:79882459001").mobile-menu__phone +7 988 245-90-01
+
+      .btn
+        .btn__text Отправить заявку
+
     .page
+
+
       header.main-header
         .wrapper
           .main-header__container
@@ -23,14 +79,38 @@ html(lang="ru")
               a(href="./pages.html").logo
                 img(src="./img/logo.svg", alt="")
               .nav
-                a(href="").nav__link О заводе
-                a(href="").nav__link Каталог
-                a(href="").nav__link Услуги
-                a(href="").nav__link Информация
-                a(href="").nav__link Контакты
+                .nav__container
+                  .nav__link
+                    a(href="") О заводе
+                    .dropdown
+                      .wrapper.dropdown__container
+                        .dropdown__link: a(href="") О заводе
+                        .dropdown__link: a(href="") Отзывы
+                        .dropdown__link: a(href="") Гарантии
+                        .dropdown__link: a(href="") Доставка
+                        .dropdown__link: a(href="") Обслуживание
+                        .dropdown__link: a(href="") Сертификаты
+                        .dropdown__link: a(href="") Лизинг
+                        .dropdown__link: a(href="") Отраслевые решения
+                  .nav__link 
+                    a(href="") Каталог
+                    .dropdown
+                      .wrapper.dropdown__container
+                        .dropdown__link: a(href="") Паровые котлы (парогенераторы)
+                        .dropdown__link: a(href="") Котельные
+                        .dropdown__link: a(href="") Тепловые пункты
+                        .dropdown__link: a(href="") Дымовые трубы
+                        .dropdown__link: a(href="") Деаэраторы
+                  .nav__link
+                    a(href="") Услуги
+                  .nav__link
+                    a(href="") Информация
+                  .nav__link
+                    a(href="") Контакты
             .main-header__right
               .main-header__phone 8 861 206 31 86
               .btn Отправить заявку / КП
+              .burger
 
       block content
 
@@ -47,7 +127,7 @@ html(lang="ru")
                 img(src="./img/logo.svg", alt="")
             .col.col--xl-8.col--lg-7
               .grid
-                .col.col--sm-4
+                .col.col--sm-4.col--xs-6
                   .footer-nav
                     .footer-nav__link.footer-nav__link_big: a(href="") Каталог
                     .footer-nav__link: a(href="") Паровые котлы (парогенераторы)
@@ -55,7 +135,7 @@ html(lang="ru")
                     .footer-nav__link: a(href="") Тепловые пункты
                     .footer-nav__link: a(href="") Дымовые трубы
                     .footer-nav__link: a(href="") Деаэраторы
-                .col.col--sm-4
+                .col.col--sm-4.col--xs-6
                   .footer-nav
                     .footer-nav__link.footer-nav__link_big: a(href="") Услуги
                     .footer-nav__link: a(href="") Проектирование
@@ -64,7 +144,7 @@ html(lang="ru")
                     .footer-nav__link: a(href="") Доставка
                     .footer-nav__link: a(href="") Сервис
                     .footer-nav__link: a(href="") Реконструкция
-                .col.col--sm-4
+                .col.col--sm-4.col--xs-6
                   .footer-nav
                     .footer-nav__link.footer-nav__link_big: a(href="") О заводе
                     .footer-nav__link.footer-nav__link_big: a(href="") Портфолио
@@ -93,6 +173,8 @@ html(lang="ru")
     script(src="./js/jquery.blast.min.js")
     script(src="./js/jquery.inputmask.bundle.min.js")
     script(src="./js/jquery.nice-select.min.js")
+    script(src="./js/nouislider.min.js")
+    script(src="./js/wNumb.js")
     script(src="./js/main.js")
     script(src="./js/animations.js")
 //- include footer.html

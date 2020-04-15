@@ -1,0 +1,33 @@
+extends layout.pug
+
+block content
+
+
+  .inner-header
+    .inner-header__container
+      .wrapper
+        section.breadcrumbs
+          .breadcrumbs-list
+            .breadcrumbs-item
+              a(href="/" title="Главная").breadcrumbs-text Главная
+            .breadcrumbs-item
+              a(href="/" title="Главная").breadcrumbs-text Каталог
+            .breadcrumbs-item
+              a(href="/" title="Главная").breadcrumbs-text Паровые котлы
+            .breadcrumbs-item
+              .breadcrumbs-text Паровые котлы (парогенераторы) 0,7 бар (100 - 10000 кг/ч)
+        h1 Паровой котел 0,7 бар (от 100 до 10 000 кг/ч)
+
+
+  .wrapper
+    section.section
+      p Здесь будет карточка товара
+
+  section.help
+    .wrapper
+      h2 Нужна помощь в выборе или остались вопросы? <br>Мы перезвоним вам в течение 15 минут!
+      form.form
+        .form-input
+          input(type="tel" placeholder="Номер телефона").phone-mask
+        .btn Получить консультацию
+      small Нажимая кнопку «Получить консультацию» Вы соглашаетесь на обработку ваших персональных данных
