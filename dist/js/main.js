@@ -36,6 +36,22 @@ $(document).ready(function () {
     }]
   });
 
+  $('.general-slider').slick({
+    arrows: true,
+    infinite: true,
+    slidesToShow: 4,
+    slidesToScroll: 4,
+    adaptiveHeight: true,
+    responsive: [{
+      breakpoint: 1200,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 2,
+        dots: true
+      }
+    }]
+  });
+
   $('.cards').slick({
     slidesToShow: 3,
     slidesToScroll: 1,
@@ -103,38 +119,39 @@ $(document).ready(function () {
     $(this).find('.mobile-menu__link_big').toggleClass('mobile-menu__link_big_active');
   });
 
-  // catalog filter price
-  var priceSlider = document.getElementById('price-slider');
-  if ($('.price-slider').length) {
-    var start = parseFloat($('.price-slider__left').data("start"));
-    var end = parseFloat($('.price-slider__right').data("end"));
-    noUiSlider.create(priceSlider, {
+  // catalog filter slides или КОСТЫЛЬНЫЕ ВОЙНЫ!
+  var catalogSliders = document.getElementsByClassName('catalog-slider');
+  for (var i = 0; i < catalogSliders.length; i++) {
+
+    var start = parseFloat($('.catalog-slider').eq(i).find('.catalog-slider__left').data("start"));
+    var end = parseFloat($('.catalog-slider').eq(i).find('.catalog-slider__right').data("end"));
+    noUiSlider.create(catalogSliders[i], {
       format: wNumb({
         decimals: 0
       }),
       start: [start, end],
       connect: true,
       range: {
-        'min': $('.price-slider__left').data('min'),
-        'max': $('.price-slider__right').data('max')
+        'min': $('.catalog-slider__left').data('min'),
+        'max': $('.catalog-slider__right').data('max')
       }
     });
-    priceSlider.noUiSlider.on('update', function (values, handle) {
-      $('.price-slider__left').val(values[0]);
-      $('.price-slider__right').val(values[1]);
-    });
-    priceSlider.noUiSlider.on('end', function (values, handle) {
+    catalogSliders[i].noUiSlider.on('slide', noUiSliderUpdate);
+  }
 
-      $('.price-slider__left').trigger("keyup");
+  function noUiSliderUpdate() {
+    for (var a = 0; a < catalogSliders.length; a++) {
+      $('.catalog-slider').eq(a).find('.catalog-slider__left').val(catalogSliders[a].noUiSlider.get()[0]);
+      $('.catalog-slider').eq(a).find('.catalog-slider__right').val(catalogSliders[a].noUiSlider.get()[1]);
+    };
+    $('.catalog-slider__left, .catalog-slider__right').on('keyup', function () {
+      for (var b = 0; b < catalogSliders.length; b++) {
+        catalogSliders[b].noUiSlider.set([$('.catalog-slider').eq(b).find('.catalog-slider__left').val(), $('.catalog-slider').eq(b).find('.catalog-slider__right').val()]);
+      }
     });
+  }
 
-    $('.price-slider__left').on('change', function () {
-      priceSlider.noUiSlider.set([$(this).val(), $('.price-slider__right').val()]);
-    });
-    $('.price-slider__right').on('change', function () {
-      priceSlider.noUiSlider.set([$('.price-slider__left').val(), $(this).val()]);
-    });
-  };
+  noUiSliderUpdate();
 
   // SVG magic
   jQuery('img.svg').each(function () {

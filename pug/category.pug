@@ -63,14 +63,45 @@ block content
                 option Другого типа
             .form-input
               label.forim-input__label Параметр
-              .filter__item
-                input(type="checkbox")
-                label Классика
-            .price-slider
-              .price-slider__values
-                input(type="tel" data-min=0).price-slider__left
-                input(type="tel" data-max=6000).price-slider__right
-              #price-slider
+              .checkbox
+                input(type="checkbox" id="checkbox")
+                label(for="checkbox").checkbox__label
+                label.checkbox__text(for="checkbox") Большой мощности
+              .checkbox
+                input(type="checkbox" id="checkbox")
+                label(for="checkbox").checkbox__label
+                label.checkbox__text(for="checkbox") Высокого давления
+              .checkbox
+                input(type="checkbox" id="checkbox")
+                label(for="checkbox").checkbox__label
+                label.checkbox__text(for="checkbox") Малой мощности
+              .checkbox
+                input(type="checkbox" id="checkbox")
+                label(for="checkbox").checkbox__label
+                label.checkbox__text(for="checkbox") Средней мощности
+
+            .form-input
+              label.forim-input__label Мощность, кг пар/час
+            .catalog-slider
+              .catalog-slider__values
+                input(type="tel" data-min=0 data-start=200).catalog-slider__left
+                input(type="tel" data-max=6000 data-end=1000).catalog-slider__right
+            
+            .form-input
+              label.forim-input__label Мощность, кг пар/час
+            .catalog-slider
+              .catalog-slider__values
+                input(type="tel" data-min=0 data-start=500).catalog-slider__left
+                input(type="tel" data-max=6000 data-end=2000).catalog-slider__right
+
+            .form-input
+              label.forim-input__label Мощность, кг пар/час
+            .catalog-slider
+              .catalog-slider__values
+                input(type="tel" data-min=0 data-start=500).catalog-slider__left
+                input(type="tel" data-max=6000 data-end=2000).catalog-slider__right
+
+
         .col.col--xl-9
           section.section
             .goods.grid

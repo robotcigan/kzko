@@ -160,33 +160,38 @@
   align-items center
   cursor pointer
   display flex
-  margin-bottom 1em
+  margin-bottom .5rem
   user-select none
   &__label
-    background transparent
+    background #fff
     border-radius $radius
     border $border
     cursor pointer
-    circle(1.8rem)
     display inline-block
     flex-shrink 0
-    margin-right .4rem
+    margin-bottom 0 !important
+    margin-right 1.2rem
     position relative
+    size(2rem)
     transform translateY(-1px)
     z-index 1
+    &:before
+      display none !important
     &:after
       color $main
-      // content "\f00c"
-      content url('../../img/checkbox.png')
+      border none !important
+      content url('../../img/checkbox.svg') !important
       display none
-      // font-family 'FontAwesome'
-      font-size 1.3rem
-      left 2px
+      font-size 1.6rem
+      left 4px !important
       position absolute
-      top 2px
+      transform none !important
+      top 0 !important
       z-index 10
   &__text
     display inline-block
+    font-size 1.6rem !important
+    margin-bottom 0 !important
   .link
     display inline-block
     margin-bottom 0
@@ -199,12 +204,12 @@
 
 .noUi
   &-horizontal
-    background-color $primary-light
+    background-color transparent
     border none
     box-shadow none
-    height 2px
+    height initial
     .noUi-handle
-      circle(2rem)
+      size(2rem)
       top -.9rem
   &-handle
     background #fff
@@ -217,9 +222,36 @@
     &:before,
     &:after
       display none
+  &-base
+    background-color #D5D9DB
+  &-base,
+  &-connects
+    height 2px
   &-connect
     background $primary
     box-shadow none
+    height 2px
+
+
+.catalog-slider
+  margin-bottom 2.4rem
+  margin-top -2rem
+  &__values
+    display flex
+    justify-content space-between
+    margin-bottom 1.2rem
+    input
+      border 1px solid #D5D9DB
+      border-radius 4px
+      color #1a1a1a
+      font-family $font
+      font-size 1.2rem
+      line-height 1
+      padding 0.7rem
+      text-align center
+      width 6.4rem
+      -webkit-appearance none
+
 
 // .radio
 //   cursor pointer
