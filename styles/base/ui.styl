@@ -31,8 +31,14 @@
       background-color $primary-light - 5%
   &--transparent
     background rgba(#fff, .2)
-  &--full
+  &_full
     width 100%
+  &_white
+    background-color #fff
+    color $main
+    &:hover
+      background-color #fff !important
+      color $primary
   & + &
     margin-left 2rem
   & + .link

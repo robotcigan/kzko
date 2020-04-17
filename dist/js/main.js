@@ -36,22 +36,6 @@ $(document).ready(function () {
     }]
   });
 
-  $('.general-slider').slick({
-    arrows: true,
-    infinite: true,
-    slidesToShow: 4,
-    slidesToScroll: 4,
-    adaptiveHeight: true,
-    responsive: [{
-      breakpoint: 1200,
-      settings: {
-        slidesToShow: 2,
-        slidesToScroll: 2,
-        dots: true
-      }
-    }]
-  });
-
   $('.cards').slick({
     slidesToShow: 3,
     slidesToScroll: 1,
@@ -152,6 +136,122 @@ $(document).ready(function () {
   }
 
   noUiSliderUpdate();
+
+  // Tabs
+  $('.tabs__link').on('click', function () {
+    $(this).closest('.tabs').find('.tabs__link').removeClass('tabs__link_active');
+    $(this).addClass('tabs__link_active');
+    var index = $(this).index();
+    $(this).closest('.tabs').find('.tabs__content').removeClass('tabs__content_active');
+    $(this).closest('.tabs').find('.tabs__content').eq(index).addClass('tabs__content_active');
+  });
+
+  // Sliders
+  $('.slider-1').slick({
+    infinite: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    dots: true,
+    responsive: [{
+      breakpoint: 1200,
+      settings: {
+        arrows: false,
+        dots: true
+      }
+    }]
+  });
+
+  $('.slider-2').slick({
+    infinite: true,
+    slidesToShow: 2,
+    slidesToScroll: 2,
+    dots: true,
+    responsive: [{
+      breakpoint: 1200,
+      settings: {
+        arrows: false,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        dots: true
+      }
+    }]
+  });
+
+  $('.slider-3').slick({
+    infinite: true,
+    slidesToShow: 3,
+    slidesToScroll: 3,
+    dots: true,
+    responsive: [{
+      breakpoint: 1200,
+      settings: {
+        arrows: false,
+        slidesToShow: 2,
+        slidesToScroll: 2,
+        dots: true
+      }
+    }, {
+      breakpoint: 767,
+      settings: {
+        arrows: false,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        dots: true
+      }
+    }]
+  });
+
+  $('.slider-4').slick({
+    infinite: true,
+    slidesToShow: 4,
+    slidesToScroll: 4,
+    dots: true,
+    responsive: [{
+      breakpoint: 1200,
+      settings: {
+        arrows: false,
+        slidesToShow: 3,
+        slidesToScroll: 3
+      }
+    }, {
+      breakpoint: 767,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    }]
+  });
+
+  $('.slider-6').slick({
+    infinite: true,
+    slidesToShow: 6,
+    slidesToScroll: 6,
+    dots: true,
+    responsive: [{
+      breakpoint: 1200,
+      settings: {
+        arrows: false,
+        slidesToShow: 5,
+        slidesToScroll: 5
+      }
+    }, {
+      breakpoint: 1000,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 3
+      }
+    }, {
+      breakpoint: 767,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 2
+      }
+    }]
+  });
+
+  $('.modal-open').fancybox({
+    touch: false
+  });
 
   // SVG magic
   jQuery('img.svg').each(function () {

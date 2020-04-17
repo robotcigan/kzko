@@ -1,0 +1,100 @@
+.cardpage
+  &__img
+    img
+      display block
+      width 100%
+  &__price
+    font-size 4rem
+    margin-bottom .5em
+  &__buttons
+    margin-bottom 2.4rem
+  &-download
+    background-color #FFCE21
+    border-radius $radius
+    display inline-block
+    min-width 28rem
+    // overflow hidden
+    padding 1.6rem 2.4rem
+    position relative
+    &__text
+      font-weight 600
+      line-height 1.2
+      max-width 10rem
+      transition $transition
+    &__img
+      bottom 0
+      overflow hidden
+      position absolute
+      right 2.4rem
+      img
+        display block
+        transition $transition
+        transform translateY(4px)
+    &:hover
+      .cardpage-download
+        &__img
+          img
+            transform none
+        &__text
+          opacity .8
+
+
+.leasing
+  background-color #fff
+  &__container
+    padding 4rem
+  &__name
+    font-size 2.4rem
+    font-weight 600
+    line-height 1.2
+    margin-bottom .75em
+  &__bottom
+    background-color #eee
+    padding 2rem 4rem
+    p
+      margin-bottom 0
+
+
+.another-service
+  border-radius $radius
+  display block
+  overflow hidden
+  position relative
+  &__img
+    transition $transition
+    img
+      display block
+      width 100%
+  &__container
+    display flex
+    flex-direction column
+    justify-content space-between
+    height 100%
+    left 0
+    padding 3.2rem
+    position absolute
+    top 0
+    width 100%
+  &__title
+    font-size 1.8rem
+    font-weight 600
+    transition $transition
+  &__number
+    font-size 1.4rem
+    opacity .5
+  &_white-text
+    color #fff
+  &:hover
+    .another-service
+      &__img
+        opacity .9
+      &__title
+        opacity .7
+
+
+@media(max-width 1200px)
+  .another-service
+    &__container
+      padding 1.6rem
+
+      

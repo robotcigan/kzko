@@ -20,33 +20,367 @@ block content
 
 
   .wrapper
-    section.section
+    section.section.cardpage
       .grid
-        .col--sm-6
-        .col--sm-1
-        .col--sm-5
-          p Здесь будет карточка товара
+        .col.col--xl-6.col--sm-6
+          .cardpage__img
+            img(src="./img/goods/1.jpg", alt="")
+        .col.col--sm-1.dn-xl
+        .col.col--sm-6.col--xl-5
+          .cardpage__price от 380 000 ₽
+          p Паровые промышленные котлы (парогенераторы). Паропроизводительность от 100 килограмм до 10 тонн пара  час. Расчётное давление 0,7 бар. Выработка насыщенного пара с температурой до 115 °C. Паровые жаротрубные котлы малой, средней и большой мощности.
+          .cardpage__buttons
+            .btn Оформить заявку
+            .btn.btn_white Получить КП
+          hr
+          .grid
+            .col.col--sm-4.col--xs-6
+              .info-item.info-item_big
+                .info-item__label кг пар/час
+                .info-item__value ≤10 000
+            .col.col--sm-4.col--xs-6
+              .info-item.info-item_big
+                .info-item__label бар 
+                .info-item__value ≤0.7
+            .col.col--sm-4.col--xs-6
+              .info-item.info-item_big
+                .info-item__label градусов °C
+                .info-item__value ≤115 °C
+          a(href="" download).cardpage-download
+            .cardpage-download__text Скачать PDF-каталог
+            .cardpage-download__img
+              img(src="./img/catalog-download.png", alt="")
 
+    section.section
+      .tabs
+        .tabs__header
+          .tabs__link.tabs__link_active: span Описание
+          .tabs__link: span Характеристики
+          .tabs__link: span Сертификаты
+          .tabs__link: span Лизинг
+          .tabs__link: span Процесс
+
+
+        .tabs__content.tabs__content_active
+          p Паровые промышленные котлы (парогенераторы). Паропроизводительность от 100 килограмм до 10 тонн пара  час. Расчётное давление 0,7 бар. Выработка насыщенного пара с температурой до 115 °C. Паровые жаротрубные котлы малой, средней и большой мощности. Благодаря трехходовой конструкции паровое котлы имеет высокий коэффициент полезного действия. Паровые котлы по запросу клиента могут быть укомплектованы двумя модулируемыми горелками, что регулирует нагрузку. Работа в рамках широкого диапазона важна для производств с циклической нагрузкой. Высокоэффективные модели по доступным ценам. Оснащение предприятий качественным оборудованием. Производительность и долговечность подтверждена сертификатами.
+        .tabs__content
+          .responsive-table
+            table.table
+              thead
+                th Номинальная производительность, кг/ч
+                th Тепловая мощность, кВт
+                th Температура уходящих газов, Cn
+                th Аэродинамическое сопротивление топки
+                th Масса сухого котла, кг
+                th Номинальная производительность, кг/ч
+                th Тепловая мощность, кВт
+                th Температура уходящих газов, Cn
+                th Аэродинамическое сопротивление топки
+                th Масса сухого котла, кг
+              tbody
+                tr
+                  td 100
+                  td 70
+                  td 70
+                  td 70
+                  td 70
+                  td 70
+                  td 70
+                  td 70
+                  td 70
+                  td 70
+                tr
+                  td 150
+                  td 100
+                  td 70
+                  td 70
+                  td 70
+                  td 70
+                  td 70
+                  td 70
+                  td 70
+                  td 70
+                tr
+                  td 200
+                  td 130
+                  td 70
+                  td 70
+                  td 70
+                  td 70
+                  td 70
+                  td 70
+                  td 70
+                  td 70
+                tr
+                  td 300
+                  td 200
+                  td 70
+                  td 70
+                  td 70
+                  td 70
+                  td 70
+                  td 70
+                  td 70
+                  td 70
+                tr
+                  td 400
+                  td 280
+                  td 70
+                  td 70
+                  td 70
+                  td 70
+                  td 70
+                  td 70
+                  td 70
+                  td 70
+                tr
+                  td 500
+                  td 350
+                  td 70
+                  td 70
+                  td 70
+                  td 70
+                  td 70
+                  td 70
+                  td 70
+                  td 70
+                tr
+                  td 600
+                  td 420
+                  td 70
+                  td 70
+                  td 70
+                  td 70
+                  td 70
+                  td 70
+                  td 70
+                  td 70
+                tr
+                  td 700
+                  td 490
+                  td 70
+                  td 70
+                  td 70
+                  td 70
+                  td 70
+                  td 70
+                  td 70
+                  td 70
+                tr
+                  td 800
+                  td 560
+                  td 70
+                  td 70
+                  td 70
+                  td 70
+                  td 70
+                  td 70
+                  td 70
+                  td 70
+
+          hr
+
+          .grid
+            .col.col--sm-3
+              .info-item
+                .info-item__label Максимальное избыточное давление пара, МПа
+                .info-item__value 0.07
+            .col.col--sm-3
+              .info-item
+                .info-item__label Максимальная температура пара, Cn
+                .info-item__value 115
+            .col.col--sm-3
+              .info-item
+                .info-item__label Минимальная температура воды на входе в котёл, Cn
+                .info-item__value Не менее 50
+            .col.col--sm-3
+              .info-item
+                .info-item__label Вид топлива
+                .info-item__value Природный газ, дизельное топливо, мазут, отработанное масло, твёрдое топливо
+            .col.col--sm-3
+              .info-item
+                .info-item__label Расход топлива
+                .info-item__value Согласно паспорта горечного устройства
+            .col.col--sm-3
+              .info-item
+                .info-item__label Максимальное избыточное давление пара, МПа
+                .info-item__value 0.07
+            .col.col--sm-3
+              .info-item
+                .info-item__label Минимальная температура пара, Cn
+                .info-item__value 115
+            .col.col--sm-3
+              .info-item
+                .info-item__label Расчётный срок службы
+                .info-item__value Не менее 10 лет, при соблюдении правил безопасности
+
+        .tabs__content
+          .grid
+            .col.col--sm-3
+              a(href="./img/certificate.png").certificate.modal-open
+                .certificate__img
+                  img(src="./img/certificate.png", alt="")
+                .certificate__title Сертификат соответствия «ЛСМ» ООО «Трансконсалтинг»
+            .col.col--sm-3
+              a(href="./img/certificate.png").certificate.modal-open
+                .certificate__img
+                  img(src="./img/certificate.png", alt="")
+                .certificate__title Сертификат соответствия «ЛСМ» ООО «Трансконсалтинг»
+        .tabs__content
+          .grid
+            .col.col--sm-6
+              .leasing
+                .leasing__container
+                  .leasing__name Группа Компаний «Национальная Лизинговая Компания» 
+                  .grid
+                    .col.col--sm-6
+                      .info-item
+                        .info-item__label Аванс
+                        .info-item__value от 20%
+                    .col.col--sm-6
+                      .info-item
+                        .info-item__label Сумма финансирования
+                        .info-item__value от 300 000 руб.
+                    .col.col--sm-6
+                      .info-item
+                        .info-item__label Лизингополучатель
+                        .info-item__value ИП, юридическое лицо
+                    .col.col--sm-6
+                      .info-item
+                        .info-item__label Срок лизинга
+                        .info-item__value 12-48 месяцев
+                    .col.col--sm-6
+                      .info-item
+                        .info-item__label Срок ведения деятельности
+                        .info-item__value от 12 месяцев
+                  .leasing__logo
+                    img(src="./img/leasing-1.jpg", alt="")
+                .leasing__bottom
+                  p Предмет лизинга: автотранспорт, спецтехника, оборудование
+            .col.col--sm-6
+              .leasing
+                .leasing__container
+                  .leasing__name Группа Компаний «Национальная Лизинговая Компания» 
+                  .grid
+                    .col.col--sm-6
+                      .info-item
+                        .info-item__label Аванс
+                        .info-item__value от 5%
+                    .col.col--sm-6
+                      .info-item
+                        .info-item__label Срок договора
+                        .info-item__value от 6 месяцев до 10 лет
+                    .col.col--sm-6
+                      .info-item
+                        .info-item__label Объем финансирования
+                        .info-item__value без ограничений
+                    .col.col--sm-6
+                      .info-item
+                        .info-item__label Валюта договора
+                        .info-item__value рубли, доллары США, евро
+                    .col.col--sm-6
+                      .info-item
+                        .info-item__label Решение по сделке
+                        .info-item__value от 1 рабочего дня
+                  .leasing__logo
+                    img(src="./img/leasing-2.jpg", alt="")
+                .leasing__bottom
+                  p + Льготное финансирование оборудования с комплектующими Siemens
+
+    section.section
+      h2 Галерея
+      .slider.slider-3
+        a(href="./img/gallery-1.jpg").modal-open
+          img(src="./img/gallery-1.jpg", alt="")
+        a(href="./img/gallery-1.jpg").modal-open
+          img(src="./img/gallery-1.jpg", alt="")
+        a(href="./img/gallery-1.jpg").modal-open
+          img(src="./img/gallery-1.jpg", alt="")
+        a(href="./img/gallery-1.jpg").modal-open
+          img(src="./img/gallery-1.jpg", alt="")
+
+
+
+    section.section
+      h2 Надёжные комплектующие
+      .tabs
+        .tabs__header
+          .tabs__link.tabs__link_active: span Горелки
+          .tabs__link: span Насосы
+          .tabs__link: span Автоматика и безопасность
+          .tabs__link: span Арматура
+          .tabs__link: span Контрольно-измерительное
+        .tabs__content.tabs__content_active
+          .slider.slider-6
+            .logotype
+              img(src="./img/partner-1.png", alt="")
+            .logotype
+              img(src="./img/partner-1.png", alt="")
+            .logotype
+              img(src="./img/partner-1.png", alt="")
+            .logotype
+              img(src="./img/partner-1.png", alt="")
+            .logotype
+              img(src="./img/partner-1.png", alt="")
+            .logotype
+              img(src="./img/partner-1.png", alt="")
+            .logotype
+              img(src="./img/partner-1.png", alt="")
+        .tabs__content
 
   .text
     .wrapper
-      h2 Реконструкция котельной позволит вам
+      h2 Почему наше оборудование
       .text__container
         .text__left
           .text-list
-            .text-list__item Снизить расход топлива — уменьшению себестоимости теплоэнергии
-            .text-list__item Повысить производительность оборудования
-            .text-list__item Сократить затраты на содержание котельной
-            .text-list__item Полностью автоматизировать оборудование
-            .text-list__item Повысить качество теплоснабжения
-            .text-list__item Повысить безопасность в процессе эксплуатации
+            .text-list__item Без постоянного присутствия оператора
+            .text-list__item Интуитивное сенсорное управление
+            .text-list__item Любые виды диспетчеризации
+            .text-list__item Встроенный журнал работы
+            .text-list__item Каскадное управление
+            .text-list__item Возможность удаленного подключения инженеров завода
         .text__right
           .text__right-img
             img(src="./img/services/text-reconstruction.jpg", alt="")
 
+
+  .wrapper
+    section.section
+      h2 Сопутствующие услуги
+      .grid
+        .col.col--lg-3.col--sm-6
+          a(href="").another-service
+            .another-service__img
+              img(src="./img/another-service-1.jpg", alt="")
+            .another-service__container
+              .another-service__title Проектирование
+              .another-service__number 1
+        .col.col--lg-3.col--sm-6
+          a(href="").another-service
+            .another-service__img
+              img(src="./img/another-service-2.jpg", alt="")
+            .another-service__container
+              .another-service__title Химводоотчистка
+              .another-service__number 2
+        .col.col--lg-3.col--sm-6
+          a(href="").another-service
+            .another-service__img
+              img(src="./img/another-service-3.jpg", alt="")
+            .another-service__container
+              .another-service__title Шеф-монтаж
+              .another-service__number 3
+        .col.col--lg-3.col--sm-6
+          a(href="").another-service.another-service_white-text
+            .another-service__img
+              img(src="./img/another-service-4.jpg", alt="")
+            .another-service__container
+              .another-service__title Доставка
+              .another-service__number 4
+
   section.wrapper.section
     h2 Популярные товары
-    .general-slider
+    .slider.slider-4
       - for (var i = 1; i < 10; i++)
         .col.col--lg-4.col--md-6
           a(href="").good

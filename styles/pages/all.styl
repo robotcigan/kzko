@@ -66,6 +66,35 @@
     h1
       color #fff
 
+.info-item
+  margin-bottom .5em
+  &__label
+    line-height 1.2
+    margin-bottom .25em
+    opacity .5
+  &__value
+    font-weight 500
+    line-height 1.2
+  &_big
+    margin-bottom 2em
+    .info-item
+      &__value
+        font-size 4.8rem
+        font-weight 600
+
+
+.logotype
+  align-items center
+  background-color #fff
+  display flex
+  height 14rem
+  justify-content center
+  padding 3.2rem
+  img
+    display block
+    object-fit contain
+    height 100%
+    width 100%
 
 
 @media screen and (max-width: 1260px)
@@ -73,6 +102,17 @@
     margin-bottom 6.4rem
     padding-top 0
 
+@media(max-width 1200px)
+  .info-item
+    &_big
+      margin-bottom 1em
+      .info-item
+        &__value
+          font-size 3.2rem
+
 @media(max-width 767px)
   .inner-header
-    height 16rem
+    &_with-img
+      height 16rem
+    h1
+      margin-bottom 0

@@ -1,0 +1,29 @@
+.responsive-table
+  overflow-x scroll
+  -webkit-overflow-scrolling touch
+
+.table
+  margin-bottom 3.2rem
+  thead
+    border-bottom $border
+    th
+      font-weight 500
+      font-size 1.4rem
+      line-height 1.2
+      padding 8px
+      // &:first-child
+      //   padding-left 0
+  tbody
+    tr
+      // border-bottom $border
+      td
+        font-size 1.4rem
+        padding 8px
+        // &:first-child
+        //   padding-left 0
+      &:nth-child(odd)
+        td
+          background-color initial
+          border-right $border
+      &:nth-child(even)
+        background-color #e8ebef
