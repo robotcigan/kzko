@@ -2421,11 +2421,12 @@ body {
 @media (max-width: 1000px) {
   .tabs__header {
     overflow-x: scroll;
-    margin-left: -2.4rem;
-    margin-right: -2.4rem;
+    overflow-y: hidden;
+    margin-left: -1.2rem;
+    margin-right: -1.2rem;
     -ms-flex-pack: initial;
     justify-content: initial;
-    padding: 0 2.4rem;
+    padding: 0 1.2rem;
     -webkit-overflow-scrolling: touch;
   }
   .tabs__content {
@@ -2433,10 +2434,10 @@ body {
   }
   .tabs__link {
     font-size: 1.4rem;
-    padding: 1em 0.5em;
+    margin-right: 2.4rem;
   }
   .tabs__link:last-child {
-    margin-right: 2.4rem;
+    margin-right: 4rem;
   }
 }
 @keyframes tabs {
@@ -2475,6 +2476,12 @@ body {
 }
 .table tbody tr:nth-child(even) {
   background-color: #e8ebef;
+}
+@media (max-width: 1200px) {
+  .responsive-table {
+    margin: 0 -1.2rem;
+    padding: 0 1.2rem;
+  }
 }
 .certificate {
   display: block;
@@ -2843,9 +2850,23 @@ body {
     display: flex;
   }
 }
+.cardpage__img {
+  margin-bottom: 2.4rem;
+  max-height: 56rem;
+  overflow: hidden;
+}
 .cardpage__img img {
   display: block;
   width: 100%;
+}
+.cardpage__img-nav {
+  margin: 0 -0.8rem;
+}
+.cardpage__img-nav__item {
+  cursor: pointer;
+  height: 8rem;
+  overflow: hidden;
+  padding: 0 0.8rem;
 }
 .cardpage__price {
   font-size: 4rem;
@@ -2906,6 +2927,66 @@ body {
 .leasing__bottom p {
   margin-bottom: 0;
 }
+.work-process {
+  display: block;
+  position: relative;
+}
+.work-process:before {
+  background-color: #d5d9db;
+  content: '';
+  height: 100%;
+  left: 1.9rem;
+  opacity: 1;
+  position: absolute;
+  transition: all 1s cubic-bezier(0.4, 0, 0, 1);
+  transition-delay: 1s;
+  width: 3px;
+  z-index: 0;
+}
+.work-process__item {
+  -ms-flex-align: center;
+  align-items: center;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 1.2rem;
+  position: relative;
+  z-index: 10;
+}
+.work-process__number {
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #dc1a14;
+  border-radius: 50%;
+  color: #fff;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  margin-right: 1.6rem;
+  height: 4rem;
+  width: 4rem;
+}
+.work-process__text {
+  font-size: 2rem;
+}
+.process-whatsapp {
+  background-color: #deefe4;
+  padding: 4rem;
+}
+.process-whatsapp__icon {
+  margin-bottom: 4rem;
+}
+.process-whatsapp__text {
+  margin-bottom: 1em;
+}
+.process-whatsapp__phone {
+  display: block;
+  color: #15bf45;
+  font-size: 4.8rem;
+  font-weight: 600;
+}
 .another-service {
   border-radius: 4px;
   display: block;
@@ -2952,8 +3033,39 @@ body {
   opacity: 0.7;
 }
 @media (max-width: 1200px) {
+  .cardpage__img {
+    max-height: 36rem;
+  }
   .another-service__container {
     padding: 1.6rem;
+  }
+  .leasing__container {
+    padding: 2.4rem;
+  }
+  .leasing__bottom {
+    padding: 2rem 2.4rem;
+  }
+  .leasing__title {
+    font-size: 1.8rem;
+  }
+  .work-process__text {
+    font-size: 1.6rem;
+  }
+  .process-whatsapp__phone {
+    font-size: 3.2rem;
+  }
+}
+@media (max-width: 1000px) {
+  .cardpage__img {
+    max-height: 28rem;
+  }
+}
+@media (max-width: 767px) {
+  .cardpage__buttons .btn {
+    margin-bottom: 1rem;
+  }
+  .cardpage__buttons .btn + .btn {
+    margin-left: 0;
   }
 }
 .small-offset {

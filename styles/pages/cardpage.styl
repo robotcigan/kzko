@@ -1,8 +1,18 @@
 .cardpage
   &__img
+    margin-bottom 2.4rem
+    max-height 56rem
+    overflow hidden
     img
       display block
       width 100%
+    &-nav
+      margin 0 -.8rem
+      &__item
+        cursor pointer
+        height 8rem
+        overflow hidden
+        padding 0 .8rem
   &__price
     font-size 4rem
     margin-bottom .5em
@@ -54,6 +64,52 @@
     p
       margin-bottom 0
 
+.work-process
+  display block
+  position relative
+  &:before
+    background-color #D5D9DB
+    content ''
+    height 100%
+    left 1.9rem
+    opacity 1
+    position absolute
+    transition $transition2
+    transition-delay 1s
+    width 3px
+    z-index 0
+  &__item
+    align-items center
+    display flex
+    margin-bottom 1.2rem
+    position relative
+    z-index 10
+  &__number
+    align-items center
+    background-color $primary
+    border-radius 50%
+    color #fff
+    display flex
+    justify-content center
+    flex-shrink 0
+    margin-right 1.6rem
+    size(4rem)
+  &__text
+    font-size 2rem
+
+.process-whatsapp
+  background-color #DEEFE4
+  padding 4rem
+  &__icon
+    margin-bottom 4rem
+  &__text
+    margin-bottom 1em
+  &__phone
+    display block
+    color #15BF45
+    font-size 4.8rem
+    font-weight 600
+
 
 .another-service
   border-radius $radius
@@ -93,8 +149,36 @@
 
 
 @media(max-width 1200px)
+  .cardpage
+    &__img
+      max-height 36rem
   .another-service
     &__container
       padding 1.6rem
-
+  .leasing
+    &__container
+      padding 2.4rem
+    &__bottom
+      padding 2rem 2.4rem
+    &__title
+      font-size 1.8rem
+  .work-process
+    &__text
+      font-size 1.6rem
+  .process-whatsapp
+    &__phone
+      font-size 3.2rem
       
+
+@media(max-width 1000px)
+  .cardpage
+    &__img
+      max-height 28rem
+
+@media(max-width 767px)
+  .cardpage
+    &__buttons
+      .btn
+        margin-bottom 1rem
+        & + .btn
+          margin-left 0

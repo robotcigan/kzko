@@ -214,8 +214,16 @@ $(document).ready(function () {
         slidesToScroll: 3
       }
     }, {
+      breakpoint: 1000,
+      settings: {
+        arrows: false,
+        slidesToShow: 2,
+        slidesToScroll: 2
+      }
+    }, {
       breakpoint: 767,
       settings: {
+        arrows: false,
         slidesToShow: 1,
         slidesToScroll: 1
       }
@@ -237,18 +245,48 @@ $(document).ready(function () {
     }, {
       breakpoint: 1000,
       settings: {
+        arrows: false,
         slidesToShow: 3,
         slidesToScroll: 3
       }
     }, {
       breakpoint: 767,
       settings: {
+        arrows: false,
         slidesToShow: 2,
         slidesToScroll: 2
       }
     }]
   });
 
+  // Страница карточки слайдер вверху
+  $('.cardpage__img').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: false,
+    fade: true,
+    asNavFor: '.cardpage__img-nav'
+  });
+  $('.cardpage__img-nav').slick({
+    slidesToShow: 6,
+    slidesToScroll: 1,
+    asNavFor: '.cardpage__img',
+    arrows: true,
+    // dots: false,
+    // centerMode: true,
+    focusOnSelect: true,
+    responsive: [{
+      breakpoint: 1200,
+      settings: {
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        // dots: true,
+        arrows: false
+      }
+    }]
+  });
+
+  // Модалки открытия файлов
   $('.modal-open').fancybox({
     touch: false
   });

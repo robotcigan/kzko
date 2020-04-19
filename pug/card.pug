@@ -24,7 +24,38 @@ block content
       .grid
         .col.col--xl-6.col--sm-6
           .cardpage__img
-            img(src="./img/goods/1.jpg", alt="")
+            a(href="./img/goods/1.jpg").modal-open
+              img(src="./img/goods/1.jpg", alt="")
+            a(href="./img/goods/2.jpg").modal-open
+              img(src="./img/goods/2.jpg", alt="")
+            a(href="./img/goods/3.jpg").modal-open
+              img(src="./img/goods/3.jpg", alt="")
+            a(href="./img/goods/4.jpg").modal-open
+              img(src="./img/goods/4.jpg", alt="")
+            a(href="./img/goods/5.jpg").modal-open
+              img(src="./img/goods/5.jpg", alt="")
+            a(href="./img/goods/6.jpg").modal-open
+              img(src="./img/goods/6.jpg", alt="")
+            a(href="./img/goods/7.jpg").modal-open
+              img(src="./img/goods/7.jpg", alt="")
+
+            
+          .cardpage__img-nav
+            .cardpage__img-nav__item
+              img(src="./img/goods/1.jpg", alt="")
+            .cardpage__img-nav__item
+              img(src="./img/goods/2.jpg", alt="")
+            .cardpage__img-nav__item
+              img(src="./img/goods/3.jpg", alt="")
+            .cardpage__img-nav__item
+              img(src="./img/goods/4.jpg", alt="")
+            .cardpage__img-nav__item
+              img(src="./img/goods/5.jpg", alt="")
+            .cardpage__img-nav__item
+              img(src="./img/goods/6.jpg", alt="")
+            .cardpage__img-nav__item
+              img(src="./img/goods/7.jpg", alt="")
+
         .col.col--sm-1.dn-xl
         .col.col--sm-6.col--xl-5
           .cardpage__price от 380 000 ₽
@@ -61,7 +92,7 @@ block content
           .tabs__link: span Процесс
 
 
-        .tabs__content.tabs__content_active
+        .tabs__content
           p Паровые промышленные котлы (парогенераторы). Паропроизводительность от 100 килограмм до 10 тонн пара  час. Расчётное давление 0,7 бар. Выработка насыщенного пара с температурой до 115 °C. Паровые жаротрубные котлы малой, средней и большой мощности. Благодаря трехходовой конструкции паровое котлы имеет высокий коэффициент полезного действия. Паровые котлы по запросу клиента могут быть укомплектованы двумя модулируемыми горелками, что регулирует нагрузку. Работа в рамках широкого диапазона важна для производств с циклической нагрузкой. Высокоэффективные модели по доступным ценам. Оснащение предприятий качественным оборудованием. Производительность и долговечность подтверждена сертификатами.
         .tabs__content
           .responsive-table
@@ -216,12 +247,12 @@ block content
 
         .tabs__content
           .grid
-            .col.col--sm-3
+            .col.col--xl-3.col--sm-4
               a(href="./img/certificate.png").certificate.modal-open
                 .certificate__img
                   img(src="./img/certificate.png", alt="")
                 .certificate__title Сертификат соответствия «ЛСМ» ООО «Трансконсалтинг»
-            .col.col--sm-3
+            .col.col--xl-3.col--sm-4
               a(href="./img/certificate.png").certificate.modal-open
                 .certificate__img
                   img(src="./img/certificate.png", alt="")
@@ -260,7 +291,7 @@ block content
             .col.col--sm-6
               .leasing
                 .leasing__container
-                  .leasing__name Группа Компаний «Национальная Лизинговая Компания» 
+                  .leasing__name Лизинговая компания  «Сименс Финанс»
                   .grid
                     .col.col--sm-6
                       .info-item
@@ -286,6 +317,43 @@ block content
                     img(src="./img/leasing-2.jpg", alt="")
                 .leasing__bottom
                   p + Льготное финансирование оборудования с комплектующими Siemens
+        .tabs__content.tabs__content_active
+          .grid
+            .col.col--xl-8.col--sm-6
+              h2 Процесс
+              .work-process
+                .work-process__item
+                  .work-process__number 1
+                  .work-process__text Вы присылаете заявку
+                .work-process__item
+                  .work-process__number 2
+                  .work-process__text Наши специалисты подбирают оптимальное решение
+                .work-process__item
+                  .work-process__number 3
+                  .work-process__text Вы можете посетить наше производство в любое время
+                .work-process__item
+                  .work-process__number 4
+                  .work-process__text Обсуждаем договорные обязательства и подписываем договор
+                .work-process__item
+                  .work-process__number 5
+                  .work-process__text Производим оборудование в установленные сроки
+                .work-process__item
+                  .work-process__number 6
+                  .work-process__text Проводим заводские испытания
+                .work-process__item
+                  .work-process__number 7
+                  .work-process__text Доставляем продукцию (либо самовывоз)
+                .work-process__item
+                  .work-process__number 8
+                  .work-process__text Монтажные и пусконаладочные работы (при необходимости)
+            .col.col--xl-4.col--sm-6
+              .process-whatsapp
+                .process-whatsapp__icon
+                  img(src="./img/whatsapp.svg", alt="")
+                .process-whatsapp__text Есть вопросы? Пишите в WhatsApp 
+                a(href="tel:88612063186").process-whatsapp__phone 8 861 206-31-86
+
+
 
     section.section
       h2 Галерея
