@@ -1469,6 +1469,8 @@ small {
 .main-header__phone {
   -ms-flex-negative: 0;
   flex-shrink: 0;
+  font-size: 1.5em;
+  font-weight: 600;
   margin-right: 2em;
 }
 .main-header + .inner-header_with-img {
@@ -1755,6 +1757,9 @@ small {
   }
   .main-header .nav__link:last-child {
     margin-right: 2rem;
+  }
+  .main-header__phone {
+    font-size: 1em;
   }
   .main-header .btn {
     display: none;
@@ -2980,6 +2985,9 @@ body {
 .cardpage-download:hover .cardpage-download__text {
   opacity: 0.8;
 }
+.cardpage .info-item__label {
+  font-size: 1.2rem;
+}
 .leasing {
   background-color: #fff;
 }
@@ -3108,6 +3116,9 @@ body {
   .cardpage__img {
     max-height: 36rem;
   }
+  .cardpage__img .slick-slide {
+    height: 36rem;
+  }
   .another-service__container {
     padding: 1.6rem;
   }
@@ -3131,6 +3142,9 @@ body {
   .cardpage__img {
     max-height: 28rem;
   }
+  .cardpage__img .slick-slide {
+    height: 28rem;
+  }
 }
 @media (max-width: 767px) {
   .cardpage__buttons .btn {
@@ -3138,6 +3152,12 @@ body {
   }
   .cardpage__buttons .btn + .btn {
     margin-left: 0;
+  }
+  .cardpage__img {
+    max-height: 24rem;
+  }
+  .cardpage__img .slick-slide {
+    height: 24rem;
   }
 }
 .small-offset {

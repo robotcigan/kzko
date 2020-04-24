@@ -1,0 +1,71 @@
+extends layout.pug
+
+block content
+
+  .inner-header.inner-header_with-img
+    .inner-header__bg
+      img(src="./img/catalog-bg-2.jpg", alt="")
+    .inner-header__container
+      .wrapper
+        section.breadcrumbs
+          .breadcrumbs-list
+            .breadcrumbs-item
+              a(href="/" title="Главная").breadcrumbs-text Главная
+            .breadcrumbs-item
+              .breadcrumbs-text Услуги
+        h1 Котельные
+
+  .wrapper
+    .catalog-links
+      .catalog-link.catalog-link_active: a Все
+      .catalog-link: a(href="") По способу размещения
+      .catalog-link: a(href="") Блочно-модульные
+      .catalog-link: a(href="") Стационарные
+      .catalog-link: a(href="") Транспортабельные
+      .catalog-link: a(href="") Крышные
+      .catalog-link: a(href="") Мини-котельные
+      .catalog-link: a(href="") По типу теплоносителя
+      .catalog-link: a(href="") Водогрейные
+      .catalog-link: a(href="") Пароводогрейные
+      .catalog-link: a(href="") Паровые
+
+
+
+    section.section
+      .goods
+
+        section.section
+          .goods.grid
+            - for (var i = 1; i < 6; i++)
+              .col.col--lg-3.col--md-6
+                a(href="").good
+                  .good__img
+                    img(src="./img/kotelynie/" + i + ".png", alt="")
+                  .good__container
+                    .good__left
+                      .good__category Паровые котлы (парогенераторы)
+                      .good__title 10 бар 100 - 2000 кг/ч
+                    .good__right
+                      .good__price от 285 000 ₽
+
+          section.pagination
+            .pagination-wrap
+              .pagination-center
+                .pagination-list
+                  .pagination-item: a.pagination-item-link.pagination-item-link-active 1
+                  .pagination-item: a(href="/catalog/parovye-kotly-/?PAGEN_1=2").pagination-item-link 2
+
+          .seo-text
+            p Паровые промышленные котлы (парогенераторы). Паропроизводительность от 100 килограмм до 10 тонн пара час.Расчётное давление 0,7 бар. Выработка насыщенного пара с температурой до 115 °C. Паровые жаротрубные котлы малой, средней и большой мощности. Благодаря трехходовой конструкции паровое котлы имеет высокий коэффициент полезного действия. Паровые котлы по запросу клиента могут быть укомплектованы двумя модулируемыми горелками, что регулирует нагрузку. Работа в рамках широкого диапазона важна для производств с циклической нагрузкой.
+            p Высокоэффективные модели по доступным ценам. Оснащение предприятий качественным оборудованием. Производительность и долговечность подтверждена сертификатами.
+
+
+
+  section.help
+    .wrapper
+      h2 Нужна помощь в выборе или остались вопросы?<br>Мы перезвоним вам в течение 15 минут!
+      form.form
+        .form-input
+          input(type="tel" placeholder="Номер телефона").phone-mask
+        .btn Получить консультацию
+      small Нажимая кнопку «Получить консультацию» Вы соглашаетесь на обработку ваших персональных данных

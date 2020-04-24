@@ -54,6 +54,11 @@
           opacity .8
 
 
+.cardpage
+  .info-item
+    &__label
+      font-size 1.2rem
+
 .leasing
   background-color #fff
   &__container
@@ -157,6 +162,8 @@
   .cardpage
     &__img
       max-height 36rem
+      .slick-slide
+        height 36rem
   .another-service
     &__container
       padding 1.6rem
@@ -179,6 +186,8 @@
   .cardpage
     &__img
       max-height 28rem
+      .slick-slide
+        height 28rem
 
 @media(max-width 767px)
   .cardpage
@@ -187,3 +196,7 @@
         margin-bottom 1rem
         & + .btn
           margin-left 0
+    &__img
+      max-height 24rem
+      .slick-slide
+        height 24rem

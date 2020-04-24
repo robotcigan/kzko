@@ -31,15 +31,84 @@ block content
             img(src="./img/filter.svg", alt="").filter-mobile-button__img
             .filter-mobile-button__text Фильтры
           .filter
-            .filter__links
-              .filter__link: a(href="") Автоматические
-              .filter__link: a(href="") На газе
-              .filter__link: a(href="") Автономная
-              .filter__link: a(href="") Водогрейная
-              .filter__link: a(href="") Дизельные
-              .filter__link: a(href="") Жидком топливе
-              .filter__link: a(href="") Мини котельная
-              .filter__link: a(href="") Многоквартирных домах
+
+            .form-input
+              label.forim-input__label Назначение
+              select.custom-select
+                option Жидкое топливо
+                option Дизельные
+                option Газомазутный
+                option Газовые
+                option Газодизельные
+                option Мазутные
+                option На отработанном масле
+
+            .form-input
+              label.forim-input__label Назначение
+              select.custom-select
+                option 500 кг пара час
+                option 150 кг пара час
+                option 700 пара час
+                option 2000 кг (2 тонны) пара час
+                option 300 кг пара час
+                option 4000 кг пара час
+                option 12 т пара час
+                option 1000 кг (1тонна) пара час
+                option 1500 кг пара час
+                option 3000 кг пара час
+                option 900 кг пара в час
+
+
+            .form-input
+              label.forim-input__label Параметр
+              .checkbox
+                input(type="checkbox" id="checkbox")
+                label(for="checkbox").checkbox__label
+                label.checkbox__text(for="checkbox") Большой мощности
+              .checkbox
+                input(type="checkbox" id="checkbox")
+                label(for="checkbox").checkbox__label
+                label.checkbox__text(for="checkbox") Малой мощности
+              .checkbox
+                input(type="checkbox" id="checkbox")
+                label(for="checkbox").checkbox__label
+                label.checkbox__text(for="checkbox") Средней мощности
+
+            .form-input
+              label.forim-input__label Параметр
+              .checkbox
+                input(type="checkbox" id="checkbox")
+                label(for="checkbox").checkbox__label
+                label.checkbox__text(for="checkbox") Низкого давления
+              .checkbox
+                input(type="checkbox" id="checkbox")
+                label(for="checkbox").checkbox__label
+                label.checkbox__text(for="checkbox") Среднего давления
+              .checkbox
+                input(type="checkbox" id="checkbox")
+                label(for="checkbox").checkbox__label
+                label.checkbox__text(for="checkbox") Высокое давление
+
+            .form-input
+              label.forim-input__label Назначение
+              select.custom-select
+                option Мини
+                option Вертикальные
+                option Горизонтальный
+                option Мобильная
+                option Цилиндрический
+                option Контейнерного типа
+
+            .form-input
+              label.forim-input__label Параметр
+              .checkbox
+                input(type="checkbox" id="checkbox")
+                label(for="checkbox").checkbox__label
+                label.checkbox__text(for="checkbox") Промышленные
+              .checkbox
+                input(type="checkbox" id="checkbox")
+                label(for="checkbox").checkbox__label
+                label.checkbox__text(for="checkbox") С большим КПД
 
             .form-input
               label.forim-input__label Назначение
@@ -61,48 +130,20 @@ block content
                 option Для камер
                 option Для теплиц
                 option Для бетонного завода
+
             .form-input
-              label.forim-input__label Тип
+              label.forim-input__label Назначение
               select.custom-select
-                option Контейнерного типа
-                option Другого типа
-            .form-input
-              label.forim-input__label Топливо
-              select.custom-select
-                option Жидкое топливо
-                option Другого типа
+                option Дизельные
+                option На газу
+                option ЖБИ
+
             .form-input
               label.forim-input__label Параметр
               .checkbox
                 input(type="checkbox" id="checkbox")
                 label(for="checkbox").checkbox__label
-                label.checkbox__text(for="checkbox") Большой мощности
-              .checkbox
-                input(type="checkbox" id="checkbox")
-                label(for="checkbox").checkbox__label
-                label.checkbox__text(for="checkbox") Высокого давления
-              .checkbox
-                input(type="checkbox" id="checkbox")
-                label(for="checkbox").checkbox__label
-                label.checkbox__text(for="checkbox") Малой мощности
-              .checkbox
-                input(type="checkbox" id="checkbox")
-                label(for="checkbox").checkbox__label
-                label.checkbox__text(for="checkbox") Средней мощности
-
-            .form-input
-              label.forim-input__label Мощность, кг пар/час
-            .catalog-slider
-              .catalog-slider__values
-                input(type="tel" data-min=0 data-start=200).catalog-slider__left
-                input(type="tel" data-max=6000 data-end=1000).catalog-slider__right
-            
-            .form-input
-              label.forim-input__label Давление
-            .catalog-slider
-              .catalog-slider__values
-                input(type="tel" data-min=0 data-start=500).catalog-slider__left
-                input(type="tel" data-max=6000 data-end=2000).catalog-slider__right
+                label.checkbox__text(for="checkbox") Длительного горения 
 
             .form-input
               label.forim-input__label Цена, ₽
