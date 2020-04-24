@@ -22,7 +22,20 @@
 
 .filter
   max-width 35rem
+  position relative
   transition all .8s cubic-bezier(.16,1.08,.38,.98)
+  &__links
+    border-bottom $border
+    margin-bottom 1.5em
+    padding-bottom .5em
+  &__link
+    a
+      display block
+      font-weight 500
+      margin-bottom 1em
+      transition $transition
+      &:hover
+        color $primary
 
 .filter-mobile-button
   align-items center
@@ -44,6 +57,34 @@
       fill $primary
   &__text
     color $primary
+
+.bx-filter-popup-result.left
+  background-color $primary
+  color #fff
+  padding 1.2rem 1.6rem
+  position absolute
+  right -14rem
+  width 12rem
+  z-index 100
+  &:before
+    border-style solid
+    border-width 11px 14px 11px 0
+    border-color transparent $primary transparent transparent
+    bottom 0
+    content ''
+    left -.8rem
+    margin auto
+    position: absolute
+    top 0
+    size(0)
+  a
+    color #fff
+    display block
+    margin-top .25em
+    opacity .5
+    transition $transition
+    &:hover
+      opacity 1
 
 
 @media(max-width 1200px)
@@ -79,7 +120,8 @@
   .filter-mobile-button
     display flex
 
-
+  .bx-filter-popup-result.left
+    display none
 
 
 

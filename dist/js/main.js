@@ -144,6 +144,7 @@ $(document).ready(function () {
     var index = $(this).index();
     $(this).closest('.tabs').find('.tabs__content').removeClass('tabs__content_active');
     $(this).closest('.tabs').find('.tabs__content').eq(index).addClass('tabs__content_active');
+    $('.slider').slick('setPosition');
   });
 
   // Sliders

@@ -375,8 +375,6 @@ hr {
 }
 .container {
   max-width: 1600px;
-  padding-left: 0;
-  padding-right: 0;
 }
 .wrapper {
   margin: 0 auto;
@@ -663,6 +661,10 @@ hr {
   }
 }
 @media (min-width: 1200px) {
+  .wrapper {
+    padding-left: 3%;
+    padding-right: 3%;
+  }
   .grid {
     grid-column-gap: 2rem;
     grid-row-gap: 2rem;
@@ -980,6 +982,18 @@ small {
 }
 .slick-dots li button:before {
   font-size: 3rem;
+}
+@media (max-width: 1600px) {
+  .slick-prev,
+  .slick-next {
+    border: none;
+  }
+  .slick-prev {
+    left: -2.2rem;
+  }
+  .slick-next {
+    right: -2.2rem;
+  }
 }
 @media (max-width: 1200px) {
   .slick-dotted.slick-slider {
@@ -2628,7 +2642,7 @@ body {
   margin-bottom: 2em;
 }
 .info-item_big .info-item__value {
-  font-size: 4.8rem;
+  font-size: 3.2rem;
   font-weight: 600;
 }
 .logotype {
@@ -2783,7 +2797,22 @@ body {
 }
 .filter {
   max-width: 35rem;
+  position: relative;
   transition: all 0.8s cubic-bezier(0.16, 1.08, 0.38, 0.98);
+}
+.filter__links {
+  border-bottom: 1px solid #dbe1e9;
+  margin-bottom: 1.5em;
+  padding-bottom: 0.5em;
+}
+.filter__link a {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 1em;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0, 1);
+}
+.filter__link a:hover {
+  color: #dc1a14;
 }
 .filter-mobile-button {
   -ms-flex-align: center;
@@ -2807,6 +2836,38 @@ body {
 }
 .filter-mobile-button__text {
   color: #dc1a14;
+}
+.bx-filter-popup-result.left {
+  background-color: #dc1a14;
+  color: #fff;
+  padding: 1.2rem 1.6rem;
+  position: absolute;
+  right: -14rem;
+  width: 12rem;
+  z-index: 100;
+}
+.bx-filter-popup-result.left:before {
+  border-style: solid;
+  border-width: 11px 14px 11px 0;
+  border-color: transparent #dc1a14 transparent transparent;
+  bottom: 0;
+  content: '';
+  left: -0.8rem;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  height: 0;
+  width: 0;
+}
+.bx-filter-popup-result.left a {
+  color: #fff;
+  display: block;
+  margin-top: 0.25em;
+  opacity: 0.5;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0, 1);
+}
+.bx-filter-popup-result.left a:hover {
+  opacity: 1;
 }
 @media (max-width: 1200px) {
   .catalog-links {
@@ -2849,6 +2910,9 @@ body {
     display: -ms-flexbox;
     display: flex;
   }
+  .bx-filter-popup-result.left {
+    display: none;
+  }
 }
 .cardpage__img {
   margin-bottom: 2.4rem;
@@ -2857,7 +2921,15 @@ body {
 }
 .cardpage__img img {
   display: block;
+  -o-object-fit: contain;
+  object-fit: contain;
+  -o-object-position: center;
+  object-position: center;
+  height: 100%;
   width: 100%;
+}
+.cardpage__img .slick-slide {
+  height: 56rem;
 }
 .cardpage__img-nav {
   margin: 0 -0.8rem;
