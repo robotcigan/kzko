@@ -1,3 +1,31 @@
+.popup-block.active
+  .change-language
+    display none
+  .mobile-phone-wrap
+    display none
+  .checkbox
+    align-items flex-start
+  .checkbox input[type="checkbox"]:checked+label::after
+    margin-left 1px
+    margin-top 2px
+  .checkbox input[type="checkbox"]+label
+    display block
+  .checkbox
+    .checkbox__text
+      .link
+        display inline
+
+
+.chekbox-wrap
+  background-color #fff
+  flex-shrink 0
+  margin-right 2rem
+  size(2rem)
+  .checkbox__label
+    border none
+  .checkbox .link
+    display inline
+
 .main-title-wrap
   margin-bottom 0
   h1
@@ -5,3 +33,35 @@
     color $main
     line-height 1.2
     margin-bottom .75em
+
+@media(max-width 1600px)
+  .popup-block-cross
+    right 2.4rem
+    top 2.4rem
+
+@media(max-width 1200px)
+  .popup-block.active
+    padding 2.4rem 2.4rem
+    padding-bottom 0
+    width 100%
+    .block-title
+      font-family $font !important
+      font-size 2.4rem
+      font-weight 600
+      line-height 1.2
+      margin-bottom .25em
+      max-width 90%
+    .block-sub-title
+      line-height 1.2
+      margin-bottom 1em !important
+    .popup-block-cross
+      right 1.6rem
+      top 1.6rem
+    .form
+      .form-control
+        border-bottom 1px solid rgba(#fff, .1)
+    .back-call.active
+      margin-bottom 0
+      padding-bottom 4rem
+      overflow-y scroll
+      -webkit-overflow-scrolling touch

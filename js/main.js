@@ -30,7 +30,8 @@ $(document).ready(function() {
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
-          dots: true
+          dots: true,
+          arrows: false
         }
       }
     ]
@@ -267,6 +268,7 @@ $(document).ready(function() {
       }, {
         breakpoint: 767,
         settings: {
+          dots: true,
           arrows: false,
           slidesToShow: 2,
           slidesToScroll: 2

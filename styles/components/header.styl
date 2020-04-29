@@ -95,11 +95,18 @@
   align-items center
   // background-color teal
   display none
+  // margin-top 4px
   position relative
   size(2.4rem)
   transition $transition
-  transform translateY(-4px)
+  // top 4px
+  // transform translateY(-8px)
   width 2.4rem
+  span
+    background-color $main
+    height 2px
+    transition $transition
+    width 2.4rem
   &:before,
   &:after
     background-color $main
@@ -110,16 +117,18 @@
     transition all .3s ease
     width 2.4rem
   &:before
-    top 6px
+    top 4px
   &:after
-    top 14px
+    top 18px
   &_active
-    transform translate(8px, -4px)
+    transform translate(7px, 0)
+    span
+      opacity 0
     &:before
-      transform rotate(45deg) translateY(6px)
+      transform rotate(45deg) translateY(10px)
       width 2.4rem
     &:after
-      transform rotate(-45deg) translateY(-6px)
+      transform rotate(-45deg) translateY(-10px)
       width 2.4rem
 
 
@@ -243,7 +252,7 @@
       &__link:last-child
         margin-right 2rem
     &__phone
-      font-size 1em
+      font-size 1.4rem
     .btn
       display none
       // background-color transparent

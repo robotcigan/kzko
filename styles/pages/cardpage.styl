@@ -18,6 +18,14 @@
         height 8rem
         overflow hidden
         padding 0 .8rem
+      .slick
+        &-prev,
+        &-next
+          border none
+        &-prev
+          left -4rem
+        &-next
+          right -4rem
   &__price
     font-size 4rem
     margin-bottom .5em
@@ -181,6 +189,10 @@
     &__phone
       font-size 3.2rem
       
+@media(max-width 1440px)
+  .process-whatsapp
+    &__phone
+      font-size 3.2rem
 
 @media(max-width 1000px)
   .cardpage

@@ -257,7 +257,7 @@ hr {
 .checkbox {
   -ms-flex-align: center;
   align-items: center;
-  cursor: pointer;
+  cursor: pointer !important;
   display: -ms-flexbox;
   display: flex;
   margin-bottom: 0.5rem;
@@ -270,7 +270,7 @@ hr {
   background: #fff;
   border-radius: 4px;
   border: 1px solid #dbe1e9;
-  cursor: pointer;
+  cursor: pointer !important;
   display: inline-block;
   -ms-flex-negative: 0;
   flex-shrink: 0;
@@ -983,16 +983,24 @@ small {
 .slick-dots li button:before {
   font-size: 3rem;
 }
-@media (max-width: 1600px) {
+@media (max-width: 1700px) {
   .slick-prev,
   .slick-next {
     border: none;
   }
   .slick-prev {
-    left: -2.2rem;
+    left: -4.8rem;
   }
   .slick-next {
-    right: -2.2rem;
+    right: -4.8rem;
+  }
+}
+@media (max-width: 1600px) {
+  .slick-prev {
+    left: -4rem;
+  }
+  .slick-next {
+    right: -4rem;
   }
 }
 @media (max-width: 1200px) {
@@ -1050,11 +1058,9 @@ small {
     -webkit-overflow-scrolling: touch;
   }
   .slider {
-    display: -ms-flexbox;
-    display: flex;
     padding-left: 1.2rem;
-    overflow-x: scroll;
-    overflow-y: hidden;
+    overflow-x: initial;
+    overflow-y: initial;
   }
   .slider--1 {
     overflow-x: initial;
@@ -1085,6 +1091,40 @@ small {
     bottom: -2rem;
   }
 }
+.popup-block.active .change-language {
+  display: none;
+}
+.popup-block.active .mobile-phone-wrap {
+  display: none;
+}
+.popup-block.active .checkbox {
+  -ms-flex-align: start;
+  align-items: flex-start;
+}
+.popup-block.active .checkbox input[type="checkbox"]:checked+label::after {
+  margin-left: 1px;
+  margin-top: 2px;
+}
+.popup-block.active .checkbox input[type="checkbox"]+label {
+  display: block;
+}
+.popup-block.active .checkbox .checkbox__text .link {
+  display: inline;
+}
+.chekbox-wrap {
+  background-color: #fff;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  margin-right: 2rem;
+  height: 2rem;
+  width: 2rem;
+}
+.chekbox-wrap .checkbox__label {
+  border: none;
+}
+.chekbox-wrap .checkbox .link {
+  display: inline;
+}
 .main-title-wrap {
   margin-bottom: 0;
 }
@@ -1093,6 +1133,44 @@ small {
   color: #1e1f21;
   line-height: 1.2;
   margin-bottom: 0.75em;
+}
+@media (max-width: 1600px) {
+  .popup-block-cross {
+    right: 2.4rem;
+    top: 2.4rem;
+  }
+}
+@media (max-width: 1200px) {
+  .popup-block.active {
+    padding: 2.4rem 2.4rem;
+    padding-bottom: 0;
+    width: 100%;
+  }
+  .popup-block.active .block-title {
+    font-family: 'Proxima Nova', 'Arial', 'Helvetica', sans-serif !important;
+    font-size: 2.4rem;
+    font-weight: 600;
+    line-height: 1.2;
+    margin-bottom: 0.25em;
+    max-width: 90%;
+  }
+  .popup-block.active .block-sub-title {
+    line-height: 1.2;
+    margin-bottom: 1em !important;
+  }
+  .popup-block.active .popup-block-cross {
+    right: 1.6rem;
+    top: 1.6rem;
+  }
+  .popup-block.active .form .form-control {
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+  }
+  .popup-block.active .back-call.active {
+    margin-bottom: 0;
+    padding-bottom: 4rem;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+  }
 }
 .hero__title {
   overflow: hidden;
@@ -1370,6 +1448,15 @@ small {
 .service:hover .service__icon svg path {
   fill: #fff;
 }
+@media (max-width: 1200px) {
+  .service {
+    padding: 2rem;
+  }
+  .service__icon {
+    height: 4.8rem;
+    width: 4.8rem;
+  }
+}
 .category {
   background-color: #fff;
   display: -ms-flexbox;
@@ -1545,8 +1632,12 @@ small {
   height: 2.4rem;
   width: 2.4rem;
   transition: all 0.4s cubic-bezier(0.4, 0, 0, 1);
-  -ms-transform: translateY(-4px);
-  transform: translateY(-4px);
+  width: 2.4rem;
+}
+.burger span {
+  background-color: #1e1f21;
+  height: 2px;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0, 1);
   width: 2.4rem;
 }
 .burger:before,
@@ -1559,23 +1650,26 @@ small {
   width: 2.4rem;
 }
 .burger:before {
-  top: 6px;
+  top: 4px;
 }
 .burger:after {
-  top: 14px;
+  top: 18px;
 }
 .burger_active {
-  -ms-transform: translate(8px, -4px);
-  transform: translate(8px, -4px);
+  -ms-transform: translate(7px, 0);
+  transform: translate(7px, 0);
+}
+.burger_active span {
+  opacity: 0;
 }
 .burger_active:before {
-  -ms-transform: rotate(45deg) translateY(6px);
-  transform: rotate(45deg) translateY(6px);
+  -ms-transform: rotate(45deg) translateY(10px);
+  transform: rotate(45deg) translateY(10px);
   width: 2.4rem;
 }
 .burger_active:after {
-  -ms-transform: rotate(-45deg) translateY(-6px);
-  transform: rotate(-45deg) translateY(-6px);
+  -ms-transform: rotate(-45deg) translateY(-10px);
+  transform: rotate(-45deg) translateY(-10px);
   width: 2.4rem;
 }
 .mobile-menu {
@@ -1759,7 +1853,7 @@ small {
     margin-right: 2rem;
   }
   .main-header__phone {
-    font-size: 1em;
+    font-size: 1.4rem;
   }
   .main-header .btn {
     display: none;
@@ -2094,6 +2188,9 @@ body {
   -ms-transform: translateY(1rem);
   transform: translateY(1rem);
 }
+.catalog-item__count {
+  display: none;
+}
 .catalog-item:hover {
   background-color: #e4e8ee;
 }
@@ -2136,6 +2233,9 @@ body {
 @media (max-width: 1200px) {
   .help {
     padding: 4rem 0;
+  }
+  .help .form-input {
+    width: 100%;
   }
 }
 @media (max-width: 1000px) {
@@ -2380,6 +2480,7 @@ body {
   display: -ms-flexbox;
   display: flex;
   margin-bottom: 3.2rem;
+  position: relative;
 }
 .tabs__link {
   -ms-flex-align: center;
@@ -2446,13 +2547,14 @@ body {
     -ms-flex-pack: initial;
     justify-content: initial;
     padding: 0 1.2rem;
+    width: calc(100% + 1.2rem);
     -webkit-overflow-scrolling: touch;
   }
   .tabs__content {
     padding: 0;
   }
   .tabs__link {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     margin-right: 2.4rem;
   }
   .tabs__link:last-child {
@@ -2945,6 +3047,16 @@ body {
   overflow: hidden;
   padding: 0 0.8rem;
 }
+.cardpage__img-nav .slick-prev,
+.cardpage__img-nav .slick-next {
+  border: none;
+}
+.cardpage__img-nav .slick-prev {
+  left: -4rem;
+}
+.cardpage__img-nav .slick-next {
+  right: -4rem;
+}
 .cardpage__price {
   font-size: 4rem;
   margin-bottom: 0.5em;
@@ -3134,6 +3246,11 @@ body {
   .work-process__text {
     font-size: 1.6rem;
   }
+  .process-whatsapp__phone {
+    font-size: 3.2rem;
+  }
+}
+@media (max-width: 1440px) {
   .process-whatsapp__phone {
     font-size: 3.2rem;
   }
