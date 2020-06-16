@@ -30,7 +30,57 @@ linkHover($color)
       left 0
       width 100%
 
+circleHover($circleSize, $circleBg, $circleBgHover)
+  align-items center
+  cursor pointer
+  display flex
+  flex-shrink 0
+  justify-content center
+  size($circleSize)
+  &:before,
+  &:after
+    background-color $circleBg
+    border-radius 50%
+    content ''
+    left 0
+    position absolute
+    size($circleSize)
+    top 0
+    transition $transition
+    z-index -1
+  &:after
+    background-color $circleBgHover
+    size($circleSize + .8rem)
+    // size($circleSize)
+    transform scale(0)
+    // left -($circleSize * 0.1)
+    left -.4rem
+    top -.4rem
+    // left 0
+    // top 0
+    // top -($circleSize * 0.1)
+  &:hover
+    &:before
+      // opacity 0
+      transform scale(.8)
+    &:after
+      transform none
 
+
+imageShadow($shadowOpacity)
+  &:after
+    background-color rgba(#000, $shadowOpacity)
+    content ''
+    left 0
+    position absolute
+    size(100%)
+    top 0
+
+
+itemsDelay($delay)
+  for num in 2..12
+    &:nth-child({num})
+      transition-delay ((num - 1) / (10 * $delay)) s
 
 clearfix()
   &:after

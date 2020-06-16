@@ -1,3 +1,30 @@
+.text-list
+  padding-left 4rem
+  &__item
+    line-height 1.4
+    margin-bottom 2em
+    position relative
+    &:before
+      align-items center
+      border 1px solid rgba(#fff, .2)
+      border-radius 50%
+      size(3.2rem)
+      content url('../../img/services/list-check.svg')
+      display flex
+      justify-content center
+      left -4.4rem
+      position absolute
+      top -.5em
+  &_black
+    .text
+      &-list
+        &__item
+          color $main
+          &:before
+            border $border
+            content url('../../img/services/list-check-color.svg')
+
+
 .text
   background-color #2F3745
   color #fff
@@ -23,23 +50,7 @@
     justify-content space-between
     position relative
     z-index 10
-  &-list
-    padding-left 4rem
-    &__item
-      line-height 1.4
-      margin-bottom 2em
-      position relative
-      &:before
-        align-items center
-        border 1px solid rgba(#fff, .2)
-        border-radius 50%
-        size(3.2rem)
-        content url('../../img/services/list-check.svg')
-        display flex
-        justify-content center
-        left -4.4rem
-        position absolute
-        top -.5em
+
   &__left
     p
       opacity .7

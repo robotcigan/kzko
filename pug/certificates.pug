@@ -1,0 +1,30 @@
+extends layout.pug
+
+block content
+  .inner-header
+    .inner-header__container
+      .wrapper
+        section.breadcrumbs
+          .breadcrumbs-list
+            .breadcrumbs-item
+              a(href="/" title="Главная").breadcrumbs-text Главная
+            .breadcrumbs-item
+              .breadcrumbs-text Лицензии и сертификаты
+        h1 Лицензии и сертификаты
+
+  .wrapper
+    section.section
+      .grid
+        - for (var i = 0; i < 6; i++)
+          .col.col--xl-4.col--sm-6
+            a(href="./img/certificate-2.jpg").certificate.modal-open
+              .certificate__img
+                img(src="./img/certificate-2.jpg", alt="")
+              .certificate__title «Всероссийский Социально-экономический проект «Элита нации»
+          .col.col--xl-4.col--sm-6
+            a(href="./img/certificate-2.jpg").certificate.modal-open
+              .certificate__img
+                img(src="./img/certificate-2.jpg", alt="")
+              .certificate__title Государственное унитарное предприятие «Грозненский завод железобетонных изделий»
+    
+    include pagination.pug

@@ -1,0 +1,52 @@
+extends layout.pug
+
+block content
+  .inner-header
+    .inner-header__container
+      .wrapper
+        section.breadcrumbs
+          .breadcrumbs-list
+            .breadcrumbs-item
+              a(href="/" title="Главная").breadcrumbs-text Главная
+            .breadcrumbs-item
+              a(href="/" title="Главная").breadcrumbs-text Каталог
+            .breadcrumbs-item
+              a(href="/" title="Главная").breadcrumbs-text Паровые котлы
+            .breadcrumbs-item
+              .breadcrumbs-text Паровые котлы (парогенераторы) 0,7 бар (100 - 10000 кг/ч)
+        h1 Паровой котел 0,7 бар (от 100 до 10 000 кг/ч)
+
+  .wrapper
+    section.section
+      .grid
+        .col.col--sm-6
+          p ООО «КЗКЭО Энерго-Стандарт»  - это производственное предприятие, основная цель которого - выпуск на российский рынок котельного оборудования, способного конкурировать с иностранными производителями.
+          p Основным направлением нашей деятельности стал выпуск современного, надёжного и высокоэффективного оборудования для малой и средней теплоэнергетики.  
+          p ООО «КЗКЭО Энерго-Стандарт» - современная, динамично развивающаяся компания, эффективно решающая вопросы теплоснабжения комплексов промышленного, жилого и социального назначения уже более 15 лет. Современное оборудование и инновационные технологии, позволяют нам и нашим клиентам достичь высоких результатов в области теплоэнергетики. 
+        .col.col--sm-1
+        .col.col--sm-5
+
+
+
+    section.section
+      .grid
+        .col.col--sm-6
+          a(href="").block-link
+            .block-link__img
+              img(src="./img/block-link-construction.jpg", alt="")
+            .block-link__container
+              .block-link__title Производство
+              p.block-link__text Производим и водогрейные котлы, котельные, дымовые трубы, экономайзеры и деаэраторы и тепловые пункты
+              .btn.btn_ghost Подробнее
+        .col.col--sm-6
+          a(href="").block-link
+            .block-link__img
+              img(src="./img/block-link-services.jpg", alt="")
+            .block-link__container
+              .block-link__title Монтажные работы
+              p.block-link__text Производим и водогрейные котлы, котельные, дымовые трубы, экономайзеры и деаэраторы и тепловые пункты
+              .btn.btn_ghost Подробнее
+
+
+
+

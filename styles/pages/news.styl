@@ -1,0 +1,72 @@
+.new
+  display block
+  &__img
+    overflow hidden
+    img
+      transition $transition
+      transform scale(1.08)
+      width 100%
+  &__title
+    font-size 2rem
+    font-weight 600
+    line-height 1.2
+    margin-bottom .25em
+  &__container
+    background-color #fff
+    display flex
+    flex-direction column
+    justify-content space-between
+    height 22rem
+    padding 4rem
+    position relative
+    &:before
+      // background-color teal
+      background-color #fff
+      content ''
+      height 0
+      left 0
+      position absolute
+      top 0
+      transition $transition
+      width 100%
+    &-top
+      margin-bottom 0
+      max-height 12rem
+      transition $transition
+  &__tag
+    color $primary
+  &__anons
+    color $second
+    // display none
+    margin-bottom 0
+    opacity 0
+    transform translateY(1rem)
+    transition $transition
+  &:hover
+    .new
+      &__img
+        img
+          transform none
+      &__container
+        &:before
+          height 4rem
+          top -4rem
+        &-top
+          margin-top -4rem
+      &__anons
+        display block
+        opacity 1
+        transform none
+
+
+
+
+
+
+
+
+
+
+
+
+    

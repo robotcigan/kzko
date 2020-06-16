@@ -1,0 +1,39 @@
+.block-link
+  display block
+  position relative
+  &__img
+    overflow hidden
+    imageShadow(0)
+    &:after
+      background linear-gradient(180deg, rgba(#000, 0) 0%, #000 100%);
+      opacity .3
+      transition $transition
+    img
+      transform scale(1.08)
+      transition $transition
+  &__container
+    bottom 0rem
+    color #fff
+    left 4rem
+    max-width 44rem
+    position absolute
+    transition $transition
+  &__title
+    font-size 3.2rem
+    font-weight 600
+    line-height 1
+    margin-bottom .25em
+  .btn
+    opacity 0
+  &:hover
+    .block-link
+      &__img
+        &:after
+          opacity .5
+        img
+          transform none
+      &__container
+        bottom 4rem
+    .btn
+      opacity 1
+      margin-bottom 0
