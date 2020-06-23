@@ -2927,6 +2927,9 @@ body {
   font-size: 4rem;
   font-weight: 600;
 }
+.header-center {
+  text-align: center;
+}
 @media screen and (max-width: 1260px) {
   .section {
     margin-bottom: 6.4rem;
@@ -3519,6 +3522,7 @@ body {
 }
 .new {
   display: block;
+  overflow: hidden;
 }
 .new__img {
   overflow: hidden;
@@ -3657,7 +3661,6 @@ body {
 }
 .construction {
   background-color: #fff;
-  height: 100vh;
   padding: 8rem 0;
   position: relative;
 }
@@ -3671,13 +3674,32 @@ body {
 .construction__left {
   display: inline-block;
   height: 24rem;
+  position: -webkit-sticky;
+  position: sticky;
   top: 14rem;
+  width: 30%;
 }
 .construction__right {
   width: 50%;
 }
+.construction__item {
+  margin-bottom: 4rem;
+  opacity: 0;
+  -ms-transform: translateY(4rem);
+  transform: translateY(4rem);
+  transition: all 1s cubic-bezier(0.4, 0, 0, 1);
+}
+.construction__item.animated {
+  opacity: 1;
+  -ms-transform: none;
+  transform: none;
+}
 .construction__img {
   margin-bottom: 2.4rem;
+}
+.construction__label {
+  color: #dc1a14;
+  margin-bottom: 1em;
 }
 .leasing-detail {
   border-top: 1px solid #dbe1e9;

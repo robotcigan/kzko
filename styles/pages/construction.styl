@@ -1,6 +1,6 @@
 .construction
   background-color #fff
-  height 100vh
+  // height 100vh
   // overflow hidden
   padding 8rem 0
   position relative
@@ -12,10 +12,21 @@
     // background-color teal
     display inline-block
     height 24rem
-    // position sticky
+    position sticky
     top 14rem
-    // width 50%
+    width 30%
   &__right
     width 50%
+  &__item
+    margin-bottom 4rem
+    opacity 0
+    transform translateY(4rem)
+    transition $transition2
+    &.animated
+      opacity 1
+      transform none
   &__img
     margin-bottom 2.4rem
+  &__label
+    color $primary
+    margin-bottom 1em

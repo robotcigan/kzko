@@ -2,6 +2,12 @@
 
 $(document).ready(function () {
 
+  var wow = new WOW({
+    boxClass: 'wow',
+    animateClass: 'animated'
+  });
+  wow.init();
+
   var controller = new ScrollMagic.Controller();
 
   $('.hero .hero__title').blast({
