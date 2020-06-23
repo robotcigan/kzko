@@ -17,7 +17,7 @@
       z-index 100
 
 .section
-  margin-bottom 12rem
+  margin-bottom 8rem
 
 .inner-header
   overflow hidden
@@ -95,6 +95,38 @@
     object-fit contain
     height 100%
     width 100%
+
+.video
+  display block
+  position relative
+  imageShadow(.2)
+  &:before
+    align-items center
+    background-color $primary
+    border-radius 50%
+    bottom 0
+    size(8.8rem)
+    content url('../../img/services/play.svg')
+    display flex
+    justify-content center
+    left 0
+    margin auto
+    position absolute
+    right 0
+    top 0
+    transition $transition
+    z-index 10
+  &:hover
+    &:before
+      size(9.6rem)
+
+
+.info-number
+  &__number
+    color $primary
+    font-size 4rem
+    font-weight 600
+
 
 
 @media screen and (max-width: 1260px)

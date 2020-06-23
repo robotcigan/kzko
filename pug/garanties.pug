@@ -1,0 +1,67 @@
+extends layout.pug
+
+block content
+  .inner-header
+    .inner-header__container
+      .wrapper
+        section.breadcrumbs
+          .breadcrumbs-list
+            .breadcrumbs-item
+              a(href="/" title="Главная").breadcrumbs-text Главная
+            .breadcrumbs-item
+              a(href="/" title="Главная").breadcrumbs-text О заводе
+            .breadcrumbs-item
+              .breadcrumbs-text Гарантии
+
+        h1 Гарантии
+
+
+  .wrapper
+    section.section
+      .grid
+        .col.col--sm-6
+          p Важнейшая роль в системе гарантирования качества возложена на производственную аккредитованную лабораторию, которая осуществляет функции входного и выходного контроля, проводит испытания оборудования. 
+        .col.col--sm-1
+        .col.col--sm-5
+
+
+    section.section
+      .grid
+        .col.col--sm-6
+          .garanties-block
+            .garanties-block__img
+              img(src="./img/garanties-1.jpg", alt="")
+            .garanties-block__container
+              .garanties-block__title Гарантия более 2 лет
+              p.garanties-block__text На все оборудование выпускаемое нашим заводом распространяется гарантия от 24 месяцев. Право на гарантийное обслуживание предоставляется в соответствии с действующими законодательными актами РФ и условиями гарантии от производителя. 
+
+        .col.col--sm-6
+
+          .garanties-block
+            .garanties-block__img
+              img(src="./img/garanties-2.jpg", alt="")
+            .garanties-block__container
+              .garanties-block__title Гарантия более 2 лет
+              p.garanties-block__text На все оборудование выпускаемое нашим заводом распространяется гарантия от 24 месяцев. Право на гарантийное обслуживание предоставляется в соответствии с действующими законодательными актами РФ и условиями гарантии от производителя. 
+
+
+  section
+    .block-with-info
+      .wrapper
+        .grid
+          .col.col--sm-6
+            .block-with-info__title При поломке на протяжении гарантийного срока, позвоните на 8 861 206 31 86, чтобы обговорить детали предоставления услуг.
+            p Наши инженеры проанализируют ситуацию и бесплатно заменят или отремонтируют агрегат, если поломка произошла не по причине нарушения правил эксплуатации. 
+            p В остальных случаях, а также после истечения срока гарантии, работы выполняются в соответствии с действующими расценками.
+          .col.col--sm-6
+            .text-list.text-list_black
+              .text-list__item Снизить расход топлива — уменьшению себестоимости теплоэнергии
+              .text-list__item Повысить производительность оборудования
+              .text-list__item Сократить затраты на содержание котельной
+              .text-list__item Полностью автоматизировать оборудование
+              .text-list__item Повысить качество теплоснабжения
+              .text-list__item Повысить безопасность в процессе эксплуатации
+
+
+
+

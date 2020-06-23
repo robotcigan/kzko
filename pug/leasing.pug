@@ -1,0 +1,83 @@
+extends layout.pug
+
+block content
+  .inner-header
+    .inner-header__container
+      .wrapper
+        section.breadcrumbs
+          .breadcrumbs-list
+            .breadcrumbs-item
+              a(href="/" title="Главная").breadcrumbs-text Главная
+            .breadcrumbs-item
+              a(href="/" title="Главная").breadcrumbs-text О заводе
+            .breadcrumbs-item
+              .breadcrumbs-text Лизинг
+        h1 Лизинг
+
+  .wrapper
+    section.section
+      .grid
+        .col.col--lg-8
+          h2 Simens
+          p Минимальный авансовый платеж 10% (в зависимости от параметров сделки), максимальный срок лизинга 5 и 7 лет. Графики лизинговых платежей на выбор клиента, в том числе и с учетом сезонности его бизнеса. Финансирование осуществляется за счёт собственных средств нашего собственника – концерна Siemens AG, благодаря чему условия финансирования в нашей компании можно считать более чем эффективными.
+          .leasing-detail
+            .leasigng-detail__table
+              .leasing-detail__line
+                .leasing-detail__line-left Аванс
+                .leasing-detail__line-right От 5%
+              .leasing-detail__line
+                .leasing-detail__line-left Объем финансирования
+                .leasing-detail__line-right Без ограничений
+              .leasing-detail__line
+                .leasing-detail__line-left Срок договора
+                .leasing-detail__line-right От 6 месяцев до 10 лет
+              .leasing-detail__line
+                .leasing-detail__line-left Валюта договора
+                .leasing-detail__line-right Рубли, доллары США, евро
+              .leasing-detail__line
+                .leasing-detail__line-left Решение по сделке
+                .leasing-detail__line-right От 1 рабочего дня
+
+          p По Вашему запросу или запросу Ваших клиентов мы сформируем индивидуальное предложение исходя из особенностей бизнеса клиента и проекта. В любое время Вы можете обратиться за консультацией.
+          .btn Отправить заявку на лизинг
+
+        .col.col--lg-1
+        .col.col--lg-3
+          .leasing-detail-img-block
+            .leasing-detail-img
+              img(src="./img/simens.jpg", alt="")
+            .leasing-detail-img-text + Льготное финансирование оборудования с комплектующими Siemens
+
+
+    section.section
+      .grid
+        .col.col--lg-8
+          h2 Национальная Лизинговая Компания
+          p Национальная Лизинговая Компания основана в 2003 году. С 2014 года входит в холдинг Mikro Kapital Group.
+          p Mikro Kapital Group – это европейский холдинг, с головным офисом в Италии, объединяющий ряд компаний, расположенных в России, Швейцарии, Люксембурге, Беларуси, Молдове и Армении. Компании в составе холдинга специализируются на широком спектре финансовых и сопутствующих им услуг, ориентированных как на клиентов в странах присутствия, так и на иностранных клиентов.
+          .leasing-detail
+            .leasigng-detail__table
+              .leasing-detail__line
+                .leasing-detail__line-left Аванс
+                .leasing-detail__line-right От 5%
+              .leasing-detail__line
+                .leasing-detail__line-left Объем финансирования
+                .leasing-detail__line-right Без ограничений
+              .leasing-detail__line
+                .leasing-detail__line-left Срок договора
+                .leasing-detail__line-right От 6 месяцев до 10 лет
+              .leasing-detail__line
+                .leasing-detail__line-left Валюта договора
+                .leasing-detail__line-right Рубли, доллары США, евро
+              .leasing-detail__line
+                .leasing-detail__line-left Решение по сделке
+                .leasing-detail__line-right От 1 рабочего дня
+
+          p По Вашему запросу или запросу Ваших клиентов мы сформируем индивидуальное предложение исходя из особенностей бизнеса клиента и проекта. В любое время Вы можете обратиться за консультацией.
+          .btn Отправить заявку на лизинг
+
+        .col.col--lg-1
+        .col.col--lg-3
+          .leasing-detail-img-block
+            .leasing-detail-img
+              img(src="./img/nlk.jpg", alt="")

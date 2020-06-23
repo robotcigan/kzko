@@ -1,0 +1,63 @@
+extends layout.pug
+
+block content
+  .inner-header
+    .inner-header__container
+      .wrapper
+        section.breadcrumbs
+          .breadcrumbs-list
+            .breadcrumbs-item
+              a(href="/" title="Главная").breadcrumbs-text Главная
+            .breadcrumbs-item
+              a(href="/" title="Главная").breadcrumbs-text О заводе
+            .breadcrumbs-item
+              .breadcrumbs-text Производство
+        h1 Производство
+
+  .wrapper
+    section.section
+      .grid
+        .col.col--sm-6
+          p Опираясь на современное технологическое оборудование, ООО «КЗКЭО Энерго-Стандарт», производит и реализует паровые и водогрейные котлы, котельные, дымовые трубы, экономайзеры и деаэраторы, тепловые пункты как для промышленных, так и жилых, социальных и прочих объектов и комплексов.
+          p Производственные площади, мощности и оснощенность Краснодарского завода котельно-энергетического оборудования увеличиваются из года в год.
+
+        .col.col--sm-1
+        .col.col--sm-5
+          .grid
+            .col.col--sm-6
+              .info-number
+                .info-number__number c 2015
+                p.info-number__text года успешно реализуем комплексные решения в теплоэнергетической сфере
+            .col.col--sm-6
+              .info-number
+                .info-number__number >23
+                p.info-number__text регионов РФ и СНГ где наш завод спроектировал и построил котельные
+
+
+    section.section.blocks
+      .block.grid
+        .col.col--sm-6
+          a(href="").block__img
+            img(src="./img/construction-img.jpg", alt="")
+        .col.col--sm-1
+        .col.col--sm-4
+          .block__plate Качество
+          h2.block__title Контроль качества
+          p Система управления производством построена на принципах регулярного контроля качества продукции и обновления технологических процессов и модернизации оборудования.
+          p Для контроля качества выпускаемой продукции завод ООО «КЗКЭО Энерго-Стандарт» использует лабораторию, осуществляющую функции входного и выходного контроля, проводит испытания оборудования. Высочайшее качество выпускаемой продукции позволяет устанавливать до 5 лет гарантии на всю линейку продукции. 
+
+  section.section
+    .construction
+      .construction__container.wrapper
+        .construction__left
+          h2 Предварительная обработка
+        .construction__right
+          - for (var i = 0; i < 4; i++)
+            .construction__item
+              .construction__img
+                img(src="./img/construction-1.jpg", alt="")
+              p Эта линия имеет туннель, шесть уровней предварительной обработки с помощью фосфата железа и независимой деоксидации, а также уровни пассивирования. 
+
+
+
+
