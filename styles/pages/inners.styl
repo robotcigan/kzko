@@ -1,4 +1,6 @@
 .about-serv
+  background-color #151618
+  overflow hidden
   position relative
   &__container
     color #fff
@@ -9,10 +11,11 @@
     p
       opacity .7
   &__img
-    background-color #151618
     display flex
+    min-height 48rem
     justify-content flex-end
     img
+      object-fit cover
       width initial
 
 
@@ -46,3 +49,25 @@
     margin-bottom .75em
 
 
+@media(max-width 1200px)
+  .about-serv
+    &__container
+      left 4rem
+      top 4rem
+    &__img
+      img
+        max-width 80%
+
+
+@media(max-width 767px)
+  .about-serv
+    margin-left -1.2rem
+    margin-right -1.2rem
+    &__container
+      position initial
+      padding 2.4rem
+    &__img
+      min-height initial
+      img
+        max-width initial
+        width 100%

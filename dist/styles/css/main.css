@@ -2056,6 +2056,7 @@ small {
 .text__left p {
   opacity: 0.7;
   max-width: 56rem;
+  margin-bottom: 2em;
 }
 .text__right {
   margin-bottom: -16rem;
@@ -2982,6 +2983,8 @@ body {
   }
 }
 .about-serv {
+  background-color: #151618;
+  overflow: hidden;
   position: relative;
 }
 .about-serv__container {
@@ -2995,13 +2998,15 @@ body {
   opacity: 0.7;
 }
 .about-serv__img {
-  background-color: #151618;
   display: -ms-flexbox;
   display: flex;
+  min-height: 48rem;
   -ms-flex-pack: end;
   justify-content: flex-end;
 }
 .about-serv__img img {
+  -o-object-fit: cover;
+  object-fit: cover;
   width: initial;
 }
 .serv-right-img {
@@ -3032,6 +3037,32 @@ body {
   font-weight: 600;
   line-height: 1.2;
   margin-bottom: 0.75em;
+}
+@media (max-width: 1200px) {
+  .about-serv__container {
+    left: 4rem;
+    top: 4rem;
+  }
+  .about-serv__img img {
+    max-width: 80%;
+  }
+}
+@media (max-width: 767px) {
+  .about-serv {
+    margin-left: -1.2rem;
+    margin-right: -1.2rem;
+  }
+  .about-serv__container {
+    position: initial;
+    padding: 2.4rem;
+  }
+  .about-serv__img {
+    min-height: initial;
+  }
+  .about-serv__img img {
+    max-width: initial;
+    width: 100%;
+  }
 }
 .project-list .project-item {
   background-size: cover;
@@ -3657,6 +3688,22 @@ body {
   -ms-transform: none;
   transform: none;
 }
+@media (max-width: 1200px) {
+  .news-detail-back {
+    display: none;
+  }
+}
+@media (max-width: 1200px) {
+  .new__container {
+    padding: 2.4rem;
+  }
+  .new__title {
+    font-size: 1.8rem;
+  }
+  .new__anons {
+    display: none !important;
+  }
+}
 .construction {
   background-color: #fafafa;
   padding: 8rem 0;
@@ -3698,6 +3745,18 @@ body {
 .construction__label {
   color: #dc1a14;
   margin-bottom: 1em;
+}
+@media (max-width: 767px) {
+  .construction__container {
+    display: block;
+  }
+  .construction__left {
+    position: initial;
+    width: 100%;
+  }
+  .construction__right {
+    width: 100%;
+  }
 }
 .leasing-detail {
   border-top: 1px solid #dbe1e9;
@@ -3809,6 +3868,17 @@ body {
   font-size: 3.2rem;
   font-weight: 600;
   max-width: 27.5rem;
+}
+@media (max-width: 1000px) {
+  .about-black-text__item {
+    margin-bottom: 1.5em;
+  }
+  .about-black-text__item .grid {
+    grid-row-gap: 0;
+  }
+  .about-black-text__item h2 {
+    margin-bottom: 0.5em;
+  }
 }
 .small-offset {
   margin-bottom: 1em;
