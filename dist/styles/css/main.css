@@ -3689,11 +3689,6 @@ body {
   transform: none;
 }
 @media (max-width: 1200px) {
-  .news-detail-back {
-    display: none;
-  }
-}
-@media (max-width: 1200px) {
   .new__container {
     padding: 2.4rem;
   }
@@ -3702,6 +3697,13 @@ body {
   }
   .new__anons {
     display: none !important;
+  }
+  .news-detail-back {
+    display: none;
+  }
+  .news-detail__img {
+    margin-left: 0;
+    margin-right: 0;
   }
 }
 .construction {
