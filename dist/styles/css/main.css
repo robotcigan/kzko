@@ -1666,6 +1666,26 @@ small {
 .dropdown__link a:hover {
   color: #dc1a14;
 }
+.main-header-socials {
+  -ms-flex-align: center;
+  align-items: center;
+  display: -ms-flexbox;
+  display: flex;
+  margin-right: 2.4rem;
+}
+.main-header-socials__item {
+  display: block;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0, 1);
+}
+.main-header-socials__item:not(:last-child) {
+  margin-right: 1.6rem;
+}
+.main-header-socials__item:hover {
+  -ms-transform: scale(1.2);
+  transform: scale(1.2);
+}
 .burger {
   -ms-flex-align: center;
   align-items: center;
@@ -1854,6 +1874,15 @@ small {
 .mobile-menu_active .mobile-menu__item:after {
   width: 100%;
 }
+@media (max-width: 1440px) {
+  .main-header__phone {
+    font-size: 1.8rem;
+    margin-right: 1em;
+  }
+  .main-header .nav__link:not(:last-child) {
+    margin-right: 0.5em;
+  }
+}
 @media (max-width: 1200px) {
   .main-header {
     padding: 1.2rem 0;
@@ -1867,6 +1896,19 @@ small {
   }
   .main-header .btn {
     padding: 1.2rem 0.8rem;
+  }
+  .main-header__phone {
+    font-size: 1.4rem;
+  }
+  .main-header-socials {
+    margin-right: 1.6rem;
+  }
+  .main-header-socials__item:not(:last-child) {
+    margin-right: 0.6rem;
+  }
+  .main-header-socials__item img {
+    -ms-transform: scale(0.8);
+    transform: scale(0.8);
   }
 }
 @media (max-width: 1000px) {
@@ -1914,6 +1956,24 @@ small {
 @media (max-width: 767px) {
   .main-header__phone span {
     font-size: 1.6rem !important;
+  }
+  .main-header .main-header-socials {
+    display: none;
+  }
+  .mobile-menu__socials {
+    margin-bottom: 1.6rem;
+    margin-top: 4rem;
+  }
+  .mobile-menu__socials .main-header-socials {
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .mobile-menu__socials .main-header-socials__item:not(:last-child) {
+    margin-right: 1.6rem;
+  }
+  .mobile-menu__socials .main-header-socials__item img {
+    -ms-transform: none;
+    transform: none;
   }
 }
 .cards {
@@ -3687,6 +3747,9 @@ body {
 .news-detail-back__icon:hover:after {
   -ms-transform: none;
   transform: none;
+}
+.news-gallery {
+  margin-bottom: 4rem;
 }
 @media (max-width: 1200px) {
   .new__container {
