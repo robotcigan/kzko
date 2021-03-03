@@ -35,7 +35,7 @@
     "gulp-pug-inheritance": "^0.2.1",
     "gulp-sourcemaps": "^2.4.1",
     "gulp-stylus": "^2.6.0",
-    "pug": "^2.0.0-beta11"
+    "pug": "^3.0.1"
   },
   "description": ""
 }
